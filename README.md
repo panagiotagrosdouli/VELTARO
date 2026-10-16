@@ -1,14 +1,14 @@
 <div align="center">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 110" width="260" role="img" aria-label="VELTARO geometric V emblem in champagne gold">
-    <rect width="260" height="110" rx="12" fill="#0b0b0d"/>
-    <path d="M86 19 L130 86 L174 19 L151 29 L130 62 L109 29 Z" fill="none" stroke="#d3b58b" stroke-width="5" stroke-linejoin="round"/>
-    <path d="M100 13 L130 38 L160 13" fill="none" stroke="#d3b58b" stroke-width="4" stroke-linejoin="round"/>
-  </svg>
-  <h1>VELTARO</h1>
-  <p><strong>Born to Drive. Designed to Fly.</strong></p>
+
+![VELTARO — V monogram in champagne gold on black](https://placehold.co/960x260/0b0b0d/d3b58b/png?text=%E2%85%A4%20%20VELTARO)
+
+# Ⅴ VELTARO
+
+**BORN TO DRIVE. DESIGNED TO FLY.**
+
 </div>
 
-> **Proposed company logo:** A geometric, champagne-gold **V** on a near-black background, inspired by the emblem already used in the VELTARO website navigation. The upper strokes evoke wings, while the lower point conveys forward motion. This is a proposed brand identity, not a registered trademark.
+> **Proposed company identity:** A champagne-gold V monogram on a near-black background, matching the VELTARO brand palette. The banner is a typographic mockup, not the final custom-drawn trademark.
 
 VELTARO is a concept-stage luxury road-and-air mobility startup website. The entire public experience lives in **one page**: `index.html`.
 
