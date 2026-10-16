@@ -1,22 +1,17 @@
-# VELTARO AUTOMOBILI
+# VELTARO
 
-Premium concept-stage website for **VELTARO V1**, a proposed luxury road-and-air grand tourer.
+VELTARO is a concept-stage luxury road-and-air mobility startup website. The entire public experience lives in **one page**: `index.html`.
 
-## Preview
-Open `index.html` locally or host on GitHub Pages. `v1.html` provides a dedicated vehicle presentation. No build tools or credentials required.
+## Features
 
-## Design
-- Responsive cinematic dark design, champagne-metal accents and custom original vector concept artwork.
-- Shared styling in `design.css`; hero illustration in `v1-hero.svg`.
-- Homepage covers vision, V1, engineering, roadmap and partnerships.
-- Functional anchor/navigation links and keyboard-accessible mobile menu.
+- Cinematic VELTARO-first homepage with no V1 product branding or separate product navigation.
+- Our Vision, Why VELTARO, Technology, Roadmap, Investors and Contact sections.
+- Responsive premium dark/champagne design in `design.css`.
+- Original vector artwork in `v1-hero.svg` (legacy filename for backward compatibility). This is an illustration, not a photograph or working vehicle.
+- No build process or backend. Open `index.html` or host using GitHub Pages.
 
-## Important limitation
-This is **concept art**, not a photograph or validated aircraft. No prototype, flight tests, financial performance, certification, commercial sales or investor commitments are claimed. Public GitHub Issues are the only linked inquiry mechanism; do not post private information. The site does not collect personal information.
+## Brand-image guidance
+The coastal flying-car photo supplied as a visual reference appears sourced from a third-party publication. It is **not** distributed in this repository. Obtain proper rights before replacing the original illustration with a photograph. Do not imply a third-party vehicle is VELTARO's product.
 
-## Publication checklist
-- Verify brand and trademark availability, assess operational and regulatory feasibility.
-- Review text with aerospace/automotive specialists.
-- Test across browsers, assistive tech and mobile devices.
-- Arrange a private contact channel and privacy notice before collecting contact information.
-- Configure GitHub Pages to publish from `main` after review and merge.
+## Integrity
+No working prototype, flight performance, certification, funding or partner relationship is represented as established. GitHub Issues is a public inquiry route only; do not share confidential information. No lead storage is implemented.
