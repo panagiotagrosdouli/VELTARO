@@ -18,10 +18,10 @@ VELTARO is a concept-stage luxury road-and-air mobility startup website. The ent
 - Our Vision, Why VELTARO, Technology, Roadmap, Investors and Contact sections.
 - Responsive premium dark/champagne design in `design.css`.
 - Original vector artwork in `v1-hero.svg` (legacy filename for backward compatibility). This is an illustration, not a photograph or working vehicle.
-- No build process or backend. Open `index.html` or host using GitHub Pages.
+- No build process required. Open `index.html` or host using GitHub Pages. Contact form submissions use FormSubmit and require owner email activation.
 
 ## Brand-image guidance
 The coastal flying-car photo supplied as a visual reference appears sourced from a third-party publication. It is **not** distributed in this repository. Obtain proper rights before replacing the original illustration with a photograph. Do not imply a third-party vehicle is VELTARO's product.
 
 ## Integrity
-No working prototype, flight performance, certification, funding or partner relationship is represented as established. GitHub Issues is a public inquiry route only; do not share confidential information. No lead storage is implemented.
+No working prototype, flight performance, certification, funding or partner relationship is represented as established. GitHub Issues is a public inquiry route only; do not share confidential information. Contact submissions are processed by third-party FormSubmit for email delivery. Activate the destination inbox and publish suitable privacy information before wider use.
