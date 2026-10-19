@@ -8,7 +8,12 @@ export function compareConceptFixtures(tracks){
     if(!pack||!closure)throw Error('Missing independent checks for '+id);
     const energyPower=checkMissionPack(pack);
     const massClosure=iterateMassEnergy(closure);
-    return {id,energyPower,massClosure,engineeringValidated:false};
+    const diagnostics=[];
+    if(!massClosure.converged)diagnostics.push('TOY_MASS_CLOSURE_NOT_CONVERGED');
+    if(!energyPower.energyWithinAssumedBudget)diagnostics.push('TOY_ENERGY_LIMIT_EXCEEDED');
+    if(!energyPower.allPhasePowerWithinAssumedLimits)diagnostics.push('TOY_POWER_LIMIT_EXCEEDED');
+    if(!energyPower.peakDurationWithinAssumedLimit)diagnostics.push('TOY_PEAK_DURATION_LIMIT_EXCEEDED');
+    return {id,energyPower,massClosure,diagnostics,engineeringValidated:false};
   })};
 }
 if(import.meta.url===`file://${process.argv[1]}`){
@@ -24,6 +29,8 @@ if(import.meta.url===`file://${process.argv[1]}`){
  assert.ok(result.tracks.every(t=>t.engineeringValidated===false));
  assert.equal(result.tracks[0].energyPower.allPhasePowerWithinAssumedLimits,true);
  assert.equal(result.tracks[1].energyPower.allPhasePowerWithinAssumedLimits,false);
+ assert.ok(result.tracks[1].diagnostics.includes('TOY_POWER_LIMIT_EXCEEDED'));
+ assert.ok(result.tracks[0].diagnostics.every(x=>x.startsWith('TOY_')));
  assert.throws(()=>compareConceptFixtures([{id:'A',pack,closure}]));
  console.log('Dual-track illustrative numerical comparison checks passed. Neither architecture verified or selected.');
 }
