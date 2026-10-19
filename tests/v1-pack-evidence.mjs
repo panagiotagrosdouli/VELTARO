@@ -29,7 +29,31 @@ export function assessPackEvidence(x){
  if(x.evidenceType==='MEASURED'&&x.reviewAccepted===true){
    if(!x.independentReviewer||typeof x.independentReviewer!=='string'||!x.independentReviewer.trim())errors.push('Independent review identity required');
    if(!x.sourceDocumentId||typeof x.sourceDocumentId!=='string'||!x.sourceDocumentId.trim())errors.push('Source document identifier required');
-   if(!x.reviewDate||typeof x.reviewDate!=='string'||!/^\\d{4}-\\d{2}-\\d{2}$/.test(x.reviewDate))errors.push('Review date required');
+   if(!x.reviewDate||typeof x.reviewDate!=='string'||!new RegExp('^[0-9]{4}-[0-9]{2}-[0-9]{2}
+ }
+ if(x.reviewAccepted===true&&x.evidenceType==='LITERATURE_ASSUMPTION')errors.push('Literature assumption cannot be reviewed as measured capability');
+ return errors;
+}
+if(import.meta.url===`file://${process.argv[1]}`){
+ const x={track:'BOTH',boundary:'installed_usable_pack',evidenceType:'LITERATURE_ASSUMPTION',source:'fictional unit-test fixture',conditions:'fictional controlled conditions',scope:'illustrative only',uncertainty:'unknown',reviewer:'unassigned',usableWhPerKg:180,continuousPowerKW:30,peakPowerKW:50,peakDurationHours:0.05,reviewAccepted:false};
+ assert.deepEqual(assessPackEvidence(x),[]);
+ assert.ok(assessPackEvidence({...x,boundary:'cell'}).length);
+ assert.ok(assessPackEvidence({...x,reviewAccepted:true}).length);
+ assert.ok(assessPackEvidence({...x,peakPowerKW:20}).length);
+ assert.ok(assessPackEvidence({...x,evidenceType:'MEASURED'}).length);
+ const measured={...x,evidenceType:'MEASURED',testMethod:'bench description',sourceUrl:'https://example.org/fictional',testDate:'2026-01-01',socWindow:'fictional SOC band',temperatureRangeC:'fictional temperature range',agingCondition:'fictional cycle condition',peakPowerDurationBasis:'fictional duty cycle'};
+ measured.socPercentRange=[20,90];measured.temperatureC=[15,35];
+ assert.deepEqual(assessPackEvidence(measured),[]);
+ assert.ok(assessPackEvidence({...measured,reviewAccepted:true}).length,'Review cannot be claimed without reviewer and document identity');
+ assert.ok(assessPackEvidence({...measured,socPercentRange:[95,20]}).length);
+ assert.ok(assessPackEvidence({...measured,temperatureC:[40,10]}).length);
+ assert.ok(assessPackEvidence({...measured,socWindow:''}).length);
+ assert.ok(assessPackEvidence({...measured,agingCondition:''}).length);
+ assert.ok(assessPackEvidence({...x,evidenceType:'MEASURED',testMethod:'',sourceUrl:'https://example.org/study',testDate:'2026-01-01'}).length);
+ assert.ok(assessPackEvidence({...x,evidenceType:'MEASURED',testMethod:'documented bench method',sourceUrl:'http://example.org/study',testDate:'2026-01-01'}).length);
+ console.log('Pack evidence boundary tests passed — no physical V1 pack validated.');
+}
+).test(x.reviewDate))errors.push('Review date required');
  }
  if(x.reviewAccepted===true&&x.evidenceType==='LITERATURE_ASSUMPTION')errors.push('Literature assumption cannot be reviewed as measured capability');
  return errors;
