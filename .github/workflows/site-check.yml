@@ -31,5 +31,7 @@ jobs:
         run: node tests/v1-phase-energy-power.mjs
       - name: Check dual-track illustrative numerical comparison
         run: node tests/v1-concept-comparison.mjs
+      - name: Check toy closure and phase ledger consistency
+        run: node tests/v1-fixture-consistency.mjs
       - name: Check cockpit language and mode switching
         run: node tests/cockpit-interaction.mjs
