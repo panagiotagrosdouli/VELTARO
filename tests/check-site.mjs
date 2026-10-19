@@ -3,7 +3,7 @@ import {readFileSync,existsSync} from 'node:fs';
 import {resolve,dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
-const pages=['index.html','collaborate.html','privacy.html'];
+const pages=['index.html','collaborate.html','privacy.html','cockpit-concept.html'];
 let failures=0;
 function check(ok,label){console.log((ok?'PASS':'FAIL')+' '+label);if(!ok)failures++}
 for(const page of pages){
@@ -22,6 +22,9 @@ for(const page of pages){
 const homepage=readFileSync(resolve(root,'index.html'),'utf8');
 check(homepage.includes('href="collaborate.html"'),'collaboration link');
 check(homepage.includes('href="privacy.html"'),'privacy link');
+check(homepage.includes('href="cockpit-concept.html"'),'V1 cockpit link');
+const cockpit=readFileSync(resolve(root,'cockpit-concept.html'),'utf8');
+for(const state of ['road','site','config','review','service']) check(cockpit.includes('data-mode="'+state+'"'),'cockpit '+state+' navigation');
 check(homepage.includes('prefers-reduced-motion'),'reduced motion');
 check(homepage.includes('const productImages=[')&&homepage.includes('const droneImages=['),'product image arrays');
 console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
