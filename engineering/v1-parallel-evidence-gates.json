@@ -1,0 +1,46 @@
+{
+  "version": "1.0",
+  "decision": "HOLD_BOTH",
+  "tracks": [
+    "A",
+    "B"
+  ],
+  "gates": [
+    "operational_access",
+    "mass_closure",
+    "energy_power",
+    "safety",
+    "usability",
+    "compliance"
+  ],
+  "status": {
+    "A": {
+      "operational_access": "OPEN",
+      "mass_closure": "OPEN",
+      "energy_power": "OPEN",
+      "safety": "OPEN",
+      "usability": "OPEN",
+      "compliance": "OPEN"
+    },
+    "B": {
+      "operational_access": "OPEN",
+      "mass_closure": "OPEN",
+      "energy_power": "OPEN",
+      "safety": "OPEN",
+      "usability": "OPEN",
+      "compliance": "OPEN"
+    }
+  },
+  "requiredEvidenceFields": [
+    "track",
+    "gate",
+    "source",
+    "date",
+    "scope",
+    "units",
+    "uncertainty",
+    "reviewer",
+    "claimStatus"
+  ],
+  "performanceClaimsAllowed": false
+}
