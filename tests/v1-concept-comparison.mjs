@@ -19,7 +19,13 @@ export function compareConceptFixtures(tracks){
       TOY_POWER_LIMIT_EXCEEDED:'Check continuous and peak pack discharge evidence by phase',
       TOY_PEAK_DURATION_LIMIT_EXCEEDED:'Validate time-limited discharge and thermal envelope evidence'
     };
-    const nextResearch=diagnostics.map(code=>({code,action:researchActions[code],verified:false}));
+    const evidenceGateByCode={
+      TOY_MASS_CLOSURE_NOT_CONVERGED:'mass_closure',
+      TOY_ENERGY_LIMIT_EXCEEDED:'energy_power',
+      TOY_POWER_LIMIT_EXCEEDED:'energy_power',
+      TOY_PEAK_DURATION_LIMIT_EXCEEDED:'energy_power'
+    };
+    const nextResearch=diagnostics.map(code=>({code,action:researchActions[code],gate:evidenceGateByCode[code],status:'OPEN',verified:false}));
     return {id,energyPower,massClosure,diagnostics,nextResearch,engineeringValidated:false};
   })};
 }
@@ -37,7 +43,7 @@ if(import.meta.url===`file://${process.argv[1]}`){
  assert.equal(result.tracks[0].energyPower.allPhasePowerWithinAssumedLimits,true);
  assert.equal(result.tracks[1].energyPower.allPhasePowerWithinAssumedLimits,false);
  assert.ok(result.tracks[1].diagnostics.includes('TOY_POWER_LIMIT_EXCEEDED'));
- assert.ok(result.tracks[1].nextResearch.some(x=>x.code==='TOY_POWER_LIMIT_EXCEEDED'&&x.action.includes('pack discharge')&&!x.verified));
+ assert.ok(result.tracks[1].nextResearch.some(x=>x.code==='TOY_POWER_LIMIT_EXCEEDED'&&x.action.includes('pack discharge')&&x.gate==='energy_power'&&x.status==='OPEN'&&!x.verified));
  assert.ok(result.tracks[0].diagnostics.every(x=>x.startsWith('TOY_')));
  assert.throws(()=>compareConceptFixtures([{id:'A',pack,closure}]));
  console.log('Dual-track illustrative numerical comparison checks passed. Neither architecture verified or selected.');
