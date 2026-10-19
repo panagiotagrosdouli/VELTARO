@@ -17,6 +17,11 @@ export function assessPackEvidence(x){
      if(typeof x[key]!=='string'||!x[key].trim())errors.push('Measured claim missing '+key);
    }
  }
+ if(x.evidenceType==='MEASURED'){
+   const soc=x.socPercentRange,temperature=x.temperatureC;
+   if(!Array.isArray(soc)||soc.length!==2||!soc.every(Number.isFinite)||soc[0]<0||soc[1]>100||soc[0]>=soc[1])errors.push('Invalid numeric SOC range');
+   if(!Array.isArray(temperature)||temperature.length!==2||!temperature.every(Number.isFinite)||temperature[0]>temperature[1])errors.push('Invalid numeric temperature range');
+ }
  if(!Number.isFinite(x.usableWhPerKg)||x.usableWhPerKg<=0)errors.push('Invalid usable pack specific energy');
  if(!Number.isFinite(x.continuousPowerKW)||x.continuousPowerKW<=0)errors.push('Invalid continuous power');
  if(!Number.isFinite(x.peakPowerKW)||x.peakPowerKW<x.continuousPowerKW)errors.push('Invalid peak power');
@@ -32,7 +37,10 @@ if(import.meta.url===`file://${process.argv[1]}`){
  assert.ok(assessPackEvidence({...x,peakPowerKW:20}).length);
  assert.ok(assessPackEvidence({...x,evidenceType:'MEASURED'}).length);
  const measured={...x,evidenceType:'MEASURED',testMethod:'bench description',sourceUrl:'https://example.org/fictional',testDate:'2026-01-01',socWindow:'fictional SOC band',temperatureRangeC:'fictional temperature range',agingCondition:'fictional cycle condition',peakPowerDurationBasis:'fictional duty cycle'};
+ measured.socPercentRange=[20,90];measured.temperatureC=[15,35];
  assert.deepEqual(assessPackEvidence(measured),[]);
+ assert.ok(assessPackEvidence({...measured,socPercentRange:[95,20]}).length);
+ assert.ok(assessPackEvidence({...measured,temperatureC:[40,10]}).length);
  assert.ok(assessPackEvidence({...measured,socWindow:''}).length);
  assert.ok(assessPackEvidence({...measured,agingCondition:''}).length);
  assert.ok(assessPackEvidence({...x,evidenceType:'MEASURED',testMethod:'',sourceUrl:'https://example.org/study',testDate:'2026-01-01'}).length);
