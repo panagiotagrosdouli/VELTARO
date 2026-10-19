@@ -58,5 +58,19 @@ elements.modeNavigation.listeners.keydown({key:'End',preventDefault(){}});
 assert.equal(buttons[4].pressed,'true');
 elements.modeNavigation.listeners.keydown({key:'Home',preventDefault(){}});
 assert.equal(buttons[0].pressed,'true');
+// Exercise all five modes in both languages; untranslated or stale copy is a regression.
+for(const expectedLang of ['el','en']) {
+  if(document.documentElement.lang!==expectedLang) elements.language.listeners.click();
+  assert.equal(document.documentElement.lang,expectedLang);
+  for(const button of buttons) {
+    button.listeners.click();
+    assert.ok(elements.contextText.textContent.length>15,'Mode has explanatory context');
+    assert.ok(elements.description.textContent.length>15,'Mode has description');
+    assert.ok(elements.advisory.textContent.length>15,'Mode has safety advisory');
+    assert.equal(button.pressed,'true');
+    assert.equal(buttons.filter(b=>b.pressed==='true').length,1);
+  }
+  assert.match(elements.disclaimer.textContent,expectedLang==='el'?/πτήση/:/flight/);
+}
 assert.ok(html.includes('not a flight simulator') || html.includes('no vehicle systems'),'concept-only notice');
 console.log('Cockpit EN/EL interaction regression tests passed.');
