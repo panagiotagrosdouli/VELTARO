@@ -6,6 +6,8 @@ export function iterateMassEnergy({dryMassKg,payloadKg,usableWhPerKg,phases,rese
   if(!Array.isArray(phases)||phases.length===0)throw Error('Provide flight phases');
   // phasePowerKW must be a stated toy linear relationship with total mass.
   for(const p of phases){if(![p.hours,p.powerKWPerKg].every(x=>Number.isFinite(x)&&x>=0))throw Error('Invalid phase');}
+  const coupling=phases.reduce((sum,p)=>sum+p.powerKWPerKg*p.hours,0)*1000/(usableWhPerKg*(1-reserveFraction));
+  if(coupling>=1)return {converged:false,reason:'non-closable linear mass-energy feedback',iterations:0};
   let mass=dryMassKg+payloadKg;
   for(let iteration=1;iteration<=maxIterations;iteration++){
     const missionEnergyKWh=phases.reduce((sum,p)=>sum+mass*p.powerKWPerKg*p.hours,0);
@@ -25,6 +27,9 @@ if(import.meta.url===`file://${process.argv[1]}`){
   assert.ok(sample.batteryMassKg>0);
   const impossible=iterateMassEnergy({dryMassKg:800,payloadKg:160,usableWhPerKg:50,reserveFraction:0.4,phases:[{hours:2,powerKWPerKg:0.3}]});
   assert.equal(impossible.converged,false);
+  assert.equal(impossible.reason,'non-closable linear mass-energy feedback');
+  assert.throws(()=>iterateMassEnergy({dryMassKg:800,payloadKg:10,usableWhPerKg:180,phases:[{hours:NaN,powerKWPerKg:0.2}]}));
+  assert.throws(()=>iterateMassEnergy({dryMassKg:800,payloadKg:10,usableWhPerKg:180,reserveFraction:1,phases:[{hours:1,powerKWPerKg:0.2}]}));
   assert.throws(()=>iterateMassEnergy({dryMassKg:-1,payloadKg:0,usableWhPerKg:180,phases:[]}));
   console.log('Toy mass-energy closure assertions passed. No actual V1 feasibility established.');
 }
