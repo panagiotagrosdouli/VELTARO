@@ -10,7 +10,7 @@
 
 > **Proposed company identity:** A champagne-gold V monogram on a near-black background, matching the VELTARO brand palette. The banner is a typographic mockup, not the final custom-drawn trademark.
 
-VELTARO is a concept-stage luxury road-and-air mobility startup website. The entire public experience lives in **one page**: `index.html`.
+VELTARO is a concept-stage luxury road-and-air mobility startup website. The homepage is `index.html`; the collaboration page is `collaborate.html` and the provisional contact notice is `privacy.html`.
 
 ## Features
 
@@ -25,3 +25,16 @@ The coastal flying-car photo supplied as a visual reference appears sourced from
 
 ## Integrity
 No working prototype, flight performance, certification, funding or partner relationship is represented as established. GitHub Issues is a public inquiry route only; do not share confidential information. Contact submissions are processed by third-party FormSubmit for email delivery. Activate the destination inbox and publish suitable privacy information before wider use.
+
+## Venture validation and launch review (October 2026)
+- [Commercial validation playbook](docs/VELTARO-Commercial-Validation-Playbook-2026.md): four-track customer discovery and evidence gates.
+- [12-week action board](docs/VELTARO-12-Week-Action-Board-2026.md): €0-commitment milestones.
+- `collaborate.html`: exploratory research and collaboration information.
+- `privacy.html`: DRAFT inquiry-data notice, pending review.
+
+### Before public outreach
+1. Test and activate the FormSubmit receiving inbox without sensitive information.
+2. Confirm data controller contact, retention, privacy requirements and provider arrangements; finalize notice.
+3. Verify usage rights of external images.
+4. Manually test mobile layouts, keyboard navigation, browser behavior and contact submission.
+5. Reconcile public workstream statements with actual concept-stage evidence.
