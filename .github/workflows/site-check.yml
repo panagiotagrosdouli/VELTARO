@@ -17,3 +17,5 @@ jobs:
         run: node tests/check-site.mjs
       - name: Check preliminary V1 sensitivity utilities
         run: node tests/v1-sensitivity.mjs
+      - name: Check cockpit language and mode switching
+        run: node tests/cockpit-interaction.mjs
