@@ -33,5 +33,7 @@ jobs:
         run: node tests/v1-concept-comparison.mjs
       - name: Check toy closure and phase ledger consistency
         run: node tests/v1-fixture-consistency.mjs
+      - name: Check pack evidence measurement boundaries
+        run: node tests/v1-pack-evidence.mjs
       - name: Check cockpit language and mode switching
         run: node tests/cockpit-interaction.mjs
