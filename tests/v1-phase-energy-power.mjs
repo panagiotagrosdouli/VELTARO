@@ -7,10 +7,12 @@ export function checkMissionPack({usablePackKWh,continuousPowerKW,peakPowerKW,ph
   for(const p of phases){
     if(typeof p.name!=='string'||!p.name.trim()||![p.hours,p.powerKW].every(n=>Number.isFinite(n)&&n>=0)||p.peakOnly!==true&&p.peakOnly!==false)throw Error('Invalid phase assumptions');
     const energyKWh=p.hours*p.powerKW;missionKWh+=energyKWh;
+    if(!Number.isFinite(energyKWh)||!Number.isFinite(missionKWh))throw Error('Energy calculation overflow');
     if(p.peakOnly&&p.powerKW>continuousPowerKW)totalPeakHours+=p.hours;
     rows.push({phase:p.name,energyKWh,powerWithinAssumedLimit:p.powerKW<=(p.peakOnly?peakPowerKW:continuousPowerKW)});
   }
   const budgetKWh=usablePackKWh*(1-reserveFraction);
+  if(!Number.isFinite(budgetKWh))throw Error('Invalid energy budget');
   return {missionKWh,budgetKWh,energyWithinAssumedBudget:missionKWh<=budgetKWh,allPhasePowerWithinAssumedLimits:rows.every(r=>r.powerWithinAssumedLimit),peakDurationWithinAssumedLimit:totalPeakHours<=maxPeakHours,totalPeakHours,rows};
 }
 if(import.meta.url===`file://${process.argv[1]}`){
@@ -28,5 +30,7 @@ if(import.meta.url===`file://${process.argv[1]}`){
   assert.equal(d.peakDurationWithinAssumedLimit,false);
   assert.throws(()=>checkMissionPack({...base,phases:[{name:'bad',hours:-1,powerKW:70,peakOnly:false}]}));
   assert.throws(()=>checkMissionPack({...base,peakPowerKW:10,phases:[{name:'test',hours:1,powerKW:5,peakOnly:false}]}));
+  assert.throws(()=>checkMissionPack({...base,phases:[{name:'overflow',hours:1e308,powerKW:1e308,peakOnly:true}]}),/overflow/);
+  assert.throws(()=>checkMissionPack({...base,maxPeakHours:-1,phases:[{name:'test',hours:1,powerKW:5,peakOnly:false}]}));
   console.log('Phase energy and power toy checks passed; no V1 performance validated.');
 }
