@@ -1,0 +1,13 @@
+{
+  "version": "0.1",
+  "status": "UNASSESSED",
+  "method": "evidence-gated-architecture-comparison",
+  "architectures": [
+    {"id":"A","label":"Winged roadable / runway-dependent","evidenceState":"UNKNOWN"},
+    {"id":"B","label":"Powered-lift / VTOL roadable","evidenceState":"UNKNOWN"}
+  ],
+  "criteria": ["legal-site-access","door-to-door-mission","flight-energy-power","integrated-mass","mechanisms-and-maintenance","safety-certification","noise-thermal","user-value","development-cost"],
+  "scoringEnabled": false,
+  "requiredEvidence": ["jurisdiction","legal-mission-sites","pack-level-power-and-energy","mass-ledger","mission-phase-model","safety-review"],
+  "selectedArchitecture": null
+}

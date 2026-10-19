@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const d=JSON.parse(readFileSync('engineering/v1-architecture-gates.json','utf8'));
+assert.equal(d.status,'UNASSESSED');
+assert.equal(d.scoringEnabled,false);
+assert.equal(d.selectedArchitecture,null);
+assert.deepEqual(d.architectures.map(a=>a.id),['A','B']);
+assert.ok(d.architectures.every(a=>a.evidenceState==='UNKNOWN'));
+assert.ok(d.criteria.length>=8);
+assert.ok(d.requiredEvidence.includes('legal-mission-sites'));
+console.log('Architecture trade study guards passed — no unsupported selection.');
