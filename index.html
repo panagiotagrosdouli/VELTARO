@@ -65,12 +65,12 @@ function cards(id,items){$(id).innerHTML=items.map((x,i)=>'<article class="box">
 const productImages=[
 "https://images.unsplash.com/photo-1611859266238-4b98091d9d9b?w=1100&q=85",
 "https://images.unsplash.com/photo-1675335218532-fb3540b3cb47?w=1100&q=85",
-"v1-hero.svg",
-"v1-hero.svg"
+"https://radioimg.audacy.com/aiu-media/GettyImages2163691460-ed45ab97-9422-4c1a-8a7b-b8b394808be0.jpg",
+"https://informedclearly.com/og-image/autonomous-delivery-robot-trials.jpg"
 ];
 const droneImages=[
 "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800&q=80",
-"v1-hero.svg",
+"https://radioimg.audacy.com/aiu-media/GettyImages2163691460-ed45ab97-9422-4c1a-8a7b-b8b394808be0.jpg",
 "https://images.unsplash.com/photo-1506947411487-a56738267384?w=800&q=80"
 ];
 function productCards(items){$("productCards").innerHTML=items.map((x,i)=>'<article class="product-card"><img class="product-photo" src="'+productImages[i]+'" alt="'+x[1]+' — illustrative concept reference, not VELTARO prototype" loading="lazy" decoding="async"><div class="product-body"><span class="eyebrow">'+x[0]+'</span><h3>'+x[1]+'</h3><p>'+x[2]+'</p><span class="product-tag">'+x[3]+'</span></div></article>').join('')}
