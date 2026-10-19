@@ -1,0 +1,14 @@
+{
+  "track": "A",
+  "gate": "mass_closure",
+  "claim": "Example placeholder only; no mass estimate asserted",
+  "source": "INTERNAL_PLACEHOLDER_NOT_EXTERNAL_EVIDENCE",
+  "sourceDate": "2026-10-19",
+  "accessDate": "2026-10-19",
+  "scope": "Schema demonstration only",
+  "units": "N/A",
+  "uncertainty": "Not quantified — example only",
+  "reviewer": "Not assigned (placeholder)",
+  "claimStatus": "UNSOURCED",
+  "reviewAccepted": false
+}

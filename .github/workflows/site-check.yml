@@ -25,5 +25,7 @@ jobs:
         run: node tests/v1-dual-architecture-workstreams.mjs
       - name: Check V1 evidence acceptance gates
         run: node tests/v1-parallel-evidence-gates.mjs
+      - name: Validate V1 engineering evidence intake schema
+        run: node tests/v1-evidence-intake.mjs
       - name: Check cockpit language and mode switching
         run: node tests/cockpit-interaction.mjs
