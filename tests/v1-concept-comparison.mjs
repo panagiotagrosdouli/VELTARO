@@ -45,6 +45,12 @@ if(import.meta.url===`file://${process.argv[1]}`){
  assert.ok(result.tracks[1].diagnostics.includes('TOY_POWER_LIMIT_EXCEEDED'));
  assert.ok(result.tracks[1].nextResearch.some(x=>x.code==='TOY_POWER_LIMIT_EXCEEDED'&&x.action.includes('pack discharge')&&x.gate==='energy_power'&&x.status==='OPEN'&&!x.verified));
  assert.ok(result.tracks[0].diagnostics.every(x=>x.startsWith('TOY_')));
+ for(const track of result.tracks){
+   assert.ok(track.nextResearch.every(item=>item.status==='OPEN'&&!item.verified));
+   assert.ok(track.nextResearch.every(item=>['mass_closure','energy_power'].includes(item.gate)));
+   assert.equal(track.engineeringValidated,false);
+ }
+ assert.equal(result.selectedArchitecture,null);
  assert.throws(()=>compareConceptFixtures([{id:'A',pack,closure}]));
  console.log('Dual-track illustrative numerical comparison checks passed. Neither architecture verified or selected.');
 }
