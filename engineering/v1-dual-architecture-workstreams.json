@@ -1,0 +1,72 @@
+{
+  "version": "0.2",
+  "program": "VELTARO V1",
+  "status": "PARALLEL CONCEPT RESEARCH",
+  "selectedArchitecture": null,
+  "architectures": [
+    {
+      "id": "A",
+      "label": "Foldable-wing roadable aircraft",
+      "phase": "CONCEPT",
+      "tasks": [
+        {
+          "id": "A1",
+          "name": "Define lawful runway-to-road mission and dimensional envelope",
+          "state": "OPEN"
+        },
+        {
+          "id": "A2",
+          "name": "Build wing, folding/locking mechanism and crashworthiness mass ledger",
+          "state": "OPEN"
+        },
+        {
+          "id": "A3",
+          "name": "Build takeoff/cruise/landing power and reserve ledger",
+          "state": "OPEN"
+        },
+        {
+          "id": "A4",
+          "name": "Identify ground-flight conversion failure scenarios",
+          "state": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "label": "Powered-lift VTOL roadable vehicle",
+      "phase": "CONCEPT",
+      "tasks": [
+        {
+          "id": "B1",
+          "name": "Define lawful vertiport-to-road mission and ground envelope",
+          "state": "OPEN"
+        },
+        {
+          "id": "B2",
+          "name": "Build lift/transition power, redundancy and battery discharge ledger",
+          "state": "OPEN"
+        },
+        {
+          "id": "B3",
+          "name": "Build propulsor protection, road crash and thermal mass ledger",
+          "state": "OPEN"
+        },
+        {
+          "id": "B4",
+          "name": "Identify hover/transition failures and bystander risks",
+          "state": "OPEN"
+        }
+      ]
+    }
+  ],
+  "sharedGates": [
+    "legal operational site access",
+    "mission and payload definition",
+    "independent safety review",
+    "pack-level source evidence",
+    "road and aviation compliance review"
+  ],
+  "hardwareValidated": false,
+  "performanceValidated": false,
+  "costAuthorized": false
+}
