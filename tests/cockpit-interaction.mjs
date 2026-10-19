@@ -15,12 +15,15 @@ const document={activeElement:null,documentElement:{lang:'en'},getElementById(id
 runInNewContext(match[1],{document},{timeout:1000});
 assert.equal(elements.mode.textContent,'ROAD');
 assert.equal(elements.energyValue.textContent,'NOT MEASURED');
+assert.ok(!html.includes('width:42%'),'No fabricated battery percentage is visually represented');
+assert.ok(html.includes('repeating-linear-gradient'),'Unknown battery status uses indeterminate decoration');
 assert.equal(elements.permissionValue.textContent,'NOT ASSESSED');
 assert.equal(buttons[0].pressed,'true');
 elements.language.listeners.click();
 assert.equal(document.documentElement.lang,'el');
 assert.equal(elements.energyValue.textContent,'ΧΩΡΙΣ ΜΕΤΡΗΣΗ');
 assert.equal(elements.permissionValue.textContent,'ΔΕΝ ΕΛΕΓΧΘΗΚΕ');
+assert.match(elements.permissionNote.textContent,/δεν παρέχει/);
 assert.equal(elements.language.textContent,'EN');
 assert.match(elements.heading.textContent,/cockpit/i);
 assert.match(elements.disclaimer.textContent,/δεν/);
