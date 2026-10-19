@@ -21,5 +21,7 @@ jobs:
         run: node tests/v1-mass-energy-closure.mjs
       - name: Check V1 architecture evidence gates
         run: node tests/v1-architecture-gates.mjs
+      - name: Check V1 parallel architecture workstreams
+        run: node tests/v1-dual-architecture-workstreams.mjs
       - name: Check cockpit language and mode switching
         run: node tests/cockpit-interaction.mjs

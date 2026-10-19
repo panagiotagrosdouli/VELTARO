@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const d=JSON.parse(readFileSync('engineering/v1-dual-architecture-workstreams.json','utf8'));
+assert.equal(d.selectedArchitecture,null,'No architecture chosen without evidence');
+assert.deepEqual(d.architectures.map(x=>x.id),['A','B']);
+assert.ok(d.architectures.every(x=>x.tasks.length>=4&&x.tasks.every(t=>t.state==='OPEN')));
+assert.equal(d.hardwareValidated,false);
+assert.equal(d.performanceValidated,false);
+assert.equal(d.costAuthorized,false);
+assert.ok(d.sharedGates.length>=4);
+console.log('Dual architecture concept workstreams verified.');
