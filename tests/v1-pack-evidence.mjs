@@ -26,6 +26,11 @@ export function assessPackEvidence(x){
  if(!Number.isFinite(x.continuousPowerKW)||x.continuousPowerKW<=0)errors.push('Invalid continuous power');
  if(!Number.isFinite(x.peakPowerKW)||x.peakPowerKW<x.continuousPowerKW)errors.push('Invalid peak power');
  if(!Number.isFinite(x.peakDurationHours)||x.peakDurationHours<0)errors.push('Invalid peak duration');
+ if(x.evidenceType==='MEASURED'&&x.reviewAccepted===true){
+   if(!x.independentReviewer||typeof x.independentReviewer!=='string'||!x.independentReviewer.trim())errors.push('Independent review identity required');
+   if(!x.sourceDocumentId||typeof x.sourceDocumentId!=='string'||!x.sourceDocumentId.trim())errors.push('Source document identifier required');
+   if(!x.reviewDate||typeof x.reviewDate!=='string'||!/^\\d{4}-\\d{2}-\\d{2}$/.test(x.reviewDate))errors.push('Review date required');
+ }
  if(x.reviewAccepted===true&&x.evidenceType==='LITERATURE_ASSUMPTION')errors.push('Literature assumption cannot be reviewed as measured capability');
  return errors;
 }
@@ -39,6 +44,7 @@ if(import.meta.url===`file://${process.argv[1]}`){
  const measured={...x,evidenceType:'MEASURED',testMethod:'bench description',sourceUrl:'https://example.org/fictional',testDate:'2026-01-01',socWindow:'fictional SOC band',temperatureRangeC:'fictional temperature range',agingCondition:'fictional cycle condition',peakPowerDurationBasis:'fictional duty cycle'};
  measured.socPercentRange=[20,90];measured.temperatureC=[15,35];
  assert.deepEqual(assessPackEvidence(measured),[]);
+ assert.ok(assessPackEvidence({...measured,reviewAccepted:true}).length,'Review cannot be claimed without reviewer and document identity');
  assert.ok(assessPackEvidence({...measured,socPercentRange:[95,20]}).length);
  assert.ok(assessPackEvidence({...measured,temperatureC:[40,10]}).length);
  assert.ok(assessPackEvidence({...measured,socWindow:''}).length);
