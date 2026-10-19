@@ -29,5 +29,7 @@ jobs:
         run: node tests/v1-evidence-intake.mjs
       - name: Check V1 phase power and energy independently
         run: node tests/v1-phase-energy-power.mjs
+      - name: Check dual-track illustrative numerical comparison
+        run: node tests/v1-concept-comparison.mjs
       - name: Check cockpit language and mode switching
         run: node tests/cockpit-interaction.mjs
