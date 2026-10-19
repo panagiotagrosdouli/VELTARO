@@ -9,7 +9,9 @@ export function assessPackEvidence(x){
  for(const key of ['source','conditions','scope','uncertainty','reviewer']){
    if(typeof x[key]!=='string'||!x[key].trim())errors.push('Missing '+key);
  }
- if(x.evidenceType==='MEASURED'&&typeof x.testMethod!=='string')errors.push('Measured claim requires test method');
+ if(x.evidenceType==='MEASURED'&&(typeof x.testMethod!=='string'||!x.testMethod.trim()))errors.push('Measured claim requires test method');
+ if(x.evidenceType==='MEASURED'&&(!x.sourceUrl||!/^https:\/\//.test(x.sourceUrl)))errors.push('Measured claim requires HTTPS traceable source URL');
+ if(x.evidenceType==='MEASURED'&&(!x.testDate||!/^\d{4}-\d{2}-\d{2}$/.test(x.testDate)))errors.push('Measured claim requires ISO test date');
  if(!Number.isFinite(x.usableWhPerKg)||x.usableWhPerKg<=0)errors.push('Invalid usable pack specific energy');
  if(!Number.isFinite(x.continuousPowerKW)||x.continuousPowerKW<=0)errors.push('Invalid continuous power');
  if(!Number.isFinite(x.peakPowerKW)||x.peakPowerKW<x.continuousPowerKW)errors.push('Invalid peak power');
@@ -24,5 +26,7 @@ if(import.meta.url===`file://${process.argv[1]}`){
  assert.ok(assessPackEvidence({...x,reviewAccepted:true}).length);
  assert.ok(assessPackEvidence({...x,peakPowerKW:20}).length);
  assert.ok(assessPackEvidence({...x,evidenceType:'MEASURED'}).length);
+ assert.ok(assessPackEvidence({...x,evidenceType:'MEASURED',testMethod:'',sourceUrl:'https://example.org/study',testDate:'2026-01-01'}).length);
+ assert.ok(assessPackEvidence({...x,evidenceType:'MEASURED',testMethod:'documented bench method',sourceUrl:'http://example.org/study',testDate:'2026-01-01'}).length);
  console.log('Pack evidence boundary tests passed — no physical V1 pack validated.');
 }
