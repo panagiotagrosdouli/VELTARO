@@ -13,5 +13,5 @@ for(let i=0;i<9;i++){
  for(const h of fields[1].split(';')) assert.ok(hazard.includes('"'+h+'"'));
  for(const e of fields[3].split(';')) assert.ok(evidence.includes('"'+e+'"'));
 }
-assert.ok(readFileSync('v1-evidence-dashboard.html','utf8').includes('v1-subsystem-hazard-dependencies.csv'));
+assert.ok(readFileSync('docs/VELTARO-V1-Subsystem-Hazard-Dependencies-2026.md','utf8').includes('v1-subsystem-hazard-dependencies.csv'));
 console.log('Proposed subsystem references checked.');
