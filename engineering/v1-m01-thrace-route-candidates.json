@@ -1,0 +1,58 @@
+{
+  "study": "M-01-THRACE-02",
+  "date": "2026-10-20",
+  "scope": "Provisional Alexandroupolis/Thrace desk-study only",
+  "operational_authorization": false,
+  "candidates": [
+    {
+      "id": "R-01",
+      "architecture": "TRANSFORMING_WING",
+      "research_anchor": "Alexandroupolis airport LGAL",
+      "departure_site": "LGAL (existing aerodrome; VELTARO access NOT established)",
+      "arrival_site": null,
+      "origin": null,
+      "destination": null,
+      "route_legal": false,
+      "source": [
+        "https://www.hcaa.gr/en/our-airports/kratikos-aerolimenas-alejandroypolhs-dhmokritos-kaald",
+        "https://aisgr.hasp.gov.gr/aipgr_incl_amdt_0326_wef_16apr2026/cd/ais/eaip/pdf/AD%202/AD2-LGAL/LG_AD_2_LGAL_en.pdf"
+      ],
+      "evidence_gaps": [
+        "Approved destination aerodrome",
+        "Aircraft approval and pilot privileges",
+        "Operator/site consent",
+        "Ground-leg legality and payload",
+        "Airspace and route feasibility"
+      ],
+      "status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "id": "V-01",
+      "architecture": "VTOL",
+      "research_anchor": "Alexandroupolis/Thrace (geographic scope only)",
+      "departure_site": null,
+      "arrival_site": null,
+      "origin": null,
+      "destination": null,
+      "route_legal": false,
+      "source": [],
+      "evidence_gaps": [
+        "Suitable lawful vertical departure site",
+        "Suitable lawful vertical arrival site",
+        "Powered-lift certification/operation pathway",
+        "Operator/site consent",
+        "Ground-leg legality and payload"
+      ],
+      "status": "BLOCKED_UNVERIFIED"
+    }
+  ],
+  "shared_inputs": {
+    "jurisdiction": "Greece (regulatory review pending)",
+    "occupants": null,
+    "road_distance_km": null,
+    "air_distance_km": null,
+    "pack_specific_energy_Wh_kg": null,
+    "flight_energy_kWh": null
+  },
+  "decision": "HOLD_BOTH"
+}
