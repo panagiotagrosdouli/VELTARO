@@ -1,0 +1,11 @@
+import {readFileSync} from 'node:fs';import assert from 'node:assert/strict';
+const h=readFileSync('engineering/v1-hazard-register.csv','utf8').trim().split(/\r?\n/);
+const t=readFileSync('engineering/v1-hazard-requirement-trace.csv','utf8').trim().split(/\r?\n/);
+assert.equal(h.length,13);
+assert.equal(t.length,13);
+const ids=[...h.slice(1)].map(x=>x.split(',')[0]);
+const links=t.slice(1).map(x=>x.match(/^"(HZ-\d{2})","(REQ-SAF-\d{2})"/)).map(m=>{assert.ok(m);return m[1]});
+assert.equal(new Set(links).size,12);
+assert.deepEqual(links,ids);
+assert.ok(t.slice(1).every(line=>line.includes('Proposed - unverified')));
+console.log('All 12 proposed requirements map one-to-one to registered hazards; no closure implied.');
