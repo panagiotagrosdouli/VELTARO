@@ -1,0 +1,8 @@
+gate,runway_transforming_wing,vtol,minimum_evidence,decision_state
+Legal access,Missing,Missing,Jurisdiction and independently reviewed site authorization pathways,HOLD
+Payload mission,Missing,Missing,Common mission and occupant mass baseline,HOLD
+Power and energy,Unverified,Unverified,Source-traceable pack-level energy and peak-power scenario comparison,HOLD
+Safety assessment,Unreviewed,Unreviewed,Qualified architecture-specific review and open hazard dispositions,HOLD
+Shared interfaces,Unreviewed,Unreviewed,Independent common-cause and interface boundary assessment,HOLD
+Regulatory pathway,Unresolved,Unresolved,Qualified combined road and aviation regulatory analysis,HOLD
+Commercial merit,Unknown,Unknown,Comparable cost and customer utility evidence,HOLD
