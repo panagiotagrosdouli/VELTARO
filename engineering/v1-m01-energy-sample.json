@@ -1,0 +1,40 @@
+{
+  "status": "ILLUSTRATIVE_ONLY",
+  "shared": {
+    "dryMassKg": 900,
+    "payloadKg": 180,
+    "usablePackWhPerKg": 150,
+    "reserveFraction": 0.2
+  },
+  "variants": {
+    "VTOL": {
+      "phases": [
+        {
+          "name": "hover",
+          "durationHours": 0.05,
+          "powerKWPerKg": 0.055
+        },
+        {
+          "name": "wing_or_transit",
+          "durationHours": 0.25,
+          "powerKWPerKg": 0.014
+        }
+      ]
+    },
+    "TRANSFORMING_WING": {
+      "phases": [
+        {
+          "name": "takeoff_climb",
+          "durationHours": 0.06,
+          "powerKWPerKg": 0.022
+        },
+        {
+          "name": "wingborne_cruise",
+          "durationHours": 0.25,
+          "powerKWPerKg": 0.009
+        }
+      ]
+    }
+  },
+  "notes": "Entirely hypothetical educational inputs, not VELTARO design figures, performance or authorized operation."
+}
