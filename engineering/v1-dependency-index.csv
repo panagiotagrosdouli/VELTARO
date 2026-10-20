@@ -1,0 +1,9 @@
+id,architecture,dependency,cca_links,status
+DEP-01,VTOL,Power continuity,CCA-01;CCA-06,Unreviewed
+DEP-02,VTOL,Computing independence,CCA-02;CCA-05,Unreviewed
+DEP-03,VTOL,Sensor common causes,CCA-03,Unreviewed
+DEP-04,VTOL,Readiness indication and authorization,CCA-04,Unreviewed
+DEP-05,Transforming wing,Wing locking and structure,CCA-07,Unreviewed
+DEP-06,Transforming wing,Controller and sensor agreement,CCA-02;CCA-03;CCA-05,Unreviewed
+DEP-07,Transforming wing,Conversion lockout and maintenance,CCA-04;CCA-08,Unreviewed
+DEP-08,Both,Power thermal and maintenance,CCA-01;CCA-06;CCA-08,Unreviewed
