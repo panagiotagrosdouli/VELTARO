@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.1",
+  "mission_id": "M-01",
+  "status": "UNVERIFIED_CONCEPT",
+  "reference_date": "2026-10-20",
+  "jurisdiction": null,
+  "origin": null,
+  "destination": null,
+  "assumptions": {
+    "occupant_count": null,
+    "occupant_mass_kg": null,
+    "luggage_mass_kg": null,
+    "vehicle_empty_mass_kg": null,
+    "road_leg_origin_km": null,
+    "road_leg_destination_km": null,
+    "flight_route_km": null,
+    "environment_wind_mps": null,
+    "reserve_basis": null,
+    "usable_pack_specific_energy_Wh_per_kg": null
+  },
+  "architectures": {
+    "VTOL": {
+      "departure_facility": null,
+      "arrival_facility": null,
+      "facility_authorization_evidence": null,
+      "flight_phase_energy_kWh": null,
+      "peak_electrical_power_kW": null,
+      "structural_mass_kg": null,
+      "risks": [
+        "HZ-05",
+        "HZ-08",
+        "HZ-12"
+      ]
+    },
+    "TRANSFORMING_WING": {
+      "departure_facility": null,
+      "arrival_facility": null,
+      "facility_authorization_evidence": null,
+      "flight_phase_energy_kWh": null,
+      "peak_electrical_power_kW": null,
+      "structural_mass_kg": null,
+      "risks": [
+        "HZ-04",
+        "HZ-06",
+        "HZ-12"
+      ]
+    }
+  },
+  "validation": {
+    "legal_site_access_confirmed": false,
+    "source_review_completed": false,
+    "independent_safety_review_completed": false,
+    "decision": "HOLD_BOTH"
+  }
+}
