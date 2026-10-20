@@ -1,0 +1,13 @@
+hazard_id,requirement_id,draft_safety_requirement,proposed_evidence,required_review,status
+"HZ-01","REQ-SAF-01","Separate road propulsion permission from aircraft propulsion readiness","Architecture and independence assessment","Independent review","Proposed - unverified"
+"HZ-02","REQ-SAF-02","Require positive site authority verification before flight readiness","Procedure and authorization evidence review","Regulatory expert review","Proposed - unverified"
+"HZ-03","REQ-SAF-03","Prevent conversion movement when people can access mechanism hazards","Mechanism hazard analysis and guarded test plan","Safety engineer review","Proposed - unverified"
+"HZ-04","REQ-SAF-04","Require independently supported wing lock and deployed configuration evidence","Fault tree and structural assurance evidence","Aerospace structural review","Proposed - unverified"
+"HZ-05","REQ-SAF-05","Establish survivable response and reserve strategy for VTOL lift loss","Propulsion failure analysis and energy reserve verification","Flight safety review","Proposed - unverified"
+"HZ-06","REQ-SAF-06","Require verified runway and approach margins for specified conditions","Mission-level runway performance evaluation","Flight performance review","Proposed - unverified"
+"HZ-07","REQ-SAF-07","Detect and handle degraded or conflicting flight critical sensor data","Fault injection plan and safety assessment","Flight controls review","Proposed - unverified"
+"HZ-08","REQ-SAF-08","Contain or isolate battery and HV faults without relying on operator timing","Battery pack thermal and electrical safety evidence","Electrical safety review","Proposed - unverified"
+"HZ-09","REQ-SAF-09","Distinguish request, check, authorization and readiness indications","Human factors task validation and formal state review","Human factors review","Proposed - unverified"
+"HZ-10","REQ-SAF-10","Inhibit conversion after touchdown absent defined secure ground state","Transition fault scenario verification","Systems safety review","Proposed - unverified"
+"HZ-11","REQ-SAF-11","Provide lockout and stored energy isolation for maintenance","Maintenance process validation and hazard review","Maintenance safety review","Proposed - unverified"
+"HZ-12","REQ-SAF-12","Identify and assess common cause failures across shared road flight systems","Independence analysis and common cause evaluation","Independent systems review","Proposed - unverified"
