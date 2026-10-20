@@ -1,0 +1,5 @@
+tree_id,architecture,top_event,linked_hazards,linked_requirements,status
+FT-01,VTOL,Controlled lift unavailable,HZ-05;HZ-07;HZ-12,REQ-SAF-05;REQ-SAF-07;REQ-SAF-12,Unreviewed
+FT-02,Transforming wing,Unsafe wing configuration in flight,HZ-04;HZ-09;HZ-12,REQ-SAF-04;REQ-SAF-09;REQ-SAF-12,Unreviewed
+FT-03,Both,Critical electrical energy unavailable,HZ-08;HZ-12,REQ-SAF-08;REQ-SAF-12,Unreviewed
+FT-04,Fixed-wing,Runway or flight-path margin unavailable,HZ-06;HZ-09,REQ-SAF-06;REQ-SAF-09,Unreviewed
