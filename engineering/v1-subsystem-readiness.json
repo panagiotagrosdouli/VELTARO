@@ -1,0 +1,128 @@
+{
+  "version": "0.1",
+  "as_of": "2026-10-20",
+  "scope": "CONCEPT_ONLY",
+  "decision": "HOLD_BOTH",
+  "readiness_definition": "Documentation tracking, not TRL, hardware readiness, safety or certification",
+  "subsystems": [
+    {
+      "id": "SYS-01",
+      "name": "Road chassis, brakes & crash protection",
+      "priority_links": [
+        "EV-04"
+      ],
+      "evidence_state": "UNKNOWN",
+      "independent_review": false,
+      "measured_mass_kg": null,
+      "measured_peak_kw": null,
+      "readiness": "NOT_ASSESSED",
+      "next_evidence": "Traceable architecture-specific subsystem mass, functions, and safety assessment"
+    },
+    {
+      "id": "SYS-02",
+      "name": "Aviation primary structure",
+      "priority_links": [
+        "EV-04",
+        "EV-05"
+      ],
+      "evidence_state": "UNKNOWN",
+      "independent_review": false,
+      "measured_mass_kg": null,
+      "measured_peak_kw": null,
+      "readiness": "NOT_ASSESSED",
+      "next_evidence": "Traceable architecture-specific subsystem mass, functions, and safety assessment"
+    },
+    {
+      "id": "SYS-03",
+      "name": "Flight motors & power electronics",
+      "priority_links": [
+        "EV-03",
+        "EV-04",
+        "EV-05",
+        "EV-06"
+      ],
+      "evidence_state": "UNKNOWN",
+      "independent_review": false,
+      "measured_mass_kg": null,
+      "measured_peak_kw": null,
+      "readiness": "NOT_ASSESSED",
+      "next_evidence": "Architecture-specific phase electric power measurements"
+    },
+    {
+      "id": "SYS-04",
+      "name": "Installed battery pack & cooling",
+      "priority_links": [
+        "EV-02",
+        "EV-03",
+        "EV-04"
+      ],
+      "evidence_state": "UNKNOWN",
+      "independent_review": false,
+      "measured_mass_kg": null,
+      "measured_peak_kw": null,
+      "readiness": "NOT_ASSESSED",
+      "next_evidence": "Installed usable battery pack performance and thermal qualification"
+    },
+    {
+      "id": "SYS-05",
+      "name": "Road propulsion",
+      "priority_links": [],
+      "evidence_state": "UNKNOWN",
+      "independent_review": false,
+      "measured_mass_kg": null,
+      "measured_peak_kw": null,
+      "readiness": "NOT_ASSESSED",
+      "next_evidence": "Traceable architecture-specific subsystem mass, functions, and safety assessment"
+    },
+    {
+      "id": "SYS-06",
+      "name": "Flight controls and sensors",
+      "priority_links": [
+        "EV-08"
+      ],
+      "evidence_state": "UNKNOWN",
+      "independent_review": false,
+      "measured_mass_kg": null,
+      "measured_peak_kw": null,
+      "readiness": "NOT_ASSESSED",
+      "next_evidence": "Traceable architecture-specific subsystem mass, functions, and safety assessment"
+    },
+    {
+      "id": "SYS-07",
+      "name": "Conversion / rotor protections",
+      "priority_links": [
+        "EV-07"
+      ],
+      "evidence_state": "UNKNOWN",
+      "independent_review": false,
+      "measured_mass_kg": null,
+      "measured_peak_kw": null,
+      "readiness": "NOT_ASSESSED",
+      "next_evidence": "Independent locks/guarding and failure case review"
+    },
+    {
+      "id": "SYS-08",
+      "name": "Cockpit and human-machine interface",
+      "priority_links": [],
+      "evidence_state": "UNKNOWN",
+      "independent_review": false,
+      "measured_mass_kg": null,
+      "measured_peak_kw": null,
+      "readiness": "NOT_ASSESSED",
+      "next_evidence": "Traceable architecture-specific subsystem mass, functions, and safety assessment"
+    },
+    {
+      "id": "SYS-09",
+      "name": "Thermal, wiring and auxiliary services",
+      "priority_links": [
+        "EV-08"
+      ],
+      "evidence_state": "UNKNOWN",
+      "independent_review": false,
+      "measured_mass_kg": null,
+      "measured_peak_kw": null,
+      "readiness": "NOT_ASSESSED",
+      "next_evidence": "Traceable architecture-specific subsystem mass, functions, and safety assessment"
+    }
+  ]
+}
