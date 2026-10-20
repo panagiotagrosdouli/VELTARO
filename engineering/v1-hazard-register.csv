@@ -1,0 +1,13 @@
+id,phase,architecture,hazard,possible_consequence,initial_severity,controls_to_evaluate,verification_needed,status,reviewer
+HZ-01,Road,Both,Uncommanded propulsion while on public road,Collision or loss of control,Catastrophic,Independent propulsion inhibit and safe-stop state,Hazard analysis plus independent verification,Unreviewed,TBD
+HZ-02,Site check,Both,Unauthorized or unsuitable takeoff location,Injury or unlawful operations,Catastrophic,Site authorization and go-no-go procedures,Regulatory and operational expert review,Unreviewed,TBD
+HZ-03,Conversion,Both,Mechanism operates while occupied traffic or bystanders are exposed,Crush or strike injury,Hazardous,Physical separation plus interlocks and fault monitoring,Mechanism FMEA and supervised tests,Unreviewed,TBD
+HZ-04,Conversion,Transforming wing,Incomplete wing deployment or lock verification,Structural failure in flight,Catastrophic,Redundant configuration evidence and independent lock verification,Design review and structural tests,Unreviewed,TBD
+HZ-05,Flight,VTOL,Loss of lift or insufficient power reserve,Uncontrolled descent,Catastrophic,Power and propulsion redundancy study and reserve policy,Failure analysis and verified test evidence,Unreviewed,TBD
+HZ-06,Flight,Fixed-wing,Insufficient runway or approach margins,Overrun or loss of control,Catastrophic,Runway suitability and operating limitations,Qualified flight performance modeling,Unreviewed,TBD
+HZ-07,Flight,Both,Erroneous flight-critical sensor estimate,Loss of control,Catastrophic,Sensor integrity monitoring and validated fallback,Fault injection and flight controls safety assessment,Unreviewed,TBD
+HZ-08,Flight,Both,Battery thermal runaway or high voltage fault,Fire or smoke and loss of power,Catastrophic,Containment isolation monitoring and emergency procedures,Pack evidence and qualified electrical/thermal review,Unreviewed,TBD
+HZ-09,Flight,Both,Human machine interface indicates false ready status,Unsafe pilot decision,Hazardous,Explicit requested versus checked versus authorized states,Human factors testing and traceable state logic,Unreviewed,TBD
+HZ-10,Landing,Both,Uncommanded reconfiguration following touchdown,Struck persons or structural damage,Hazardous,Weight-on-wheels state checks and lockout,Scenario-based systems safety review,Unreviewed,TBD
+HZ-11,Maintenance,Both,Unexpected actuation while serviced,Crush or electrocution,Hazardous,Isolation lockout and stored-energy management,Maintainability risk review,Unreviewed,TBD
+HZ-12,All,Both,Common cause failure in shared road and flight systems,Loss of multiple independent protections,Catastrophic,Architecture separation and common cause assessment,Independent functional safety review,Unreviewed,TBD
