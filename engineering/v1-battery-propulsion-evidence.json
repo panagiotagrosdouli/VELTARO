@@ -1,0 +1,94 @@
+{
+  "version": "0.1",
+  "review_date": "2026-10-20",
+  "vehicle_validation": false,
+  "sources": [
+    {
+      "id": "SRC-01",
+      "url": "https://ntrs.nasa.gov/citations/20210017488",
+      "publisher": "NASA Glenn",
+      "publication_year": 2021,
+      "topic": "cell-to-pack scaling",
+      "supported_claim": "Installed battery pack gravimetric energy density cannot be reliably inferred using a universal cell-to-pack penalty; pack requirements and thermal/structural margins vary.",
+      "data_boundary": "Research literature; no VELTARO measured installed pack values",
+      "status": "SOURCE_METADATA_REVIEWED_ONLY"
+    },
+    {
+      "id": "SRC-02",
+      "url": "https://ntrs.nasa.gov/citations/20250006187",
+      "publisher": "NASA Ames",
+      "publication_year": 2025,
+      "topic": "mission and architecture sensitivity",
+      "supported_claim": "Mission range, propulsion efficiency, rotor design, motor weight, and installed usable battery Wh/kg strongly affect AAM sizing in NASA concept models.",
+      "data_boundary": "NASA AAM concept studies are not measurements of a roadable VELTARO system",
+      "status": "SOURCE_METADATA_REVIEWED_ONLY"
+    },
+    {
+      "id": "SRC-03",
+      "url": "https://www.cambridge.org/core/journals/aeronautical-journal/article/nasa-concept-vehicles-and-the-engineering-of-advanced-air-mobility-aircraft/AA7E668D759491B1889299819A2F2715",
+      "publisher": "Cambridge University Press / The Aeronautical Journal",
+      "publication_year": null,
+      "topic": "example advanced air mobility conceptual assumptions",
+      "supported_claim": "AAM concept comparisons require architecture- and mission-matched assumptions; illustrative battery targets must not be represented as measured VELTARO pack performance.",
+      "data_boundary": "Secondary research; no direct VELTARO supplier characterization or test record",
+      "status": "BACKGROUND_ONLY"
+    }
+  ],
+  "required_vehicle_records": [
+    {
+      "id": "BATT-01",
+      "measure": "Usable installed pack energy density",
+      "unit": "Wh/kg",
+      "value": null,
+      "measurement_source_id": null,
+      "reviewer": null,
+      "status": "MISSING"
+    },
+    {
+      "id": "BATT-02",
+      "measure": "Continuous discharge power at stated SOC and temperature",
+      "unit": "kW",
+      "value": null,
+      "measurement_source_id": null,
+      "reviewer": null,
+      "status": "MISSING"
+    },
+    {
+      "id": "BATT-03",
+      "measure": "Peak discharge power and permissible duration",
+      "unit": "kW and s",
+      "value": null,
+      "measurement_source_id": null,
+      "reviewer": null,
+      "status": "MISSING"
+    },
+    {
+      "id": "PROP-01",
+      "measure": "VTOL propulsion electric power by flight phase",
+      "unit": "kW",
+      "value": null,
+      "measurement_source_id": null,
+      "reviewer": null,
+      "status": "MISSING"
+    },
+    {
+      "id": "PROP-02",
+      "measure": "Winged aircraft propulsion electric power by flight phase",
+      "unit": "kW",
+      "value": null,
+      "measurement_source_id": null,
+      "reviewer": null,
+      "status": "MISSING"
+    },
+    {
+      "id": "THERM-01",
+      "measure": "Installed-pack thermal rejection and containment",
+      "unit": "W and conditions",
+      "value": null,
+      "measurement_source_id": null,
+      "reviewer": null,
+      "status": "MISSING"
+    }
+  ],
+  "decision": "HOLD_BOTH"
+}
