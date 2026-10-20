@@ -1,0 +1,11 @@
+id,priority,evidence_gap,architecture,source_link,missing_measure_or_decision,acceptance_evidence,status
+"EV-01","P0","Legal infrastructure and route eligibility","BOTH","M-01","Site pair and road/air regulatory pathway","Qualified legal and aviation review","BLOCKED"
+"EV-02","P0","Usable pack-level specific energy","BOTH","SYS-04","Installed usable Wh/kg at applicable duty","Pack-level primary test evidence and integration assumptions","MISSING"
+"EV-03","P0","Sustained and peak electrical power","VTOL","SYS-03;SYS-04","Hover and transition duty at stated mass/conditions","Source-backed power/discharge/thermal tests","MISSING"
+"EV-04","P0","Integrated subsystem mass ledger","BOTH","SYS-01;SYS-02;SYS-03;SYS-04","Dry structure and powertrain mass with provenance","Reviewed CAD BOM and source-specific mass evidence","MISSING"
+"EV-05","P1","Wing-borne performance and runway margins","TRANSFORMING_WING","SYS-02;SYS-03","Takeoff/climb/cruise and landing under documented conditions","Qualified aerodynamic and runway analysis","MISSING"
+"EV-06","P1","Propulsion efficiency maps","BOTH","SYS-03","Operating-point efficiency vs power and thermal load","Independent relevant propulsion measurements","MISSING"
+"EV-07","P1","Conversion mechanism and locking integrity","TRANSFORMING_WING","HZ-04;CCA-07","Structural load and failure cases","Independent structural and safety review","UNREVIEWED"
+"EV-08","P1","Common-cause power and controls separation","BOTH","HZ-12;CCA-01;CCA-02","Failure containment across road and flight","Qualified architecture assessment","UNREVIEWED"
+"EV-09","P2","Mission durations and environmental envelope","BOTH","M-01","Route, wind and alternate conditions","Authorized site and meteorology evidence","MISSING"
+"EV-10","P2","Development and operation cost baseline","BOTH","M-01","Comparable lifecycle and approval costs","Auditable scoped cost estimates","MISSING"
