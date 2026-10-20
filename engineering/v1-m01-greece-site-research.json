@@ -1,0 +1,32 @@
+{
+  "study_id": "M01-GR-01",
+  "status": "PUBLIC_DESK_RESEARCH_ONLY",
+  "date": "2026-10-20",
+  "country": "Greece",
+  "research_area": "Alexandroupolis / Thrace (provisional, not founder-approved)",
+  "candidate_runway_facility": {
+    "name": "Alexandroupolis Airport Dimokritos",
+    "icao": "LGAL",
+    "evidence_urls": [
+      "https://www.hcaa.gr/en/our-airports/kratikos-aerolimenas-alejandroypolhs-dhmokritos-kaald",
+      "https://aisgr.hasp.gov.gr/aipgr_incl_amdt_0326_wef_16apr2026/cd/ais/eaip/pdf/AD%202/AD2-LGAL/LG_AD_2_LGAL_en.pdf"
+    ],
+    "exists_as_aerodrome": true,
+    "veltaros_access_approved": false
+  },
+  "candidate_vtol_facility": {
+    "name": null,
+    "location": null,
+    "operating_permission_confirmed": false,
+    "public_source": null
+  },
+  "origin": null,
+  "destination": null,
+  "passengers": null,
+  "payload_kg": null,
+  "road_route_km": null,
+  "flight_route_km": null,
+  "energy_required_kWh": null,
+  "regulatory_review_completed": false,
+  "decision": "HOLD_BOTH"
+}
