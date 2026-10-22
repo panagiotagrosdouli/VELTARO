@@ -64,7 +64,7 @@ for (const [label,html,path] of [['homepage',homepage,''],['early interest',inte
  check(html.includes('property="og:url" content="'+url+'"'),label+' social URL');
  check(html.includes('property="og:description"'),label+' social description');
 }
-check(privacyPage.includes('mailto:panagiotagrosdouli@gmail.com'),'privacy inquiry contact is reachable');
-check(privacyPage.includes('customer research form'),'privacy notice mentions separate research form');
+check(readFileSync(resolve(root,'privacy.html'),'utf8').includes('mailto:panagiotagrosdouli@gmail.com'),'privacy inquiry contact is reachable');
+check(readFileSync(resolve(root,'privacy.html'),'utf8').includes('customer research form'),'privacy notice mentions separate research form');
 console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
 if(failures)process.exitCode=1;
