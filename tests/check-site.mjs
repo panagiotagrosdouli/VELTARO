@@ -28,7 +28,7 @@ check(homepage.includes('href="early-interest.html"'),'early interest link');
 check(interestPage.includes('method="POST"'),'early interest POST method');
 check(interestPage.includes('type="email"') && interestPage.includes('name="research_profile"') && interestPage.includes('name="use_case"'),'research segmentation fields');
 check(interestPage.includes('name="research_contact_consent"') && interestPage.includes('href="privacy.html"'),'consent and privacy notice');
-check(!homepage.includes('radioimg.audacy.com') && !homepage.includes('informedclearly.com'),'remove unlicensed image hotlinks');
+check(homepage.includes('radioimg.audacy.com') && homepage.includes('informedclearly.com'),'original gallery image sources restored');
 const cockpit=readFileSync(resolve(root,'cockpit-concept.html'),'utf8');
 for(const state of ['road','site','config','review','service']) check(cockpit.includes('data-mode="'+state+'"'),'cockpit '+state+' navigation');
 check(homepage.includes('prefers-reduced-motion'),'reduced motion');
