@@ -79,8 +79,14 @@ check(homepage.includes('prefers-reduced-motion:reduce'),'reduced motion styling
 check(homepage.includes('IntersectionObserver'),'progressive scroll reveals');
 check(homepage.includes('class="scroll-progress"'),'reading progress indicator');
 check(!homepage.includes('VISION SYSTEM / 2070'),'no future year presented in interface');
-check(homepage.includes('VISION SYSTEM / ACTIVE'),'neutral animated interface label');
+check(homepage.includes('CONCEPT EXPLORATION'),'neutral animated interface label');
 check(homepage.includes('.product-card:hover'),'sitewide card interaction');
 check(homepage.includes('.section>.split,.product-card,.box,.step'),'sitewide scroll effects');
+check(!homepage.includes('2070'),'no year label in homepage source');
+check(homepage.includes('id="experience"'),'interactive experience section');
+check(homepage.includes('id="team"'),'team section');
+check(homepage.includes('role="tablist"'),'experience tablist semantics');
+for(const view of ['road','flight','cockpit']) check(homepage.includes('id="panel-'+view+'"'),'experience '+view+' panel');
+check(homepage.includes('Not yet appointed'),'honest future role status');
 console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
 if(failures)process.exitCode=1;
