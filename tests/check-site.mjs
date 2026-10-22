@@ -69,5 +69,9 @@ check(readFileSync(resolve(root,'privacy.html'),'utf8').includes('customer resea
 check(homepage.includes('CONCEPT STAGE · INDEPENDENT PROJECT'),'pre-company status visible on homepage');
 check(homepage.includes('href="early-interest.html">Join early research'),'clear research CTA');
 check(homepage.includes('href="collaborate.html">Explore collaboration'),'clear collaboration CTA');
+check(homepage.includes('class="skip-link" href="#main-content"'),'keyboard skip navigation');
+check(homepage.includes('<main id="main-content">'),'accessible main landmark');
+check(homepage.includes('class="nav-cta" href="early-interest.html"'),'persistent research nav CTA');
+check(homepage.includes('href="#faq">FAQ</a>'),'FAQ available from navigation');
 console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
 if(failures)process.exitCode=1;
