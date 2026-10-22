@@ -25,6 +25,8 @@ check(homepage.includes('href="privacy.html"'),'privacy link');
 check(homepage.includes('href="cockpit-concept.html"'),'V1 cockpit link');
 const interestPage=readFileSync(resolve(root,'early-interest.html'),'utf8');
 check(homepage.includes('href="early-interest.html"'),'early interest link');
+check(/<form\\b[^>]*\\bid="interest-form"[^>]*>/.test(interestPage),'early interest valid form opening tag');
+check(!/<form\\b[^>]*<input/.test(interestPage),'form opening tag cannot swallow input');
 check(interestPage.includes('method="POST"'),'early interest POST method');
 check(interestPage.includes('type="email"') && interestPage.includes('name="research_profile"') && interestPage.includes('name="use_case"'),'research segmentation fields');
 check(interestPage.includes('name="research_contact_consent"') && interestPage.includes('href="privacy.html"'),'consent and privacy notice');
