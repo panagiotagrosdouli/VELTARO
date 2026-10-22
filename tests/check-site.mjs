@@ -50,5 +50,9 @@ const cockpit=readFileSync(resolve(root,'cockpit-concept.html'),'utf8');
 for(const state of ['road','site','config','review','service']) check(cockpit.includes('data-mode="'+state+'"'),'cockpit '+state+' navigation');
 check(homepage.includes('prefers-reduced-motion'),'reduced motion');
 check(homepage.includes('const productImages=[')&&homepage.includes('const droneImages=['),'product image arrays');
+for(const [field,limit] of [['name',100],['email',200],['interest',160],['message',1500]]) {
+ const attrs=homepage.split('name="'+field+'"')[1]?.split('>')[0]||'';
+ check(attrs.includes('maxlength="'+limit+'"'),'contact field '+field+' length limit');
+}
 console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
 if(failures)process.exitCode=1;
