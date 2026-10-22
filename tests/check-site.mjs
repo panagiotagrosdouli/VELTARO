@@ -73,5 +73,10 @@ check(homepage.includes('class="skip-link" href="#main-content"'),'keyboard skip
 check(homepage.includes('<main id="main-content">'),'accessible main landmark');
 check(homepage.includes('class="nav-cta" href="early-interest.html"'),'persistent research nav CTA');
 check(homepage.includes('href="#faq">FAQ</a>'),'FAQ available from navigation');
+check(homepage.includes('class="future-atmosphere"'),'2070 atmospheric hero');
+check(homepage.includes('id="motion-toggle"'),'visitor motion control');
+check(homepage.includes('prefers-reduced-motion:reduce'),'reduced motion styling');
+check(homepage.includes('IntersectionObserver'),'progressive scroll reveals');
+check(homepage.includes('class="scroll-progress"'),'reading progress indicator');
 console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
 if(failures)process.exitCode=1;
