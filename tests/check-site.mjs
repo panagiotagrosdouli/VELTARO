@@ -66,5 +66,8 @@ for (const [label,html,path] of [['homepage',homepage,''],['early interest',inte
 }
 check(readFileSync(resolve(root,'privacy.html'),'utf8').includes('mailto:panagiotagrosdouli@gmail.com'),'privacy inquiry contact is reachable');
 check(readFileSync(resolve(root,'privacy.html'),'utf8').includes('customer research form'),'privacy notice mentions separate research form');
+check(homepage.includes('INDEPENDENT STARTUP PROJECT · PRE-INCORPORATION'),'pre-company status visible on homepage');
+check(homepage.includes('href="early-interest.html">Share your mobility needs'),'clear research CTA');
+check(homepage.includes('href="collaborate.html">Explore collaboration'),'clear collaboration CTA');
 console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
 if(failures)process.exitCode=1;
