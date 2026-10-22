@@ -108,5 +108,7 @@ check(homepage.includes('aria-pressed="true"'),'accessible guide selection');
 check(homepage.includes('id="behind-the-concept"'),'behind the concept section');
 check(homepage.includes('data-step="2"'),'three interactive research perspectives');
 check(homepage.includes('not verified project milestones'),'no fabricated milestone claims');
+check(homepage.includes('id="project-snapshot"'),'project snapshot is present');
+check(homepage.includes('Concept &amp; research stage'),'honest project status');
 console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
 if(failures)process.exitCode=1;
