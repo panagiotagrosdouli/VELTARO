@@ -54,5 +54,9 @@ for(const [field,limit] of [['name',100],['email',200],['interest',160],['messag
  const attrs=homepage.split('name="'+field+'"')[1]?.split('>')[0]||'';
  check(attrs.includes('maxlength="'+limit+'"'),'contact field '+field+' length limit');
 }
+const sitemap=readFileSync('sitemap.xml','utf8');
+const robots=readFileSync('robots.txt','utf8');
+check(robots.includes('Sitemap: https://panagiotagrosdouli.github.io/VELTARO/sitemap.xml'),'robots sitemap link');
+for(const route of ['','early-interest.html','collaborate.html','cockpit-concept.html','privacy.html']) check(sitemap.includes('https://panagiotagrosdouli.github.io/VELTARO/'+route+'</loc>'),'sitemap route '+(route||'homepage'));
 console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
 if(failures)process.exitCode=1;
