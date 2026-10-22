@@ -34,6 +34,10 @@ check(homepage.includes('radioimg.audacy.com') && homepage.includes('informedcle
 check(homepage.includes('name="contact_consent"'),'contact form captures consent');
 check(homepage.includes('name="_captcha"') && interestPage.includes('name="_captcha"'),'inquiry forms anti-spam enabled');
 check(homepage.includes('name="_autoresponse"') && interestPage.includes('name="_autoresponse"'),'inquiry forms acknowledgment configured');
+check(homepage.includes('action="https://formsubmit.co/panagiotagrosdouli@gmail.com"'),'contact form recipient');
+check(interestPage.includes('action="https://formsubmit.co/panagiotagrosdouli@gmail.com"'),'customer form recipient');
+check(homepage.includes('name="_subject" value="VELTARO | New Website Contact Message"'),'contact email subject');
+check(interestPage.includes('name="_subject" value="VELTARO | New Potential Customer Inquiry"'),'customer email subject');
 const cockpit=readFileSync(resolve(root,'cockpit-concept.html'),'utf8');
 for(const state of ['road','site','config','review','service']) check(cockpit.includes('data-mode="'+state+'"'),'cockpit '+state+' navigation');
 check(homepage.includes('prefers-reduced-motion'),'reduced motion');
