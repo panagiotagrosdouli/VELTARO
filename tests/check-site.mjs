@@ -3,7 +3,7 @@ import {readFileSync,existsSync} from 'node:fs';
 import {resolve,dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
-const pages=['index.html','collaborate.html','privacy.html','cockpit-concept.html'];
+const pages=['index.html','collaborate.html','privacy.html','cockpit-concept.html','early-interest.html'];
 let failures=0;
 function check(ok,label){console.log((ok?'PASS':'FAIL')+' '+label);if(!ok)failures++}
 for(const page of pages){
@@ -23,6 +23,12 @@ const homepage=readFileSync(resolve(root,'index.html'),'utf8');
 check(homepage.includes('href="collaborate.html"'),'collaboration link');
 check(homepage.includes('href="privacy.html"'),'privacy link');
 check(homepage.includes('href="cockpit-concept.html"'),'V1 cockpit link');
+const interestPage=readFileSync(resolve(root,'early-interest.html'),'utf8');
+check(homepage.includes('href="early-interest.html"'),'early interest link');
+check(interestPage.includes('method="POST"'),'early interest POST method');
+check(interestPage.includes('type="email"') && interestPage.includes('name="research_profile"') && interestPage.includes('name="use_case"'),'research segmentation fields');
+check(interestPage.includes('name="research_contact_consent"') && interestPage.includes('href="privacy.html"'),'consent and privacy notice');
+check(!homepage.includes('radioimg.audacy.com') && !homepage.includes('informedclearly.com'),'remove unlicensed image hotlinks');
 const cockpit=readFileSync(resolve(root,'cockpit-concept.html'),'utf8');
 for(const state of ['road','site','config','review','service']) check(cockpit.includes('data-mode="'+state+'"'),'cockpit '+state+' navigation');
 check(homepage.includes('prefers-reduced-motion'),'reduced motion');
