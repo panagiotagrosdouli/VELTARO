@@ -39,11 +39,11 @@ check(interestPage.includes('action="https://formsubmit.co/panagiotagrosdouli@gm
 check(homepage.includes('name="_subject" value="VELTARO | New Website Contact Message"'),'contact email subject');
 check(interestPage.includes('name="_subject" value="VELTARO | New Potential Customer Inquiry"'),'customer email subject');
 for (const [name,html] of [['contact',homepage],['customer',interestPage]]) {
- const forms=[...html.matchAll(/<form\\b[^>]*>/g)].map(m=>m[0]);
+ const forms=[...html.matchAll(/<form\b[^>]*>/g)].map(m=>m[0]);
  check(forms.length===1,name+' exactly one form');
  check(forms[0]?.includes('method="POST"') && forms[0]?.includes('https://formsubmit.co/'),name+' actual POST action');
  check((html.match(new RegExp('</form>', 'g'))||[]).length===1,name+' form closes');
- check(!/<form\\b[^>]*<input/.test(html),name+' opening markup clean');
+ check(!/<form\b[^>]*<input/.test(html),name+' opening markup clean');
  for(const field of ['name="name"','name="email"','name="message"','name="_subject"']) check(html.includes(field),name+' required field '+field);
 }
 const cockpit=readFileSync(resolve(root,'cockpit-concept.html'),'utf8');
