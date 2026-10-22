@@ -110,5 +110,8 @@ check(homepage.includes('data-step="2"'),'three interactive research perspective
 check(homepage.includes('not verified project milestones'),'no fabricated milestone claims');
 check(homepage.includes('id="project-snapshot"'),'project snapshot is present');
 check(homepage.includes('Concept &amp; research stage'),'honest project status');
+check(homepage.includes('class="start-section premium-showroom"'),'premium showroom replaces start grid');
+check(homepage.includes('class="showroom-tab"'),'accessible showroom mode tabs');
+check(homepage.includes('id="showroom-photo"'),'existing-photo showroom');
 console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
 if(failures)process.exitCode=1;
