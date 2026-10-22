@@ -52,3 +52,8 @@ check(homepage.includes('prefers-reduced-motion'),'reduced motion');
 check(homepage.includes('const productImages=[')&&homepage.includes('const droneImages=['),'product image arrays');
 console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
 if(failures)process.exitCode=1;
+
+for(const [field,limit] of [['name',100],['email',200],['interest',160],['message',1500]]) {
+ const input=homepage.match(new RegExp('<(?:input|textarea)\\\\b[^>]*name="'+field+'"[^>]*>'))?.[0]||'';
+ check(input.includes('maxlength="'+limit+'"'),'contact field '+field+' length limit');
+}
