@@ -105,5 +105,8 @@ check(homepage.includes('href="#use-cases"'),'use cases accessible from menu');
 check(homepage.includes('id="concept-guide"'),'interactive guide section');
 check(homepage.includes('data-guide="2"'),'three guided choices');
 check(homepage.includes('aria-pressed="true"'),'accessible guide selection');
+check(homepage.includes('id="behind-the-concept"'),'behind the concept section');
+check(homepage.includes('data-step="2"'),'three interactive research perspectives');
+check(homepage.includes('not verified project milestones'),'no fabricated milestone claims');
 console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
 if(failures)process.exitCode=1;
