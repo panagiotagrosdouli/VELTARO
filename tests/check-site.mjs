@@ -95,5 +95,7 @@ check(homepage.includes('experience-index'),'concept view progress indicators');
 check(homepage.includes('class="nav-more"'),'Explore grouped navigation');
 check(homepage.includes('class="nav-more nav-connect"'),'Connect grouped navigation');
 check(homepage.includes('class="site-nav"'),'reorganized site navigation');
+check(homepage.includes('class="nav-more nav-connect"'),'contact grouped in Connect');
+check(homepage.includes('<a href="#contact" data-i="navContact">Contact</a>'),'contact anchor preserved');
 console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
 if(failures)process.exitCode=1;
