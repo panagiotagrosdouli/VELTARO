@@ -79,7 +79,7 @@ check(homepage.includes('prefers-reduced-motion:reduce'),'reduced motion styling
 check(homepage.includes('IntersectionObserver'),'progressive scroll reveals');
 check(homepage.includes('class="scroll-progress"'),'reading progress indicator');
 check(!homepage.includes('VISION SYSTEM / 2070'),'no future year presented in interface');
-check(homepage.includes('VISION SYSTEM / ACTIVE'),'neutral animated interface label');
+check(homepage.includes('CONCEPT EXPLORATION'),'neutral animated interface label');
 check(homepage.includes('.product-card:hover'),'sitewide card interaction');
 check(homepage.includes('.section>.split,.product-card,.box,.step'),'sitewide scroll effects');
 check(!homepage.includes('2070'),'no year label in homepage source');
