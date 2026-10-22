@@ -100,5 +100,7 @@ check(homepage.includes('<a href="#contact" data-i="navContact">Contact</a>'),'c
 check(homepage.includes('href="#careers">Careers</a>'),'Careers visible in header');
 check(homepage.includes('id="careers"'),'Careers section is present');
 check(homepage.includes('not currently hiring'),'no invented vacancies');
+check(homepage.includes('id="use-cases"'),'research use cases section');
+check(homepage.includes('href="#use-cases"'),'use cases accessible from menu');
 console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
 if(failures)process.exitCode=1;
