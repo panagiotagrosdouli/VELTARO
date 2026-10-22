@@ -10,6 +10,11 @@ for(const route of routes){
   const ok=response.ok && text.length>100 && (route.endsWith('.html')||route===''?text.toLowerCase().includes('<html'):text.includes('<svg'));
   console.log((ok?'PASS':'FAIL')+' '+response.status+' '+url);
   if(!ok)failures++;
+  if(route===''){
+   const contactOk=text.includes('action="https://formsubmit.co/panagiotagrosdouli@gmail.com"') && text.includes('VELTARO | New Website Contact Message');
+   console.log((contactOk?'PASS':'FAIL')+' published website contact settings');
+   if(!contactOk)failures++;
+  }
   if(route==='early-interest.html'){
    const formOk=text.includes('action="https://formsubmit.co/panagiotagrosdouli@gmail.com"') && text.includes('name="_subject"') && text.includes('id="interest-form"');
    console.log((formOk?'PASS':'FAIL')+' published customer form configuration');
