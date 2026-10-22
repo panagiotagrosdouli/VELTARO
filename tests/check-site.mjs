@@ -58,5 +58,11 @@ const sitemap=readFileSync('sitemap.xml','utf8');
 const robots=readFileSync('robots.txt','utf8');
 check(robots.includes('Sitemap: https://panagiotagrosdouli.github.io/VELTARO/sitemap.xml'),'robots sitemap link');
 for(const route of ['','early-interest.html','collaborate.html','cockpit-concept.html','privacy.html']) check(sitemap.includes('https://panagiotagrosdouli.github.io/VELTARO/'+route+'</loc>'),'sitemap route '+(route||'homepage'));
+for (const [label,html,path] of [['homepage',homepage,''],['early interest',interestPage,'early-interest.html']]) {
+ const url='https://panagiotagrosdouli.github.io/VELTARO/'+path;
+ check(html.includes('rel="canonical" href="'+url+'"'),label+' canonical address');
+ check(html.includes('property="og:url" content="'+url+'"'),label+' social URL');
+ check(html.includes('property="og:description"'),label+' social description');
+}
 console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
 if(failures)process.exitCode=1;
