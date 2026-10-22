@@ -102,5 +102,8 @@ check(homepage.includes('id="careers"'),'Careers section is present');
 check(homepage.includes('not currently hiring'),'no invented vacancies');
 check(homepage.includes('id="use-cases"'),'research use cases section');
 check(homepage.includes('href="#use-cases"'),'use cases accessible from menu');
+check(homepage.includes('id="concept-guide"'),'interactive guide section');
+check(homepage.includes('data-guide="2"'),'three guided choices');
+check(homepage.includes('aria-pressed="true"'),'accessible guide selection');
 console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
 if(failures)process.exitCode=1;
