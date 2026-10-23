@@ -90,6 +90,25 @@ body{background-image:radial-gradient(ellipse 65vw 50vw at 85% 15%,rgba(211,181,
 #contact{background:radial-gradient(ellipse at right top,#a3835022,transparent 60%),#0b0b0d}
 @media(max-width:950px){.section .split{grid-template-columns:1fr}.section .split .image{min-height:350px}.showroom-shell{grid-template-columns:1fr}.showroom-visual{min-height:420px}}
 @media(max-width:680px){.hero-content{padding-top:155px;padding-bottom:75px}.hero h1{font-size:clamp(3.8rem,17vw,6rem)}.hero h1 span{font-size:clamp(1.1rem,4.6vw,1.5rem)}.section{padding:80px 6vw}.section .split .image{min-height:290px}#products .product-photo{height:260px}.showroom-visual{min-height:310px}#experience .experience-art{min-height:280px}}
+
+/* Luxury visual finish: consistent gallery treatment, rhythm and subtle depth. */
+:root{--lux-accent:#d3b58b}
+html{scroll-padding-top:86px}
+body{background-image:radial-gradient(ellipse 70vw 45vw at 90% 22%,#d3b58b09,transparent 75%)}
+.hero{isolation:isolate}.hero h1{max-width:920px;text-wrap:balance;text-shadow:0 10px 65px #0007}.hero .lead{max-width:560px}
+.section h2,.showroom-head h2{max-width:850px;text-wrap:balance}
+.section{position:relative}.section>.eyebrow{letter-spacing:.26em}
+.product-tile,.product-card,.team-card,.box,.card,.scenario-card,.application-tile{box-shadow:0 22px 55px #00000012}
+.product-tile img,.product-photo,.drone-image{object-position:center}
+.showroom-shell{box-shadow:0 28px 85px #0008}
+.showroom-visual img{filter:saturate(.88) contrast(1.05)}
+.showroom-visual:before{content:"";position:absolute;z-index:1;inset:0;pointer-events:none;border:1px solid #d3b58b33}
+.showroom-art-mark{max-width:65%;line-height:1.6}
+.showroom-tab,.showroom-actions button{border-radius:2px}
+.btn,.nav-primary,.nav-cta{border-radius:2px}
+@media(hover:hover) and (pointer:fine){.showroom-visual:hover img{filter:saturate(1) contrast(1.08)}}
+@media(max-width:700px){.hero h1{overflow-wrap:normal}.showroom-art-mark{max-width:75%;font-size:.57rem}.showroom-counter{font-size:.6rem}.section h2{text-wrap:pretty}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.showroom-visual img{transition:none!important}}
 </style></head><body>
 <div class="scroll-progress" aria-hidden="true"></div>
 <a class="skip-link" href="#main-content">Skip to content</a>
