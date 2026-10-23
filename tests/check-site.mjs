@@ -113,5 +113,7 @@ check(homepage.includes('Concept &amp; research stage'),'honest project status')
 check(homepage.includes('class="start-section premium-showroom"'),'premium showroom replaces start grid');
 check(homepage.includes('class="showroom-tab"'),'accessible showroom mode tabs');
 check(homepage.includes('id="showroom-photo"'),'existing-photo showroom');
+check(homepage.includes('class="showroom-prev"'),'previous showroom control');
+check(homepage.includes('class="showroom-next"'),'next showroom control');
 console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
 if(failures)process.exitCode=1;
