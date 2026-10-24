@@ -71,6 +71,33 @@
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
   .inquiry{border-top:1px solid var(--line);padding:clamp(5rem,9vw,9rem) 0}.inquiry h2{font-size:clamp(2.5rem,5vw,4.5rem);font-weight:450;letter-spacing:-.06em}.inquiry p{color:var(--muted);line-height:1.7;max-width:650px}.contact-form{display:grid;gap:1.1rem;max-width:650px;margin-top:2rem}.contact-form label{display:grid;gap:.5rem;font-size:.86rem;color:var(--paper)}.contact-form input:not([type=checkbox]),.contact-form textarea{width:100%;border:1px solid #776a5e;background:#141413;color:var(--paper);padding:1rem;font:inherit;border-radius:2px}.contact-form textarea{min-height:140px;resize:vertical}.contact-form .consent{display:flex;gap:.75rem;align-items:start;line-height:1.6;font-size:.82rem}.contact-form .consent input{margin-top:.4rem;flex:none}.contact-form .formnote{font-size:.76rem}.contact-form button{width:fit-content;cursor:pointer}.contact-form input:focus-visible,.contact-form textarea:focus-visible,.contact-form button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}.contact-form .honey{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+/* 2026 visual system: cinematic composition, premium editorial spacing and motion restraint */
+:root{--glow:#c6ad88}
+body{background-image:radial-gradient(ellipse 55% 26% at 85% 15%,#856d4512,transparent)}
+header{transition:background .3s,border-color .3s}
+.hero{isolation:isolate}
+.hero h1{text-wrap:balance;text-shadow:0 14px 70px #0007}
+.hero .kicker,.hero .eyebrow{display:inline-flex;align-items:center;gap:14px}
+.hero .kicker:before,.hero .eyebrow:before{content:"";display:inline-block;width:27px;height:1px;background:var(--glow)}
+.hero .actions a,.hero .actions .button{position:relative;overflow:hidden}
+.hero .actions a:focus-visible{outline-offset:5px}
+.section,.content{position:relative}
+.section h2,.content h2{text-wrap:balance}
+.feature,.three article,.pillar{transition:transform .25s,border-color .25s,background .25s}
+.feature:hover,.three article:hover,.pillar:hover{transform:translateY(-4px)}
+.brand,header .logo{transition:opacity .2s}.brand:hover,header .logo:hover{opacity:.78}
+.visual-system-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#13110f}
+.visual-system-strip .strip-inner{max-width:1220px;margin:auto;padding:24px 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;align-items:center}
+.visual-system-strip span{font-size:.68rem;letter-spacing:.19em;text-transform:uppercase;color:#c6ad88;font-weight:600}
+.visual-system-strip span:not(:first-child){color:#b7aa98}
+.featured-statement{padding:clamp(75px,11vw,160px) 0;border-top:1px solid var(--line);position:relative;overflow:hidden;background:linear-gradient(115deg,#1b1814,#0c0c0c)}
+.featured-statement:after{content:"";position:absolute;right:-100px;top:-100px;width:min(60vw,700px);height:min(60vw,700px);border:1px solid #c6ad8825;border-radius:50%;box-shadow:0 0 0 70px #c6ad8808,0 0 0 150px #c6ad8805;pointer-events:none}
+.featured-statement .statement-inner{width:min(1100px,calc(100% - 48px));margin:auto;position:relative;z-index:1}
+.featured-statement p{font-size:clamp(2rem,5vw,5.5rem);line-height:1.2;letter-spacing:-.065em;font-weight:400;max-width:900px;color:#f0e9de;margin:1.5rem 0 0}
+.featured-statement em{font-style:normal;color:#c6ad88}
+@media(max-width:750px){.visual-system-strip .strip-inner{padding:19px}.visual-system-strip span{font-size:.59rem}.visual-system-strip span:nth-child(4){display:none}.feature:hover,.three article:hover,.pillar:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){header,.feature,.three article,.pillar,.brand,header .logo{transition:none!important}.feature:hover,.three article:hover,.pillar:hover{transform:none}}
 </style>
 </head>
 <body>
@@ -97,7 +124,7 @@
         </div>
         <p class="hero-foot">Concept-stage venture. No working vehicle, certification, sales, or reservations are offered.</p>
       </div>
-    </section>
+    </section><div class="visual-system-strip" aria-label="VELTARO focus areas"><div class="strip-inner"><span>FORM FOLLOWS FREEDOM</span><span>DESIGN</span><span>EXPLORATION</span><span>RESPONSIBILITY</span></div></div>
     <section class="content" id="vision" aria-labelledby="vision-title">
       <div class="wrap">
         <div class="section-grid">
@@ -157,7 +184,7 @@
         </form>
       </div>
     </section>
-  </main>
+  <section class="featured-statement" aria-label="VELTARO statement"><div class="statement-inner"><span class="kicker">VELTARO / OUR PHILOSOPHY</span><p>The next frontier isn’t just a destination. It’s <em>a new perspective.</em></p></div></section></main>
   <footer>
     <div class="wrap footer-inner">
       <div><a class="brand" href="./"><span>Ⅴ</span>VELTARO</a><p>Independent road-and-air mobility concept.<br>© 2026 VELTARO.</p></div>
