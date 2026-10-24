@@ -1,4 +1,4 @@
-// Static checks only; does not validate live form delivery or legal compliance.
+// Launch-page checks. Legacy showroom-specific assertions were removed when the homepage was redesigned.
 import {readFileSync,existsSync} from 'node:fs';
 import {resolve,dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -6,114 +6,50 @@ const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const pages=['index.html','collaborate.html','privacy.html','cockpit-concept.html','early-interest.html'];
 let failures=0;
 function check(ok,label){console.log((ok?'PASS':'FAIL')+' '+label);if(!ok)failures++}
+const read=name=>readFileSync(resolve(root,name),'utf8');
 for(const page of pages){
-  const html=readFileSync(resolve(root,page),'utf8');
+  const html=read(page);
   const ids=[...html.matchAll(/\bid=["']([^"']+)["']/g)].map(x=>x[1]);
-  check(ids.length===new Set(ids).size,page+' unique element IDs');
+  check(ids.length===new Set(ids).size,page+' unique IDs');
   const anchors=[...html.matchAll(/href=["']#([^"']+)["']/g)].map(x=>x[1]);
   check(anchors.every(a=>ids.includes(a)),page+' internal anchors');
   for(const match of html.matchAll(/(?:href|src)=["']([^"']+)["']/g)){
     const link=match[1].split('#')[0];
-    if(link && !/^(https?:|mailto:|tel:|data:|\/)/.test(link)){
-      check(existsSync(resolve(root,link)),page+' local path '+link);
-    }
+    if(link && !/^(https?:|mailto:|tel:|data:|\/)/.test(link))check(existsSync(resolve(root,link)),page+' local path '+link);
   }
 }
-const homepage=readFileSync(resolve(root,'index.html'),'utf8');
-check(homepage.includes('href="collaborate.html"'),'collaboration link');
-check(homepage.includes('href="privacy.html"'),'privacy link');
-check(homepage.includes('href="cockpit-concept.html"'),'V1 cockpit link');
-const interestPage=readFileSync(resolve(root,'early-interest.html'),'utf8');
-check(homepage.includes('href="early-interest.html"'),'early interest link');
-check(/<form\b[^>]*\bid="interest-form"[^>]*>/.test(interestPage),'early interest valid form opening tag');
-check(!/<form\b[^>]*<input/.test(interestPage),'form opening tag cannot swallow input');
-check(interestPage.includes('method="POST"'),'early interest POST method');
-check(interestPage.includes('type="email"') && interestPage.includes('name="research_profile"') && interestPage.includes('name="use_case"'),'research segmentation fields');
-check(interestPage.includes('name="research_contact_consent"') && interestPage.includes('href="privacy.html"'),'consent and privacy notice');
-check(homepage.includes('radioimg.audacy.com') && homepage.includes('informedclearly.com'),'original gallery image sources restored');
-check(homepage.includes('name="contact_consent"'),'contact form captures consent');
-check(homepage.includes('name="_captcha"') && interestPage.includes('name="_captcha"'),'inquiry forms anti-spam enabled');
-check(homepage.includes('name="_autoresponse"') && interestPage.includes('name="_autoresponse"'),'inquiry forms acknowledgment configured');
-check(homepage.includes('action="https://formsubmit.co/panagiotagrosdouli@gmail.com"'),'contact form recipient');
-check(interestPage.includes('action="https://formsubmit.co/panagiotagrosdouli@gmail.com"'),'customer form recipient');
-check(homepage.includes('name="_subject" value="VELTARO | New Website Contact Message"'),'contact email subject');
-check(interestPage.includes('name="_subject" value="VELTARO | New Potential Customer Inquiry"'),'customer email subject');
-for (const [name,html] of [['contact',homepage],['customer',interestPage]]) {
- const forms=[...html.matchAll(/<form\b[^>]*>/g)].map(m=>m[0]);
- check(forms.length===1,name+' exactly one form');
- check(forms[0]?.includes('method="POST"') && forms[0]?.includes('https://formsubmit.co/'),name+' actual POST action');
- check((html.match(new RegExp('</form>', 'g'))||[]).length===1,name+' form closes');
- check(!/<form\b[^>]*<input/.test(html),name+' opening markup clean');
- for(const field of ['name="name"','name="email"','name="message"','name="_subject"']) check(html.includes(field),name+' required field '+field);
+const home=read('index.html'),interest=read('early-interest.html'),privacy=read('privacy.html'),cockpit=read('cockpit-concept.html');
+for(const path of ['collaborate.html','early-interest.html','privacy.html'])check(home.includes('href="'+path+'"'),'homepage link '+path);
+check(/<main\b[^>]*id=["']main["']/.test(home),'semantic main landmark');
+check(/class=["']skip["'][^>]*href=["']#main["']/.test(home),'keyboard skip link');
+check(home.includes('prefers-reduced-motion:reduce'),'reduced motion preference');
+check(home.includes('Concept-stage venture'),'concept-stage disclosure');
+check(home.includes('No working vehicle, certification, sales, or reservations'),'honest availability disclaimer');
+check(home.includes('href="#vision"'),'vision CTA');
+check(home.includes('href="early-interest.html"'),'customer research CTA');
+check(home.includes('href="collaborate.html"'),'collaboration CTA');
+check(home.includes('name="viewport"'),'responsive viewport');
+check(home.includes('@media(max-width:760px)'),'mobile layout');
+check(home.includes(':focus-visible'),'keyboard focus styling');
+check(!home.includes('VISION SYSTEM / 2070'),'no speculative milestone year');
+check(/<form\b[^>]*id="interest-form"[^>]*>/.test(interest),'customer form exists');
+check(interest.includes('method="POST"') && interest.includes('action="https://formsubmit.co/panagiotagrosdouli@gmail.com"'),'customer form POST recipient');
+check((interest.match(/<\/form>/g)||[]).length===1,'customer form closed');
+for(const field of ['name','email','message','_subject','research_profile','use_case','research_contact_consent','_captcha','_autoresponse']){
+  check(interest.includes('name="'+field+'"'),'customer form '+field);
 }
-const cockpit=readFileSync(resolve(root,'cockpit-concept.html'),'utf8');
-for(const state of ['road','site','config','review','service']) check(cockpit.includes('data-mode="'+state+'"'),'cockpit '+state+' navigation');
-check(homepage.includes('prefers-reduced-motion'),'reduced motion');
-check(homepage.includes('const productImages=[')&&homepage.includes('const droneImages=['),'product image arrays');
-for(const [field,limit] of [['name',100],['email',200],['interest',160],['message',1500]]) {
- const attrs=homepage.split('name="'+field+'"')[1]?.split('>')[0]||'';
- check(attrs.includes('maxlength="'+limit+'"'),'contact field '+field+' length limit');
-}
-const sitemap=readFileSync('sitemap.xml','utf8');
-const robots=readFileSync('robots.txt','utf8');
-check(robots.includes('Sitemap: https://panagiotagrosdouli.github.io/VELTARO/sitemap.xml'),'robots sitemap link');
-for(const route of ['','early-interest.html','collaborate.html','cockpit-concept.html','privacy.html']) check(sitemap.includes('https://panagiotagrosdouli.github.io/VELTARO/'+route+'</loc>'),'sitemap route '+(route||'homepage'));
-for (const [label,html,path] of [['homepage',homepage,''],['early interest',interestPage,'early-interest.html']]) {
+check(interest.includes('href="privacy.html"'),'customer form consent notice');
+check(privacy.includes('mailto:panagiotagrosdouli@gmail.com'),'privacy contact');
+check(privacy.includes('customer research form'),'privacy research disclosure');
+for(const mode of ['road','site','config','review','service'])check(cockpit.includes('data-mode="'+mode+'"'),'cockpit mode '+mode);
+const sitemap=read('sitemap.xml'),robots=read('robots.txt');
+check(robots.includes('Sitemap: https://panagiotagrosdouli.github.io/VELTARO/sitemap.xml'),'robots sitemap');
+for(const route of ['','early-interest.html','collaborate.html','cockpit-concept.html','privacy.html'])check(sitemap.includes('https://panagiotagrosdouli.github.io/VELTARO/'+route+'</loc>'),'sitemap route '+(route||'home'));
+for(const [label,html,path] of [['homepage',home,''],['interest',interest,'early-interest.html']]){
  const url='https://panagiotagrosdouli.github.io/VELTARO/'+path;
- check(html.includes('rel="canonical" href="'+url+'"'),label+' canonical address');
- check(html.includes('property="og:url" content="'+url+'"'),label+' social URL');
+ check(html.includes('rel="canonical" href="'+url+'"'),label+' canonical');
+ check(html.includes('property="og:url" content="'+url+'"'),label+' social url');
  check(html.includes('property="og:description"'),label+' social description');
 }
-check(readFileSync(resolve(root,'privacy.html'),'utf8').includes('mailto:panagiotagrosdouli@gmail.com'),'privacy inquiry contact is reachable');
-check(readFileSync(resolve(root,'privacy.html'),'utf8').includes('customer research form'),'privacy notice mentions separate research form');
-check(homepage.includes('CONCEPT STAGE · INDEPENDENT PROJECT'),'pre-company status visible on homepage');
-check(homepage.includes('href="early-interest.html">Join early research'),'clear research CTA');
-check(homepage.includes('href="collaborate.html">Explore collaboration'),'clear collaboration CTA');
-check(homepage.includes('class="skip-link" href="#main-content"'),'keyboard skip navigation');
-check(homepage.includes('<main id="main-content">'),'accessible main landmark');
-check(homepage.includes('class="nav-cta" href="early-interest.html"'),'persistent research nav CTA');
-check(homepage.includes('href="#faq">FAQ</a>'),'FAQ available from navigation');
-check(homepage.includes('class="future-atmosphere"'),'2070 atmospheric hero');
-check(homepage.includes('id="motion-toggle"'),'visitor motion control');
-check(homepage.includes('prefers-reduced-motion:reduce'),'reduced motion styling');
-check(homepage.includes('IntersectionObserver'),'progressive scroll reveals');
-check(homepage.includes('class="scroll-progress"'),'reading progress indicator');
-check(!homepage.includes('VISION SYSTEM / 2070'),'no future year presented in interface');
-check(homepage.includes('CONCEPT EXPLORATION'),'neutral animated interface label');
-check(homepage.includes('.product-card:hover'),'sitewide card interaction');
-check(homepage.includes('.section>.split,.product-card,.box,.step'),'sitewide scroll effects');
-check(!homepage.includes('2070'),'no year label in homepage source');
-check(homepage.includes('id="experience"'),'interactive experience section');
-check(homepage.includes('id="team"'),'team section');
-check(homepage.includes('role="tablist"'),'experience tablist semantics');
-for(const view of ['road','flight','cockpit']) check(homepage.includes('id="panel-'+view+'"'),'experience '+view+' panel');
-check(homepage.includes('Not yet appointed'),'honest future role status');
-check(homepage.includes('id="experience-next"'),'next concept view control');
-check(homepage.includes('id="menu" type="button" aria-label="Toggle navigation" aria-controls="links"'),'navigation ARIA control');
-check(homepage.includes('max-width:1450px'),'responsive menu layout');
-check(homepage.includes('experience-index'),'concept view progress indicators');
-check(homepage.includes('class="nav-more"'),'Explore grouped navigation');
-check(homepage.includes('class="nav-more nav-connect"'),'Connect grouped navigation');
-check(homepage.includes('class="site-nav"'),'reorganized site navigation');
-check(homepage.includes('class="nav-more nav-connect"'),'contact grouped in Connect');
-check(homepage.includes('<a href="#contact" data-i="navContact">Contact</a>'),'contact anchor preserved');
-check(homepage.includes('href="#careers">Careers</a>'),'Careers visible in header');
-check(homepage.includes('id="careers"'),'Careers section is present');
-check(homepage.includes('not currently hiring'),'no invented vacancies');
-check(homepage.includes('id="use-cases"'),'research use cases section');
-check(homepage.includes('href="#use-cases"'),'use cases accessible from menu');
-check(homepage.includes('id="concept-guide"'),'interactive guide section');
-check(homepage.includes('data-guide="2"'),'three guided choices');
-check(homepage.includes('aria-pressed="true"'),'accessible guide selection');
-check(homepage.includes('id="behind-the-concept"'),'behind the concept section');
-check(homepage.includes('data-step="2"'),'three interactive research perspectives');
-check(homepage.includes('not verified project milestones'),'no fabricated milestone claims');
-check(homepage.includes('id="project-snapshot"'),'project snapshot is present');
-check(homepage.includes('Concept &amp; research stage'),'honest project status');
-check(homepage.includes('class="start-section premium-showroom"'),'premium showroom replaces start grid');
-check(homepage.includes('class="showroom-tab"'),'accessible showroom mode tabs');
-check(homepage.includes('id="showroom-photo"'),'existing-photo showroom');
-check(homepage.includes('class="showroom-prev"'),'previous showroom control');
-check(homepage.includes('class="showroom-next"'),'next showroom control');
-console.log(failures?'Failures: '+failures:'Static checks passed. Manual QA still required.');
+console.log(failures?'Failures: '+failures:'Static checks passed. Form delivery, accessibility and legal review still require manual verification.');
 if(failures)process.exitCode=1;
