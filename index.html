@@ -70,7 +70,8 @@
       .contact .wrap{display:block}.contact .button{margin-top:1rem}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-  </style>
+  .inquiry{border-top:1px solid var(--line);padding:clamp(5rem,9vw,9rem) 0}.inquiry h2{font-size:clamp(2.5rem,5vw,4.5rem);font-weight:450;letter-spacing:-.06em}.inquiry p{color:var(--muted);line-height:1.7;max-width:650px}.contact-form{display:grid;gap:1.1rem;max-width:650px;margin-top:2rem}.contact-form label{display:grid;gap:.5rem;font-size:.86rem;color:var(--paper)}.contact-form input:not([type=checkbox]),.contact-form textarea{width:100%;border:1px solid #776a5e;background:#141413;color:var(--paper);padding:1rem;font:inherit;border-radius:2px}.contact-form textarea{min-height:140px;resize:vertical}.contact-form .consent{display:flex;gap:.75rem;align-items:start;line-height:1.6;font-size:.82rem}.contact-form .consent input{margin-top:.4rem;flex:none}.contact-form .formnote{font-size:.76rem}.contact-form button{width:fit-content;cursor:pointer}.contact-form input:focus-visible,.contact-form textarea:focus-visible,.contact-form button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}.contact-form .honey{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+</style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -134,7 +135,26 @@
           <h2 id="connect-title">The future starts<br>with a conversation.</h2>
           <p>Interested in the concept, research or a possible collaboration? We'd like to hear your perspective.</p>
         </div>
-        <a class="button primary" href="collaborate.html">Explore collaboration ↗</a>
+        <a class="button primary" href="#message-form">Start a conversation ↗</a>
+      </div>
+    </section>
+    <section class="inquiry" id="message-form" aria-labelledby="message-title">
+      <div class="wrap">
+        <span class="kicker">04 / Contact</span>
+        <h2 id="message-title">Start a conversation.</h2>
+        <p>Interested in research, future mobility or collaboration? Send VELTARO a message directly from this page.</p>
+        <form class="contact-form" action="https://formsubmit.co/panagiotagrosdouli@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="VELTARO | New Website Inquiry">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_template" value="table">
+          <div class="honey" aria-hidden="true"><label>Leave blank<input name="_honey" type="text" tabindex="-1" autocomplete="off"></label></div>
+          <label for="contact-name">Full name<input id="contact-name" name="name" autocomplete="name" minlength="2" maxlength="100" required></label>
+          <label for="contact-email">Email address<input id="contact-email" name="email" type="email" autocomplete="email" maxlength="200" required></label>
+          <label for="contact-message">Your message<textarea id="contact-message" name="message" rows="6" minlength="10" maxlength="3000" required></textarea></label>
+          <label class="consent" for="contact-consent"><input id="contact-consent" name="contact_consent" type="checkbox" value="yes" required><span>I request a reply to my inquiry and understand that my submission is processed using FormSubmit, a third-party email delivery service. I have read the <a href="privacy.html" style="color:var(--accent);text-decoration:underline">provisional data notice</a>.</span></label>
+          <p class="formnote">Please do not send sensitive or confidential information. Delivery requires activation of the receiving inbox and testing. The privacy notice requires review before wider launch.</p>
+          <button class="button primary" type="submit">Send message ↗</button>
+        </form>
       </div>
     </section>
   </main>
