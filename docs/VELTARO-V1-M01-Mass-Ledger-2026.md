@@ -45,7 +45,7 @@ A mass record can be labeled `SUBMITTED_FOR_REVIEW` only when it includes:
 - `sourceId`, `evidenceDate`, `configurationId`, `conditions` and `rangeBasis`;
 - `dataBasis` = `DOCUMENTED_RESEARCH_ASSUMPTION` or `CONFIGURATION_SPECIFIC_RECORD`, with `applicationBoundary` explicitly set to `VELTARO_CONCEPT_ASSUMPTION_ONLY`.
 
-A source ID is **not** proof that its content or relevance was checked. The code cannot authenticate a reviewer or a test record. Values taken from unrelated aircraft **must not** be imported into this ledger merely because their unit is kg. The prior [external benchmark register](VELTARO-V1-M01-Published-Benchmarks-2026.md) is literature context, not a VELTARO mass source.
+A source ID is **not** proof that its content or relevance was checked. The code cannot authenticate a reviewer or a test record. Values taken from unrelated aircraft **must not** be imported into this ledger merely because their unit is kg. The prior [external benchmark register proposed in PR #130](https://github.com/panagiotagrosdouli/VELTARO/pull/130) is literature context, not a VELTARO mass source.
 
 Once all submissions and shared payload conditions are syntactically complete, the tool can calculate:
 
