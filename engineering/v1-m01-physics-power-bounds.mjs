@@ -127,8 +127,17 @@ export function auditM01PhysicsInputs(study) {
       Object.keys(incoming).sort().join(',')!==[...CONCEPTS].sort().join(','))
     errors.push('architecture_set_invalid');
 
+  const globalPolicyBlocked=errors.length>0;
   const results={};
   for (const architecture of CONCEPTS) {
+    if (globalPolicyBlocked) {
+      results[architecture]={
+        status:'BLOCKED_STUDY_POLICY',
+        gaps:['study_policy_invalid'],
+        idealPowerKW:null,hypotheticalElectricalPowerKW:null,hypotheticalPhaseEnergyKWh:null
+      };
+      continue;
+    }
     const entry=incoming?.[architecture];
     const params=entry?.assumptions;
     const gaps=required[architecture].filter(k=>params?.[k]===null||params?.[k]===undefined);
