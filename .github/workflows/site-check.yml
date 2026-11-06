@@ -37,3 +37,5 @@ jobs:
         run: node tests/v1-pack-evidence.mjs
       - name: Check cockpit language and mode switching
         run: node tests/cockpit-interaction.mjs
+      - name: Check V1 joint sensitivity and public source boundaries
+        run: node tests/v1-m01-joint-sensitivity.mjs
