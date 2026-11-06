@@ -37,3 +37,5 @@ jobs:
         run: node tests/v1-pack-evidence.mjs
       - name: Check cockpit language and mode switching
         run: node tests/cockpit-interaction.mjs
+      - name: Audit M-01 research evidence gaps
+        run: node tests/v1-m01-evidence-gap-audit.mjs
