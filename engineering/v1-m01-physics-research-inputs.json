@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "0.1",
+  "studyDate": "2026-11-06",
+  "missionId": "M-01",
+  "status": "UNVERIFIED_RESEARCH",
+  "purpose": "First-order conceptual equations, not aircraft sizing or flight planning",
+  "architectures": {
+    "VTOL": {
+      "status": "UNASSESSED",
+      "phase": "OUT_OF_GROUND_EFFECT_STEADY_HOVER",
+      "assumptions": {
+        "massKg": null,
+        "airDensityKgPerM3": null,
+        "totalEffectiveRotorDiskAreaM2": null,
+        "rotorFigureOfMerit": null,
+        "electricalDrivetrainEfficiency": null,
+        "auxiliaryElectricalKW": null,
+        "durationHours": null
+      },
+      "provenance": {
+        "sourceId": null,
+        "configurationId": null,
+        "conditions": null,
+        "evidenceDate": null,
+        "scopeBasis": null
+      },
+      "applicationBoundary": "NO_VELTARO_PERFORMANCE_TRANSFER",
+      "independentEngineeringReviewCompleted": false
+    },
+    "TRANSFORMING_WING": {
+      "status": "UNASSESSED",
+      "phase": "STEADY_LEVEL_WINGBORNE_FLIGHT",
+      "assumptions": {
+        "massKg": null,
+        "trueAirspeedMps": null,
+        "liftToDragRatio": null,
+        "airDensityKgPerM3": null,
+        "wingReferenceAreaM2": null,
+        "propulsiveEfficiency": null,
+        "electricalDrivetrainEfficiency": null,
+        "auxiliaryElectricalKW": null,
+        "durationHours": null
+      },
+      "provenance": {
+        "sourceId": null,
+        "configurationId": null,
+        "conditions": null,
+        "evidenceDate": null,
+        "scopeBasis": null
+      },
+      "applicationBoundary": "NO_VELTARO_PERFORMANCE_TRANSFER",
+      "independentEngineeringReviewCompleted": false
+    }
+  },
+  "references": [
+    {
+      "id": "NASA-NDARC-2016",
+      "organization": "NASA Ames",
+      "year": 2016,
+      "title": "NDARC NASA Design and Analysis of Rotorcraft Theory, Appendix 1",
+      "url": "https://ntrs.nasa.gov/api/citations/20160012474/downloads/20160012474.pdf",
+      "relevance": "Section 12-4 and 12-5: ideal rotor induced power/inflow and nonideal induced/profile losses",
+      "transferToVeltaro": false
+    },
+    {
+      "id": "NASA-GLENN-LD",
+      "organization": "NASA Glenn Research Center",
+      "year": null,
+      "title": "Lift to Drag Ratio",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-to-drag-ratio/",
+      "relevance": "Steady cruise L=W, T=D, L/D ratio, dynamic pressure and coefficients",
+      "transferToVeltaro": false
+    }
+  ],
+  "distinctMassSource": "engineering/v1-m01-architecture-mass-ledgers.json",
+  "massLedgerStatus": "UNKNOWN_FOR_BOTH_ARCHITECTURES",
+  "noAutomaticImportFromPublishedAircraft": true,
+  "modellingExclusions": [
+    "aircraft-specific mass/energy closure",
+    "flight transition",
+    "rotor overlap",
+    "structural and road loads",
+    "stall envelope",
+    "runway takeoff/landing",
+    "wind and atmospheric mission profiles",
+    "battery continuous/peak power",
+    "power margins, reserve requirements and emergency operations",
+    "certification and permissions"
+  ],
+  "selectedArchitecture": null,
+  "decision": "HOLD_BOTH"
+}
