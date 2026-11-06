@@ -62,7 +62,7 @@ assert.equal(toy.rows[0].packPower.status, 'UNKNOWN_INVALID_PACK_RATINGS');
 
 // Explicit mathematical non-closure cannot be silently interpreted as zero.
 const lowEnergy = structuredClone(sample);
-lowEnergy.shared.usablePackWhPerKg = 5;
+lowEnergy.shared.usablePackWhPerKg = 2;
 const nonclosing = jointSensitivity(lowEnergy);
 assert.ok(nonclosing.rows.every(r => r.converged === false));
 assert.ok(nonclosing.rows.every(r =>
