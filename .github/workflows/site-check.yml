@@ -39,3 +39,5 @@ jobs:
         run: node tests/cockpit-interaction.mjs
       - name: Check V1 joint sensitivity and public source boundaries
         run: node tests/v1-m01-joint-sensitivity.mjs
+      - name: Check published M-01 external research benchmarks
+        run: node tests/v1-m01-published-benchmarks.mjs
