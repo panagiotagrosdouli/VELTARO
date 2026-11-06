@@ -39,3 +39,5 @@ jobs:
         run: node tests/cockpit-interaction.mjs
       - name: Validate M-01 dual architecture mass ledgers
         run: node tests/v1-m01-architecture-mass-ledger.mjs
+      - name: Verify M-01 first-order rotor and wingborne equations
+        run: node tests/v1-m01-physics-power-bounds.mjs
