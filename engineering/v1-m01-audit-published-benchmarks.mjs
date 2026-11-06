@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 
 const units = {
   cell_specific_energy:'Wh/kg', pack_specific_energy:'Wh/kg',
+  modeled_usable_specific_energy:'Wh/kg',
   pack_mass:'kg', pack_nominal_energy:'kWh',
   tested_discharge_current:'A', tested_discharge_current_high_rate:'A',
   max_measured_temperature_high_rate:'degC',
@@ -23,6 +24,10 @@ export function auditPublishedBenchmarks(data) {
   if (data?.transferPolicy !== 'NO_AUTOMATIC_MODEL_INGESTION')
     fail('Missing no-transfer rule');
   if (data?.decision !== 'HOLD_BOTH') fail('HOLD_BOTH decision not preserved');
+  const missionFields = data?.unresolvedMissionFields;
+  if (!Array.isArray(missionFields) || missionFields.length < 6 ||
+      missionFields.some(x => !nonempty(x)) || new Set(missionFields).size !== missionFields.length)
+    fail('Mission constraints/permission gaps not retained');
   const v = data?.veltaroValidatedInputs;
   if (!v || typeof v !== 'object' || Array.isArray(v))
     fail('Missing explicit unknown VELTARO configuration');
@@ -62,6 +67,7 @@ export function auditPublishedBenchmarks(data) {
       fail('Prohibited unreviewed evidence transfer: '+x?.id);
     if ((x?.metric === 'cell_specific_energy' ||
          x?.metric === 'pack_specific_energy' ||
+         x?.metric === 'modeled_usable_specific_energy' ||
          x?.metric === 'pack_nominal_energy') &&
         !nonempty(x.energyBoundary))
       fail('Missing specific-energy boundary: '+x?.id);
@@ -87,6 +93,7 @@ export function auditPublishedBenchmarks(data) {
   const capacity=get('VS-ONBOARD-AH','pack_rated_capacity','VS210-24S4P-ONBOARD');
   const cell=get('X57-CELL-E','cell_specific_energy','NASA-X57');
   const x57Pack=get('X57-PACK-E','pack_specific_energy','NASA-X57');
+  const x57Usable=get('X57-USABLE-MODEL-E','modeled_usable_specific_energy','NASA-X57');
   const takeoff=get('VS-FLIGHT-MASS','actual_takeoff_mass','VS210-TESTFLIGHT');
   const maxTakeoff=get('VS-AIRFRAME-MTOW','maximum_takeoff_mass','VS210-AIRCRAFT');
   if (!near(testEnergy*1000/testMass,testSpec,0.7))
@@ -95,7 +102,8 @@ export function auditPublishedBenchmarks(data) {
     fail('24S4P nominal energy / mass inconsistent with reported specific energy');
   if (!near(voltage*capacity/1000,installedEnergy,0.02))
     fail('24S4P nominal voltage x Ah inconsistent with reported energy');
-  if (!(x57Pack < cell)) fail('X-57 reference pack/cell relation inconsistent');
+  if (!(x57Usable < x57Pack && x57Pack < cell))
+    fail('X-57 model usable vs cited pack/cell energy boundaries inconsistent');
   if (!(takeoff <= maxTakeoff)) fail('Actual test mass exceeds listed MTOW');
 
   return {
