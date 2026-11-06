@@ -1,0 +1,92 @@
+{
+  "version": "0.1",
+  "study": "VELTARO-M01",
+  "last_research_review": "2026-11-06",
+  "status": "BACKGROUND_RESEARCH_ONLY",
+  "validated_vehicle_data": false,
+  "selected_architecture": null,
+  "sources": [
+    {
+      "id": "NASA-2021-PACK",
+      "organization": "NASA Glenn Research Center",
+      "document": "Battery Cell-to-Pack Scaling Trends for Electric Aircraft",
+      "year": 2021,
+      "url": "https://ntrs.nasa.gov/citations/20210017488",
+      "supports": "Installed battery-pack gravimetric energy density must account for thermal, structural and operational safety overhead; a universal cell-to-pack reduction factor is not supported.",
+      "application": "Require installed usable Wh/kg as a separately sourced input; do not promote cell figures into pack figures.",
+      "veltaro_numerical_value": null,
+      "transfer_status": "BACKGROUND_ONLY"
+    },
+    {
+      "id": "NASA-2025-AAM",
+      "organization": "NASA Ames Research Center",
+      "document": "Impact of Technology and Mission Variations on NASA Advanced Air Mobility Concept Vehicles",
+      "year": 2025,
+      "url": "https://ntrs.nasa.gov/citations/20250006187",
+      "supports": "Concept-aircraft mass and mission sensitivities depend on installed battery usable Wh/kg, rotor and propulsion assumptions, power, thermal system, reserve and mission profile.",
+      "application": "Compare concept architectures on a shared mission and vary coupled assumptions; do not treat NASA concept numbers as roadable VELTARO performance.",
+      "veltaro_numerical_value": null,
+      "transfer_status": "BACKGROUND_ONLY"
+    },
+    {
+      "id": "EASA-SC-VTOL",
+      "organization": "European Union Aviation Safety Agency",
+      "document": "Special Condition for VTOL and Means of Compliance",
+      "year": 2026,
+      "url": "https://www.easa.europa.eu/en/document-library/product-certification-consultations/special-condition-vtol",
+      "supports": "EASA publishes a specific VTOL certification framework and evolving means of compliance.",
+      "application": "Document applicability with a qualified regulator/certification specialist; not evidence of VELTARO approval.",
+      "veltaro_numerical_value": null,
+      "transfer_status": "REGULATORY_CONTEXT_ONLY"
+    },
+    {
+      "id": "EU-2018-858",
+      "organization": "European Union",
+      "document": "Regulation (EU) 2018/858 on motor-vehicle approval and market surveillance",
+      "year": 2018,
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018R0858",
+      "supports": "Regulation defines approval framework and scope for motor vehicles including categories M and N intended for public-road use.",
+      "application": "Determine possible VELTARO road-vehicle classification separately; do not assume type approval.",
+      "veltaro_numerical_value": null,
+      "transfer_status": "REGULATORY_CONTEXT_ONLY"
+    }
+  ],
+  "open_numeric_evidence": [
+    {
+      "id": "M01-E01",
+      "parameter": "Installed usable pack specific energy",
+      "unit": "Wh/kg",
+      "value": null,
+      "required_conditions": "Full installed pack configuration, usable energy window, temperature, age, discharge conditions, hardware mass, source and independent review"
+    },
+    {
+      "id": "M01-E02",
+      "parameter": "Continuous and peak pack power",
+      "unit": "kW and duration",
+      "value": null,
+      "required_conditions": "Pack-level thermal/electrical test, state of charge, temperature, peak duration, aging and reviewer"
+    },
+    {
+      "id": "M01-E03",
+      "parameter": "Architecture-specific dry mass",
+      "unit": "kg",
+      "value": null,
+      "required_conditions": "Separate structural, road-safety, transformation, propulsion, thermal and avionics mass ledgers"
+    },
+    {
+      "id": "M01-E04",
+      "parameter": "Flight phase electrical demand",
+      "unit": "kW and h",
+      "value": null,
+      "required_conditions": "Configuration, flight phase, propulsive performance model and power electronics losses"
+    },
+    {
+      "id": "M01-E05",
+      "parameter": "Authorized flight mission and reserve basis",
+      "unit": "mission definition",
+      "value": null,
+      "required_conditions": "Country, flight sites, route, airspace, weather, suitable reserve policy and qualified legal/regulatory assessment"
+    }
+  ],
+  "decision": "HOLD_BOTH"
+}
