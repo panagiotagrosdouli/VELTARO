@@ -37,3 +37,5 @@ jobs:
         run: node tests/v1-pack-evidence.mjs
       - name: Check cockpit language and mode switching
         run: node tests/cockpit-interaction.mjs
+      - name: Validate M-01 dual architecture mass ledgers
+        run: node tests/v1-m01-architecture-mass-ledger.mjs
