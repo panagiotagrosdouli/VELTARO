@@ -64,6 +64,10 @@ export function auditM01MassLedger(ledger, mission) {
       Math.abs(ledger.sharedPayload.estimateKg-(occupants+luggage)) > 1e-8)
     globalGaps.push('shared_payload_mission_mass_mismatch');
 
+  if (!ledger?.architectures ||
+      Object.keys(ledger.architectures).sort().join(',') !== [...ARCHITECTURES].sort().join(','))
+    globalGaps.push('architecture_set_not_exact');
+
   const reports = {};
   for (const architecture of ARCHITECTURES) {
     const issues = [];
@@ -99,9 +103,7 @@ export function auditM01MassLedger(ledger, mission) {
       issues,
     };
   }
-  if (!ledger?.architectures ||
-      Object.keys(ledger.architectures).sort().join(',') !== [...ARCHITECTURES].sort().join(','))
-    globalGaps.push('architecture_set_not_exact');
+
 
   const comparisonArithmeticAvailable = globalGaps.length===0 && payload.ready &&
     ARCHITECTURES.every(x=>reports[x].status==='ARITHMETIC_ONLY_NOT_VALIDATED');
