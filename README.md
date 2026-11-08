@@ -1,40 +1,60 @@
-<div align="center">
+# VELTARO
 
-![VELTARO — V monogram in champagne gold on black](https://placehold.co/960x260/0b0b0d/d3b58b/png?text=%E2%85%A4%20%20VELTARO)
+VELTARO is an independent, concept-stage exploration of premium road-and-air mobility. The public website presents research questions and design concepts; it does not offer a functioning vehicle, certified aircraft, sales, reservations, or validated performance.
 
-# Ⅴ VELTARO
+## Development status
 
-**BORN TO DRIVE. DESIGNED TO FLY.**
+The site is a static HTML/CSS/JavaScript project. GitHub Pages serves the public pages from the repository. Contact and customer-research forms post to FormSubmit and require recipient inbox activation. Static checks do not verify delivery. The privacy notice and rights for externally hosted reference photographs still require owner review.
 
-</div>
+## Repository map
 
-> **Proposed company identity:** A champagne-gold V monogram on a near-black background, matching the VELTARO brand palette. The banner is a typographic mockup, not the final custom-drawn trademark.
+- `index.html` — homepage and general contact form.
+- `early-interest.html` — non-binding customer discovery form.
+- `collaborate.html` — concept-stage research and collaboration overview.
+- `cockpit-concept.html` — illustrative, non-operational cockpit interface.
+- `v1-evidence-dashboard.html` — noindex, read-only engineering evidence index.
+- `privacy.html` — provisional form-data notice; not a final legal policy.
+- `design.css` — legacy stylesheet; the current public pages use page-level styles.
+- `assets/` and `v1-hero.svg` — original concept illustrations.
+- `docs/` — research, launch, and operating documentation.
+- `engineering/` — preliminary concept models, evidence registers, and engineering decision records.
+- `tests/` — static site checks, live GET smoke checks, and concept-model checks.
+- `.github/workflows/` — GitHub Actions checks.
 
-VELTARO is a concept-stage luxury road-and-air mobility startup website. The homepage is `index.html`; the collaboration page is `collaborate.html` and the provisional contact notice is `privacy.html`.
+## Run locally
 
-## Features
+Open `index.html` in a browser, or serve the repository root with a local static server, for example:
 
-- Cinematic VELTARO-first homepage with no V1 product branding or separate product navigation.
-- Our Vision, Why VELTARO, Technology, Roadmap, Investors and Contact sections.
-- Responsive premium dark/champagne design in `design.css`.
-- Original vector artwork in `v1-hero.svg` (legacy filename for backward compatibility). This is an illustration, not a photograph or working vehicle.
-- No build process required. Open `index.html` or host using GitHub Pages. Contact form submissions use FormSubmit and require owner email activation.
+```sh
+python3 -m http.server 8000
+```
 
-## Brand-image guidance
-The coastal flying-car photo supplied as a visual reference appears sourced from a third-party publication. It is **not** distributed in this repository. Obtain proper rights before replacing the original illustration with a photograph. Do not imply a third-party vehicle is VELTARO's product.
+Then visit `http://localhost:8000/`. Form delivery cannot be verified by opening a local file; do not submit real personal information during testing.
 
-## Integrity
-No working prototype, flight performance, certification, funding or partner relationship is represented as established. GitHub Issues is a public inquiry route only; do not share confidential information. Contact submissions are processed by third-party FormSubmit for email delivery. Activate the destination inbox and publish suitable privacy information before wider use.
+## Checks
 
-## Venture validation and launch review (October 2026)
-- [Commercial validation playbook](docs/VELTARO-Commercial-Validation-Playbook-2026.md): four-track customer discovery and evidence gates.
-- [12-week action board](docs/VELTARO-12-Week-Action-Board-2026.md): €0-commitment milestones.
-- `collaborate.html`: exploratory research and collaboration information.
-- `privacy.html`: DRAFT inquiry-data notice, pending review.
+Run the static website checks with:
 
-### Before public outreach
-1. Test and activate the FormSubmit receiving inbox without sensitive information.
-2. Confirm data controller contact, retention, privacy requirements and provider arrangements; finalize notice.
-3. Verify usage rights of external images.
-4. Manually test mobile layouts, keyboard navigation, browser behavior and contact submission.
-5. Reconcile public workstream statements with actual concept-stage evidence.
+```sh
+node tests/check-site.mjs
+```
+
+Run the concept-model and cockpit checks with:
+
+```sh
+for f in tests/*.mjs; do [ "$f" = tests/check-live-pages.mjs ] || node "$f" || exit 1; done
+```
+
+`tests/check-live-pages.mjs` performs non-invasive GET requests to the deployed GitHub Pages site and public SVG assets. It does not submit forms or confirm inbox delivery. A failing result can indicate that the live deployment does not yet match the repository.
+
+## Contact forms
+
+Both forms submit by POST to FormSubmit using the email recipient in the HTML. The receiving mailbox must be activated through FormSubmit before messages are forwarded. See [`docs/Contact-Delivery-Activation-Checklist.md`](docs/Contact-Delivery-Activation-Checklist.md) for a safe manual verification procedure. Never use customer or sensitive information in test submissions.
+
+## Deploy
+
+The repository is configured around the GitHub Pages project URL `https://panagiotagrosdouli.github.io/VELTARO/`. The current live routes are listed in `sitemap.xml`; `robots.txt` points to that sitemap. Repository changes do not update the live site until they are deployed through the repository's GitHub Pages configuration.
+
+## Before public launch
+
+Review [`docs/PRODUCTION-LAUNCH-CHECKLIST.md`](docs/PRODUCTION-LAUNCH-CHECKLIST.md), [`docs/PRIVACY-LAUNCH-CHECKLIST.md`](docs/PRIVACY-LAUNCH-CHECKLIST.md), and [`docs/WEBSITE-LAUNCH-AUDIT.md`](docs/WEBSITE-LAUNCH-AUDIT.md). Human actions remain for FormSubmit activation and testing, privacy/legal review, photography licensing, and browser-based visual checks. The site must continue to describe VELTARO as concept-stage until evidence supports any change.
