@@ -19,6 +19,27 @@ for(const page of pages){
   }
 }
 const home=read('index.html'),interest=read('early-interest.html'),privacy=read('privacy.html'),cockpit=read('cockpit-concept.html');
+// Validate cross-page fragments as well as same-document anchors.
+for(const page of pages){
+ const html=read(page);
+ for(const match of html.matchAll(/href=["']([^"']+\.html#[^"']+)["']/g)){
+  const [target,fragment]=match[1].split('#');
+  if(existsSync(resolve(root,target))){
+   const targetHtml=readFileSync(resolve(root,target),'utf8');
+   check([...targetHtml.matchAll(/\bid=["']([^"']+)["']/g)].some(x=>x[1]===fragment),page+' cross-page anchor '+match[1]);
+  }
+ }
+ for(const match of html.matchAll(/<a\b([^>]*target=["']_blank["'][^>]*)>/gi))
+  check(/\brel=["'][^"']*\bnoopener\b[^"']*\b noreferrer\b|\brel=["'][^"']*\bnoreferrer\b[^"']*\bnoopener\b/i.test(match[1]),page+' secure new-tab link');
+ check(/<title>[^<]+<\/title>/i.test(html),page+' unique page title present');
+ check(/<meta\s+name=["']description["']\s+content=["'][^"']{40,}["']/i.test(html),page+' meta description present');
+ check(/<link\s+rel=["']canonical["']\s+href=["']https:\/\/panagiotagrosdouli\.github\.io\/VELTARO\/[^"']*["']/i.test(html),page+' GitHub Pages canonical');
+ check(/<meta\s+property=["']og:url["']\s+content=["']https:\/\/panagiotagrosdouli\.github\.io\/VELTARO\/[^"']*["']/i.test(html),page+' Open Graph URL');
+ check(/<meta\s+name=["']twitter:card["']\s+content=["']summary["']/i.test(html),page+' social card');
+}
+const websiteSchema=home.match(/<script type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/i);
+check(!!websiteSchema,'homepage structured data exists');
+if(websiteSchema){try{const schema=JSON.parse(websiteSchema[1]);check(schema['@type']==='WebSite'&&schema.url==='https://panagiotagrosdouli.github.io/VELTARO/','homepage structured data is valid');}catch{check(false,'homepage structured data is valid')}}
 for(const path of ['collaborate.html','early-interest.html','privacy.html'])check(home.includes('href="'+path+'"'),'homepage link '+path);
 check(/<main\b[^>]*id=["']main["']/.test(home),'semantic main landmark');
 check(/class=["']skip["'][^>]*href=["']#main["']/.test(home),'keyboard skip link');
@@ -39,6 +60,11 @@ for(const field of ['name','email','message','_subject','research_profile','use_
   check(interest.includes('name="'+field+'"'),'customer form '+field);
 }
 check(interest.includes('href="privacy.html"'),'customer form consent notice');
+check(home.includes('name="_subject" value="VELTARO | New Website Contact Message"'),'homepage contact form subject');
+check(existsSync(resolve(root,'v1-evidence-dashboard.html')),'engineering evidence dashboard exists');
+const dashboard=read('v1-evidence-dashboard.html');
+check(dashboard.includes('name="robots" content="noindex,follow"'),'engineering dashboard is excluded from search indexing');
+check(dashboard.includes('id="dependency-body"')&&dashboard.includes('id="subsystems"'),'engineering dashboard data regions');
 check(privacy.includes('mailto:panagiotagrosdouli@gmail.com'),'privacy contact');
 check(privacy.includes('customer research form'),'privacy research disclosure');
 for(const mode of ['road','site','config','review','service'])check(cockpit.includes('data-mode="'+mode+'"'),'cockpit mode '+mode);
@@ -53,3 +79,4 @@ for(const [label,html,path] of [['homepage',home,''],['interest',interest,'early
 }
 console.log(failures?'Failures: '+failures:'Static checks passed. Form delivery, accessibility and legal review still require manual verification.');
 if(failures)process.exitCode=1;
+
