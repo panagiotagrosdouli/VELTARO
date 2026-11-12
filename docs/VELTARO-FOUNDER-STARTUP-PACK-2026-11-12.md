@@ -46,7 +46,7 @@ Record interview date, segment, consent, verbatim objections, value signals, nex
 | P0 | Verify both contact form deliveries | Dummy message arrives in recipient inbox | **OWNER ACTION / UNVERIFIED** |
 | P0 | Review privacy, controller identity and retention | Signed-off notice | **LEGAL/OWNER REVIEW** |
 | P0 | Audit third-party image rights | License evidence or replace imagery | **OWNER ACTION** |
-| P0 | Select first paid use-case hypothesis | Founder's signed scope decision | **PROPOSED LABS, NOT APPROVED** |
+| P0 | Select first paid use-case hypothesis | Founder's signed scope decision | **FOUNDER SELECTED 2026-11-12; OFFER NOT MARKET-VALIDATED** |
 | P1 | Validate prospective buyers | Logged actual interviews, consent | **NOT VERIFIED** |
 | P1 | Technical independent review | Named qualified reviewer and signed findings | **NOT VERIFIED** |
 | P1 | Company setup and equity/IP chain | Accountant/lawyer reviewed registration and agreements | **NOT VERIFIED** |
