@@ -3,7 +3,7 @@ import {readFileSync,existsSync} from 'node:fs';
 import {resolve,dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
-const pages=['index.html','collaborate.html','privacy.html','cockpit-concept.html','early-interest.html'];
+const pages=['index.html','collaborate.html','privacy.html','cockpit-concept.html','early-interest.html','labs.html'];
 let failures=0;
 function check(ok,label){console.log((ok?'PASS':'FAIL')+' '+label);if(!ok)failures++}
 const read=name=>readFileSync(resolve(root,name),'utf8');
@@ -40,7 +40,7 @@ for(const page of pages){
 const websiteSchema=home.match(/<script type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/i);
 check(!!websiteSchema,'homepage structured data exists');
 if(websiteSchema){try{const schema=JSON.parse(websiteSchema[1]);check(schema['@type']==='WebSite'&&schema.url==='https://panagiotagrosdouli.github.io/VELTARO/','homepage structured data is valid');}catch{check(false,'homepage structured data is valid')}}
-for(const path of ['collaborate.html','early-interest.html','privacy.html'])check(home.includes('href="'+path+'"'),'homepage link '+path);
+for(const path of ['collaborate.html','early-interest.html','privacy.html','labs.html'])check(home.includes('href="'+path+'"'),'homepage link '+path);
 check(/<main\b[^>]*id=["']main["']/.test(home),'semantic main landmark');
 check(/class=["']skip["'][^>]*href=["']#main["']/.test(home),'keyboard skip link');
 check(home.includes('prefers-reduced-motion:reduce'),'reduced motion preference');
@@ -70,13 +70,18 @@ check(privacy.includes('customer research form'),'privacy research disclosure');
 for(const mode of ['road','site','config','review','service'])check(cockpit.includes('data-mode="'+mode+'"'),'cockpit mode '+mode);
 const sitemap=read('sitemap.xml'),robots=read('robots.txt');
 check(robots.includes('Sitemap: https://panagiotagrosdouli.github.io/VELTARO/sitemap.xml'),'robots sitemap');
-for(const route of ['','early-interest.html','collaborate.html','cockpit-concept.html','privacy.html'])check(sitemap.includes('https://panagiotagrosdouli.github.io/VELTARO/'+route+'</loc>'),'sitemap route '+(route||'home'));
+for(const route of ['','early-interest.html','collaborate.html','cockpit-concept.html','privacy.html','labs.html'])check(sitemap.includes('https://panagiotagrosdouli.github.io/VELTARO/'+route+'</loc>'),'sitemap route '+(route||'home'));
 for(const [label,html,path] of [['homepage',home,''],['interest',interest,'early-interest.html']]){
  const url='https://panagiotagrosdouli.github.io/VELTARO/'+path;
  check(html.includes('rel="canonical" href="'+url+'"'),label+' canonical');
  check(html.includes('property="og:url" content="'+url+'"'),label+' social url');
  check(html.includes('property="og:description"'),label+' social description');
 }
+const labs=read('labs.html');
+check(labs.includes('VELTARO LABS'),'LABS page identity');
+check(labs.includes('V1'),'LABS/V1 long-term research distinction');
+check(labs.includes('href="index.html#message-form"'),'LABS contact uses existing form');
+check(!/<form\\b/i.test(labs),'LABS introduces no unverified new form');
 console.log(failures?'Failures: '+failures:'Static checks passed. Form delivery, accessibility and legal review still require manual verification.');
 if(failures)process.exitCode=1;
 

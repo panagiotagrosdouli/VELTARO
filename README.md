@@ -8,9 +8,10 @@ The site is a static HTML/CSS/JavaScript project. GitHub Pages serves the public
 
 ## Repository map
 
-- `index.html` — homepage and general contact form.
+- `index.html` — homepage and general contact form, linking to the LABS exploration page.
 - `early-interest.html` — non-binding customer discovery form.
 - `collaborate.html` — concept-stage research and collaboration overview.
+- `labs.html` — proposed first commercial LABS research offer and V1 long-term distinction (not yet a live paid service).
 - `cockpit-concept.html` — illustrative, non-operational cockpit interface.
 - `v1-evidence-dashboard.html` — noindex, read-only engineering evidence index.
 - `privacy.html` — provisional form-data notice; not a final legal policy.
@@ -58,3 +59,7 @@ The repository is configured around the GitHub Pages project URL `https://panagi
 ## Before public launch
 
 Review [`docs/PRODUCTION-LAUNCH-CHECKLIST.md`](docs/PRODUCTION-LAUNCH-CHECKLIST.md), [`docs/PRIVACY-LAUNCH-CHECKLIST.md`](docs/PRIVACY-LAUNCH-CHECKLIST.md), and [`docs/WEBSITE-LAUNCH-AUDIT.md`](docs/WEBSITE-LAUNCH-AUDIT.md). Human actions remain for FormSubmit activation and testing, privacy/legal review, photography licensing, and browser-based visual checks. The site must continue to describe VELTARO as concept-stage until evidence supports any change.
+
+## Founder-selected operating direction (2026-11-12)
+
+The founder selected **VELTARO LABS as the first prospective revenue workstream** and **VELTARO V1 as the long-term flagship R&D ambition**. This is a strategic choice, not proof of first revenue or incorporation. See `labs.html` and `docs/VELTARO-FOUNDER-STARTUP-PACK-2026-11-12.md`.
