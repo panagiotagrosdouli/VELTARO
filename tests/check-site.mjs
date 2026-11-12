@@ -77,12 +77,11 @@ for(const [label,html,path] of [['homepage',home,''],['interest',interest,'early
  check(html.includes('property="og:url" content="'+url+'"'),label+' social url');
  check(html.includes('property="og:description"'),label+' social description');
 }
-console.log(failures?'Failures: '+failures:'Static checks passed. Form delivery, accessibility and legal review still require manual verification.');
-if(failures)process.exitCode=1;
-
-
 const labs=read('labs.html');
 check(labs.includes('VELTARO LABS'),'LABS page identity');
 check(labs.includes('V1'),'LABS/V1 long-term research distinction');
 check(labs.includes('href="index.html#message-form"'),'LABS contact uses existing form');
 check(!/<form\\b/i.test(labs),'LABS introduces no unverified new form');
+console.log(failures?'Failures: '+failures:'Static checks passed. Form delivery, accessibility and legal review still require manual verification.');
+if(failures)process.exitCode=1;
+
