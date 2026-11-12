@@ -12,6 +12,7 @@ The site is a static HTML/CSS/JavaScript project. GitHub Pages serves the public
 - `early-interest.html` — non-binding customer discovery form.
 - `collaborate.html` — concept-stage research and collaboration overview.
 - `labs.html` — proposed first commercial LABS research offer and V1 long-term distinction (not yet a live paid service).
+- `services.html` — candidate LABS research brief catalog and inquiry link (not a price list or guarantee).
 - `cockpit-concept.html` — illustrative, non-operational cockpit interface.
 - `v1-evidence-dashboard.html` — noindex, read-only engineering evidence index.
 - `privacy.html` — provisional form-data notice; not a final legal policy.
