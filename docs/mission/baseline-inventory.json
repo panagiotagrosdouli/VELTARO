@@ -1,0 +1,740 @@
+{
+  "baseline": "823490a044b6d6a36a01fa2e071f9321f567510c",
+  "files": [
+    {
+      "path": ".github/workflows/live-pages-smoke.yml",
+      "bytes": 422,
+      "sha256": "9ee519d802bd51f6ffd0ed5840abc31767994d19de5b3a68c1a7df4b80778c56"
+    },
+    {
+      "path": ".github/workflows/site-check.yml",
+      "bytes": 1657,
+      "sha256": "ffa9a0bb9e153ef00f5be4064d45f9bee983aba5c6f93d8d6cdff9f298e6dd3b"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4076,
+      "sha256": "0466730cb2fd07f0960f33c4bae4a3f5e190b488835ddd40a932948ea81ac370"
+    },
+    {
+      "path": "assets/v1-concept.svg",
+      "bytes": 3531,
+      "sha256": "25429cd960c39c3e2229bdc3d4a6e988d17f591f192f29983b1f3c9be8f755bb"
+    },
+    {
+      "path": "assets/v1-flying-design.svg",
+      "bytes": 4956,
+      "sha256": "4d63b3a3283cbf354577d1157b753eecfc5872cd01edf6c33ad49a954477483a"
+    },
+    {
+      "path": "cockpit-concept.html",
+      "bytes": 16960,
+      "sha256": "24c3eb1355bcd8465a69299e593f735c2853ca8b225810bb260f3d51a4803f18"
+    },
+    {
+      "path": "collaborate.html",
+      "bytes": 5389,
+      "sha256": "dfd648ec85e00149c095ac107fb4d9b65aa17d6e1d14d217bacb524f233d0fe5"
+    },
+    {
+      "path": "design.css",
+      "bytes": 7507,
+      "sha256": "e2cd4c532d9e14125dd5d37c99225bcaae178894d836ee6fb8652e7b4c1e4e29"
+    },
+    {
+      "path": "docs/Contact-Delivery-Activation-Checklist.md",
+      "bytes": 2130,
+      "sha256": "9f71ee667d489eaa7e1dacb57a9f628fa07844463020b3ef20545cd93206c23c"
+    },
+    {
+      "path": "docs/First-10-Research-Conversations.md",
+      "bytes": 3578,
+      "sha256": "80edd8a8b78e9c74aead011a67a5ac7f287fa109cb9a79daec8c3a81c3d67228"
+    },
+    {
+      "path": "docs/LABS-Customer-Discovery-Kit-2026.md",
+      "bytes": 3296,
+      "sha256": "d8a950f41d9b097a74342af003c97615852fd83279e1ad5f42cbb2798fd620c8"
+    },
+    {
+      "path": "docs/LABS-Public-Research-Sample-2026.md",
+      "bytes": 3162,
+      "sha256": "b6c1eef45e71503a83fde050e2eed5110238581082af9596ae7625ab74f5aeda"
+    },
+    {
+      "path": "docs/PRIVACY-LAUNCH-CHECKLIST.md",
+      "bytes": 2469,
+      "sha256": "b6cbd16cdf63483d99036f9f67c75ac0465f5265b6a5b63897bb716648c8ad4a"
+    },
+    {
+      "path": "docs/PRODUCTION-LAUNCH-CHECKLIST.md",
+      "bytes": 3494,
+      "sha256": "12dad429e6f6d83eb4c436b122503b331b6e29307e6f745e720b95b945069fa8"
+    },
+    {
+      "path": "docs/V1-Assumptions-Evidence-Register-2026.md",
+      "bytes": 3500,
+      "sha256": "48ee9845f9a8897d731decaea1c7b08d584ac4fdcf689514bb4a54d003997384"
+    },
+    {
+      "path": "docs/V1-Feasibility-Study-Protocol-2026.md",
+      "bytes": 3699,
+      "sha256": "14cc673f154b9436af029af3517f1703e41b961905f8b77e34ccb98e917eb7d8"
+    },
+    {
+      "path": "docs/VELTARO-12-Week-Action-Board-2026.md",
+      "bytes": 3745,
+      "sha256": "d5078953c150a38430641c175c44bddbc50537feffdf3f134118e36e79c53a22"
+    },
+    {
+      "path": "docs/VELTARO-90-Day-Operating-Plan-2026.md",
+      "bytes": 2990,
+      "sha256": "a22bd44325c40c750dc3ec3d7487ef22e9287ef770eae3274570e96d5590b02a"
+    },
+    {
+      "path": "docs/VELTARO-Commercial-Validation-Playbook-2026.md",
+      "bytes": 4713,
+      "sha256": "44cfd824c6bbbf216abf88739d8162e1fb2397303203f7932fae7f1bff717e92"
+    },
+    {
+      "path": "docs/VELTARO-Contact-Ready-Research-Inquiries-2026.md",
+      "bytes": 3844,
+      "sha256": "344daa37a5e3bb2dd0bfb885ba7c6b7dc49cc674f8788c699e6929b0a5029620"
+    },
+    {
+      "path": "docs/VELTARO-Customer-to-Production-Gates-2026.md",
+      "bytes": 4979,
+      "sha256": "2ad1b45e7188836246ca53eee403080478e20e6f6c69525fecbadd55ea2fa0f8"
+    },
+    {
+      "path": "docs/VELTARO-Evidence-Dashboard-2026.md",
+      "bytes": 1842,
+      "sha256": "51a779cb2768dd39b0853739f1459ee67362d7756cb6381f43d9bdbb7327e275"
+    },
+    {
+      "path": "docs/VELTARO-Executive-Launch-Operations-2026.md",
+      "bytes": 3652,
+      "sha256": "d369377fb3911075f4a6d2fad3ee3b677e501436a406066fed93612ff871f580"
+    },
+    {
+      "path": "docs/VELTARO-Executive-Product-Council-2026.md",
+      "bytes": 5419,
+      "sha256": "c18ce6bc164a1a7580d78081604cef0b678df549b3378491ecb54a2209a4d514"
+    },
+    {
+      "path": "docs/VELTARO-Executive-Week-1-2026.md",
+      "bytes": 2722,
+      "sha256": "80824542dbe95b9b210bb04fd8c3cc41121a5d3840a7a91c7dce5a33b302289d"
+    },
+    {
+      "path": "docs/VELTARO-FOUNDER-STARTUP-PACK-2026-11-12.md",
+      "bytes": 5670,
+      "sha256": "5d15ec785704c832a584d45f6fe31bb68c10e41f1410e2f63654970bc2a7452b"
+    },
+    {
+      "path": "docs/VELTARO-Founding-Strategy-2026.md",
+      "bytes": 3393,
+      "sha256": "ec5dce4d84707b8616ec39aff21e929bcb081b75291f16077d587dd9f4baec6d"
+    },
+    {
+      "path": "docs/VELTARO-Greek-Institutional-Outreach-Pack-2026.md",
+      "bytes": 7030,
+      "sha256": "5f84b2c4c6a501a78058d443b0b4c4c0d45a00cb28bc122fb6d16df3b228578a"
+    },
+    {
+      "path": "docs/VELTARO-Jurisdiction-Decision-2026.md",
+      "bytes": 2507,
+      "sha256": "8742eac7fdfae3887c4b3f3893935d83517cb7ad13d845304492e3fe913ea2a5"
+    },
+    {
+      "path": "docs/VELTARO-ONE-PAGE-PITCH-2026-11-12.md",
+      "bytes": 2117,
+      "sha256": "ab7af293d4c91bd6b379dd32c1c373630c44aff579dbb6b3a17fd44bb99dc578"
+    },
+    {
+      "path": "docs/VELTARO-Outreach-Sprint-2026.md",
+      "bytes": 2172,
+      "sha256": "a4556e1350548d4f3a22e71b2f061ab517efce3796688d47e939010f2a4e1087"
+    },
+    {
+      "path": "docs/VELTARO-Portfolio-Decision-2026.md",
+      "bytes": 4496,
+      "sha256": "2dacd46c937897658886aaa9a9636338a651f191187d328361135e6694c43693"
+    },
+    {
+      "path": "docs/VELTARO-SAME-DAY-RELEASE-GATES-2026-11-12.md",
+      "bytes": 1596,
+      "sha256": "be636ddeb3e3df363f3d76dbaed7445ff431be4858559073b6dd2c44c05d64ef"
+    },
+    {
+      "path": "docs/VELTARO-V1-Architecture-Decision-Review-2026.md",
+      "bytes": 3469,
+      "sha256": "c1eb6ac7c0aa1ca65e7a4c4719d8a112cddd8d473d7dbdc806ed8f4561edb796"
+    },
+    {
+      "path": "docs/VELTARO-V1-Architecture-Dependency-Diagrams-2026.md",
+      "bytes": 4157,
+      "sha256": "e215cee709b6a8c6538fb213778e70989a53c04b425ab9a9b4670db4d83e64a5"
+    },
+    {
+      "path": "docs/VELTARO-V1-Architecture-Trade-Study-2026.md",
+      "bytes": 3786,
+      "sha256": "4f6f7b04e6265130bace027cc85f29aec34c89567e8a90d86c5b2d4cef078295"
+    },
+    {
+      "path": "docs/VELTARO-V1-Battery-Power-Comparability-2026.md",
+      "bytes": 2422,
+      "sha256": "82bd4c45fe50151ecc5cd35507b902a307343717a7c09bc47c1c48db06be115a"
+    },
+    {
+      "path": "docs/VELTARO-V1-Battery-Propulsion-Evidence-Packet-2026.md",
+      "bytes": 2750,
+      "sha256": "cdaea0604bb9a04858ceaea5aaf3f8f50f7ba9e960e87dfdad38f2ac086aa76b"
+    },
+    {
+      "path": "docs/VELTARO-V1-Battery-Propulsion-Source-Register-2026.md",
+      "bytes": 3229,
+      "sha256": "4979b6c1f46507743e50bc0364d83cf21911b77f2a121be203192f4541e8c02d"
+    },
+    {
+      "path": "docs/VELTARO-V1-Cockpit-UX-Requirements-2026.md",
+      "bytes": 2442,
+      "sha256": "14e70de18bc36bb76dd465f2f056c9a47d5e06e8a0c2e3c332e805438edf8012"
+    },
+    {
+      "path": "docs/VELTARO-V1-Common-Cause-Analysis-2026.md",
+      "bytes": 2996,
+      "sha256": "478ec949a55f384fcdfb53ef4c8b5d536f338ee4a74d537aa0363dc4d26ace06"
+    },
+    {
+      "path": "docs/VELTARO-V1-Concept-Comparison-Runner-2026.md",
+      "bytes": 1186,
+      "sha256": "15911cb7e538f7eb746f6d65742f092d0ec2250dc66b98c7a90c08c5ca81fba9"
+    },
+    {
+      "path": "docs/VELTARO-V1-Dual-Architecture-Workstreams-2026.md",
+      "bytes": 2668,
+      "sha256": "f83e9b24fb860bb76a1aebdaa23f6dcc506b37cb6918cd57defb993d3e92ca7d"
+    },
+    {
+      "path": "docs/VELTARO-V1-Energy-Architecture-Requirements-2026.md",
+      "bytes": 2280,
+      "sha256": "0486c9f364a7bd44c76f3fafb1dafde3e3bacacdb136bf23b0a127b57e63c929"
+    },
+    {
+      "path": "docs/VELTARO-V1-Engineering-Backlog-2026.md",
+      "bytes": 1520,
+      "sha256": "98c28c18a43ca01c1355ee0a3aac411fe2919f74f682bc9b78c7f50f854213f4"
+    },
+    {
+      "path": "docs/VELTARO-V1-Evidence-Intake-Gates-2026.md",
+      "bytes": 1502,
+      "sha256": "c8030d9a7aedcd4f4d90cab668151fc9412f056c92f9b0b6dd482ce6b70fdffd"
+    },
+    {
+      "path": "docs/VELTARO-V1-Evidence-Priority-Matrix-2026.md",
+      "bytes": 2689,
+      "sha256": "4c410ab39ce957784105abebf5ed6e7dacdd085e2bcaaa34bd8aaa5203831f99"
+    },
+    {
+      "path": "docs/VELTARO-V1-Evidence-Validator-2026.md",
+      "bytes": 827,
+      "sha256": "98cc8143ca8c5026e0e3cb41d6c6d38520b8491d6e67c600e79afb9996b14fee"
+    },
+    {
+      "path": "docs/VELTARO-V1-Fixture-Consistency-2026.md",
+      "bytes": 886,
+      "sha256": "360ca9e5803d52f6ba02c696133d05d8f09cf78de18be48960b67569ea48fc19"
+    },
+    {
+      "path": "docs/VELTARO-V1-Hazard-Requirement-Traceability-2026.md",
+      "bytes": 2165,
+      "sha256": "756e30ef23ee3156039195377904f866ea4795b9a4bc77c638a5962909690a4d"
+    },
+    {
+      "path": "docs/VELTARO-V1-Integration-Risk-Matrix-2026.md",
+      "bytes": 2150,
+      "sha256": "977ca9da6cca70c7c0460e2cff968865dfd7b601dec74d0e78df179d19d8ef04"
+    },
+    {
+      "path": "docs/VELTARO-V1-Interface-Inventory-2026.md",
+      "bytes": 2970,
+      "sha256": "6df77139f167263bf78d7403e35ea83b986db49532ab01909d642f00a842bb7a"
+    },
+    {
+      "path": "docs/VELTARO-V1-M01-Energy-Comparability-2026.md",
+      "bytes": 1750,
+      "sha256": "01c04844d1dfc678148adde717230423f03b1dbc5e53b370b74bbbca5949d5f3"
+    },
+    {
+      "path": "docs/VELTARO-V1-M01-Greece-Infrastructure-Desk-Research-2026.md",
+      "bytes": 2901,
+      "sha256": "8f77d3adbc95439081564c8ea5984d88f2a151f0f95a1eac284b37c03028d4a3"
+    },
+    {
+      "path": "docs/VELTARO-V1-M01-Mass-Ledger-2026.md",
+      "bytes": 5628,
+      "sha256": "58f57434f01206a43b6cf2409c76dabb4a2efaee187184a50883be1fcf63e54e"
+    },
+    {
+      "path": "docs/VELTARO-V1-M01-Sensitivity-Study-2026.md",
+      "bytes": 2385,
+      "sha256": "974bcf51239feaea2ae3374ca35b931f5e6bb52cfc77dfe8d186544d069f9bd6"
+    },
+    {
+      "path": "docs/VELTARO-V1-M01-Shared-Baseline-2026.md",
+      "bytes": 2461,
+      "sha256": "c5dd92a3d78068e85d8a647311f767180a6b73ffe036e097052e997faa177c8e"
+    },
+    {
+      "path": "docs/VELTARO-V1-M01-Thrace-Route-Gates-2026.md",
+      "bytes": 3034,
+      "sha256": "ef5697ac27116edcc096ba616f55f669bd95ae2c222063d80fb0a4762ef7d48e"
+    },
+    {
+      "path": "docs/VELTARO-V1-Mass-Energy-Closure-Prototype-2026.md",
+      "bytes": 1716,
+      "sha256": "51f6f7221e3c3822316c553ec2c049ff5dc4616ea0ff37b8b310e93aafb59444"
+    },
+    {
+      "path": "docs/VELTARO-V1-Mass-Energy-Model-2026.md",
+      "bytes": 2620,
+      "sha256": "f1c1a6fdc89c55b01e3ae294ad247d15aa2b12b9d0f6ff33b402fc48e6ed5238"
+    },
+    {
+      "path": "docs/VELTARO-V1-Mode-Management-Concept-2026.md",
+      "bytes": 1818,
+      "sha256": "6c666afbbc56faa1ed1b56f08e5a52b54a788b8400e01295124afb7e9e2d2305"
+    },
+    {
+      "path": "docs/VELTARO-V1-Pack-Evidence-Validation-2026.md",
+      "bytes": 948,
+      "sha256": "1215a83ec2faaac05483aedd30c730d32e7dc504277922dd3ca24e1cd336e2b4"
+    },
+    {
+      "path": "docs/VELTARO-V1-Parallel-Evidence-Acceptance-2026.md",
+      "bytes": 2703,
+      "sha256": "fee83835de8bf750f9c6e2f20dc0936a2959818ae45387605d249fcfaa0b57ff"
+    },
+    {
+      "path": "docs/VELTARO-V1-Performance-Evidence-Gate-2026.md",
+      "bytes": 1386,
+      "sha256": "0ea4281da7f10240216c2e426517205511627f4fabae7843a9ebb00803b8772b"
+    },
+    {
+      "path": "docs/VELTARO-V1-Phase-Power-Energy-Research-2026.md",
+      "bytes": 1220,
+      "sha256": "a130c459eb5c1d74fb4173b5d2858325dc23ffc063d56137d6d5c64c2e714313"
+    },
+    {
+      "path": "docs/VELTARO-V1-Preliminary-Failure-Trees-2026.md",
+      "bytes": 4336,
+      "sha256": "91689542d818bcb766377775ce244a96718bb9fea4cc47471713091e9718a959"
+    },
+    {
+      "path": "docs/VELTARO-V1-Preliminary-Hazard-Register-2026.md",
+      "bytes": 2722,
+      "sha256": "c765fdd3270083f338d7c09cf179187af8c55c4453de44821b44a7c339d84938"
+    },
+    {
+      "path": "docs/VELTARO-V1-Product-Definition-Rev-A-2026.md",
+      "bytes": 7545,
+      "sha256": "efa440b49537da71e3fb480d6eee78f889f166bcef9e206a90f9f5b2a654cd6c"
+    },
+    {
+      "path": "docs/VELTARO-V1-Product-Requirements-v0.1.md",
+      "bytes": 4144,
+      "sha256": "158caea2bc5bfd37bf80bd1774571b16f1441742239d6ddd22f8f2719c0a7e17"
+    },
+    {
+      "path": "docs/VELTARO-V1-Public-Evidence-Baseline-2026.md",
+      "bytes": 2786,
+      "sha256": "2b269746402d7dd13a1e4388341fccda88d66469b1bd9755ca8d0e1520bbe8f2"
+    },
+    {
+      "path": "docs/VELTARO-V1-Reference-Mission-M01-2026.md",
+      "bytes": 3810,
+      "sha256": "c2dccd5e81cf4114cc536a131df7295aca6c5c9fc95c37c2d11d5fd03fc50584"
+    },
+    {
+      "path": "docs/VELTARO-V1-Subsystem-Evidence-Budget-2026.md",
+      "bytes": 3422,
+      "sha256": "0a1b4e31a25fbc6e124acd28ab65101b1b5529b0cc58be399d02611f5871e8d9"
+    },
+    {
+      "path": "docs/VELTARO-V1-Subsystem-Hazard-Dependencies-2026.md",
+      "bytes": 316,
+      "sha256": "561a2999b5fbe66a0d17a78fae8c27db9c335a6281f1b2db4298f3eff92a07f1"
+    },
+    {
+      "path": "docs/VELTARO-V1-Subsystem-Readiness-2026.md",
+      "bytes": 1469,
+      "sha256": "b665af22385c0412b28313c39645a9ea98e7269ac3a447777b11281826a473c7"
+    },
+    {
+      "path": "docs/VELTARO-V1-Systems-Architecture-Rev-A-2026.md",
+      "bytes": 3925,
+      "sha256": "e46fbeeb8ba997f47d01839938b127438bd665cbb58bc952bcb7f38f42d90710"
+    },
+    {
+      "path": "docs/VELTARO-V1-Transformation-Mechanism-Requirements-2026.md",
+      "bytes": 2310,
+      "sha256": "8afc231b324cc5c5eba0ff3c4eca27be665c4ee4be16bdb89bda6b8266940366"
+    },
+    {
+      "path": "docs/VELTARO-Verified-Outreach-Targets-2026.md",
+      "bytes": 3159,
+      "sha256": "2f675d339799d3c2468685e5e55d9394a8894f2b18a094a944c77d45a4be8ea6"
+    },
+    {
+      "path": "docs/VELTARO-Website-Launch-Checklist-2026.md",
+      "bytes": 1797,
+      "sha256": "d980ba9eddd0780b19318ae9b7081dec2aefecf0f8b99f45397c23044d7ec1e2"
+    },
+    {
+      "path": "docs/VELTARO-Zero-Capital-Operating-Plan-2026.md",
+      "bytes": 3783,
+      "sha256": "08aeffbfa3840f019d104027e0bd2fef14b13945d842d13ee6ce876d1d0c94a9"
+    },
+    {
+      "path": "docs/WEBSITE-LAUNCH-AUDIT.md",
+      "bytes": 4481,
+      "sha256": "31c1a6c77df92f432f290537cecd9bc211db6e5f2d9bf5a0897d02bbd37e880c"
+    },
+    {
+      "path": "early-interest.html",
+      "bytes": 6635,
+      "sha256": "a102ff5e45af48af5f364acaefdbc37a63535905c7c29b2bed7c8fa5d628c24d"
+    },
+    {
+      "path": "engineering/v1-architecture-decision-gates.csv",
+      "bytes": 766,
+      "sha256": "9865197075649ea5d2dcbbeabb7bef361b213ca538d2a594aa6f8f346797f40e"
+    },
+    {
+      "path": "engineering/v1-architecture-gates.json",
+      "bytes": 699,
+      "sha256": "a1f61e68b7a48e89ac300eba8f8674651349656576c6ff18b00fe691757cae59"
+    },
+    {
+      "path": "engineering/v1-battery-propulsion-evidence.json",
+      "bytes": 3414,
+      "sha256": "7aa7c97a02d5286a3cce44b855cbe791ea7e978e421edfb905290cd842fdc364"
+    },
+    {
+      "path": "engineering/v1-common-cause-register.csv",
+      "bytes": 2246,
+      "sha256": "1d47d94668f7cdf549e8f1a60f40fca2bf89e7866bfc17b67bef9b7170f54716"
+    },
+    {
+      "path": "engineering/v1-dependency-index.csv",
+      "bytes": 596,
+      "sha256": "fe49aaf19f1059284bb2cce41bf0d0672ba62b007ada1a410100c04ecf635b8f"
+    },
+    {
+      "path": "engineering/v1-dual-architecture-workstreams.json",
+      "bytes": 1914,
+      "sha256": "3caf4d09c7b2f55f9a6d5832e1c0449aa25d54bf9462ae2ce13e9823cefc08c5"
+    },
+    {
+      "path": "engineering/v1-evidence-example.json",
+      "bytes": 440,
+      "sha256": "dcfb2a91d061ec49f853039a474460150f01e067a79566cc5a385162b7084234"
+    },
+    {
+      "path": "engineering/v1-evidence-priority-matrix.csv",
+      "bytes": 1902,
+      "sha256": "1233d3982f6166eff8a9589a084bc926792b8eddb85b74cf7ab122c35c7fa8ec"
+    },
+    {
+      "path": "engineering/v1-evidence-quality-gate.mjs",
+      "bytes": 2174,
+      "sha256": "b7ea2107f55530237b99e93192322dfe960ccd27152bd4c8886d5865640fdb7c"
+    },
+    {
+      "path": "engineering/v1-failure-tree-index.csv",
+      "bytes": 494,
+      "sha256": "a32d374146b30ca3ac5ac6ad4ae9f3870f58ca9d4027fc265a09047b5556cf46"
+    },
+    {
+      "path": "engineering/v1-hazard-register.csv",
+      "bytes": 2719,
+      "sha256": "3dae57c633bce6da9d110b86fe87a8e407a7f3f709c5303e65c8c42de7bb757f"
+    },
+    {
+      "path": "engineering/v1-hazard-requirement-trace.csv",
+      "bytes": 2405,
+      "sha256": "b5b78a9d7ef1e44ec77417e34879edd80df1ed24c7ff51b08eba1374dbe1ec31"
+    },
+    {
+      "path": "engineering/v1-interface-inventory.csv",
+      "bytes": 1993,
+      "sha256": "815c174927b1196b2ff289908f3065cc757adb43d129b8f8a912f937f0f4f5d9"
+    },
+    {
+      "path": "engineering/v1-m01-architecture-mass-ledgers.json",
+      "bytes": 11464,
+      "sha256": "ce18b96634cd5da0939bbd99a71a32bc18f7c458568046b9ef8250ed1a43d614"
+    },
+    {
+      "path": "engineering/v1-m01-common-mission.json",
+      "bytes": 1405,
+      "sha256": "422476bb933fbf6ddaae925d3e5d38baf9dd272ac01f910c8f8d16c984317def"
+    },
+    {
+      "path": "engineering/v1-m01-energy-model.mjs",
+      "bytes": 1803,
+      "sha256": "ff5ddde6fd80313b7488d9888c726f04137526381b3f725bc969d1bdd49584bf"
+    },
+    {
+      "path": "engineering/v1-m01-energy-sample.json",
+      "bytes": 883,
+      "sha256": "a8ec7b04021bedd74e155275dbfdebf47ff1d6abd14c999c5a810fd23e764e2b"
+    },
+    {
+      "path": "engineering/v1-m01-greece-site-research.json",
+      "bytes": 1012,
+      "sha256": "c3c361b094b8dc1977022379223df72787c0fa8512a7170fa101c12f066e6c15"
+    },
+    {
+      "path": "engineering/v1-m01-mass-ledger-audit.mjs",
+      "bytes": 6068,
+      "sha256": "b190eadaeb323d95a9a2f6146b5fe4353ff307028e2bbb6590b8a02af4d8103f"
+    },
+    {
+      "path": "engineering/v1-m01-run-mass-ledger-audit.mjs",
+      "bytes": 555,
+      "sha256": "947380deadf3365f815e434ee8167fc0d9f73d53b7003aa8b6b2ef25d9556abb"
+    },
+    {
+      "path": "engineering/v1-m01-run-sensitivity.mjs",
+      "bytes": 606,
+      "sha256": "227236905ad914524cb9e4852ea3e0e5994707f5a78a5fa2ad151b544c7ff95b"
+    },
+    {
+      "path": "engineering/v1-m01-sensitivity-sweep.mjs",
+      "bytes": 1258,
+      "sha256": "b3cb9c56233bf8f871be0ecd18be026f4a5d686668f407a5c2b76c10b2ad7314"
+    },
+    {
+      "path": "engineering/v1-m01-thrace-route-candidates.json",
+      "bytes": 1893,
+      "sha256": "4e208eb88ffce9d067be74156dc731403f21ad9d264712d0908f41abaa8373a4"
+    },
+    {
+      "path": "engineering/v1-parallel-evidence-gates.json",
+      "bytes": 822,
+      "sha256": "a220b6c0169e0cbe4cd51c6a80b6bbb8535494cd2ec55868bc16722725eea317"
+    },
+    {
+      "path": "engineering/v1-subsystem-hazard-dependencies.csv",
+      "bytes": 955,
+      "sha256": "1928949f78bcdee89a779ee24fdf534701f2de18f55536a88d978acbd5ba9b77"
+    },
+    {
+      "path": "engineering/v1-subsystem-readiness.json",
+      "bytes": 3904,
+      "sha256": "40d264fd5a11bde5fb89fd557522a3b4ad59ed5c466b98d5eb66297c682114c0"
+    },
+    {
+      "path": "index.html",
+      "bytes": 21226,
+      "sha256": "d45b109ef03052ea4087ad44305c5c753506bb25f9412594b1bf868327a837f0"
+    },
+    {
+      "path": "labs.html",
+      "bytes": 6933,
+      "sha256": "e4d054ffa45161a17a3ea718f43539b2568252907031e0228ccf6d722bced258"
+    },
+    {
+      "path": "privacy.html",
+      "bytes": 5210,
+      "sha256": "8a6ce31529a3147cf92ea0f65259aac8fda94a9a17dbd514de581955af5452d0"
+    },
+    {
+      "path": "robots.txt",
+      "bytes": 89,
+      "sha256": "108848b4f0ef587c82d6036c99587e00e5fff4309511afbd40818bc5d4bab35a"
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 606,
+      "sha256": "1b4a6a07aa4fa33722877d1af7dc57a02d3fa07c581cb0dbfdf301e4f69f4f86"
+    },
+    {
+      "path": "tests/check-live-pages.mjs",
+      "bytes": 1440,
+      "sha256": "980141f8c2037a3dd340daaee22432b604f30c9f8279bbef82e1da9bdc8e3ddc"
+    },
+    {
+      "path": "tests/check-site.mjs",
+      "bytes": 6824,
+      "sha256": "ec7bdaa7710cdad5346f739db82f52241352bb8b994bd7ee3b74e682bcab1d22"
+    },
+    {
+      "path": "tests/cockpit-interaction.mjs",
+      "bytes": 5256,
+      "sha256": "8ea4083656b128e23e56285eebd6db4805e1f41d95cd4c430eddbfdc5c185b6c"
+    },
+    {
+      "path": "tests/v1-architecture-decision-gates.mjs",
+      "bytes": 546,
+      "sha256": "b63c3d1a01655e0051e79599bd5bc2c828fd42a34e1d5e97c92fea86fb35c5f1"
+    },
+    {
+      "path": "tests/v1-architecture-gates.mjs",
+      "bytes": 585,
+      "sha256": "7ce7c7ae22aa38cb71c5b3422cadc1b8a1faa11e344c9ac52953c1718af01df2"
+    },
+    {
+      "path": "tests/v1-battery-propulsion-evidence.mjs",
+      "bytes": 688,
+      "sha256": "0ac5eeb779d0f08bbc0889dd3472ac0229113f5effd4da00ca8ab8af09d4e161"
+    },
+    {
+      "path": "tests/v1-common-cause-links.mjs",
+      "bytes": 889,
+      "sha256": "d84ef7f2c5e3251ce5e5ac0f2a377ca59b9ddfc1ad9b5c11b809ea6d87ec24a7"
+    },
+    {
+      "path": "tests/v1-concept-comparison.mjs",
+      "bytes": 3818,
+      "sha256": "bd13f80fe113c2e12d1ae72397a245977684e507c11fdcdb4d23fb7cdcbb6c08"
+    },
+    {
+      "path": "tests/v1-dashboard-linked-dependencies.mjs",
+      "bytes": 782,
+      "sha256": "6e5f513d86f500d486af30f9060d8d5d6a0abec9c7607fbea1595f39df6609fa"
+    },
+    {
+      "path": "tests/v1-dependency-links.mjs",
+      "bytes": 890,
+      "sha256": "044f577c569dfcab0cec673f9eec6d1d848808852e01a833d03127af2ac96ee5"
+    },
+    {
+      "path": "tests/v1-dual-architecture-workstreams.mjs",
+      "bytes": 631,
+      "sha256": "8b46112fe18207e11ecd7c0e63d8fe6e4eccebeae4ef7c6116aa4ef5b6446870"
+    },
+    {
+      "path": "tests/v1-evidence-dashboard.mjs",
+      "bytes": 924,
+      "sha256": "19fab63ab234593078c3d938ccaef706bb1e39a7afbc44198805339053d7fc37"
+    },
+    {
+      "path": "tests/v1-evidence-intake.mjs",
+      "bytes": 2967,
+      "sha256": "f06946a68b335eda0b7b7102bcade402385a4c66a6859b6d325a71134025b0e2"
+    },
+    {
+      "path": "tests/v1-evidence-priority.mjs",
+      "bytes": 827,
+      "sha256": "276de7e72bacec1f27c7be22a862326a9ca996032b92e24f1878645c59a88265"
+    },
+    {
+      "path": "tests/v1-evidence-quality-gate.mjs",
+      "bytes": 1082,
+      "sha256": "974f28e2374bf36a7daf66780ce7d3bd3bf6d3fe9e5e320888aa0d0d6fce0887"
+    },
+    {
+      "path": "tests/v1-failure-tree-links.mjs",
+      "bytes": 845,
+      "sha256": "8479c4e6dfa69fdb3d6c352e83843ae40291d6ca09e9dc7d847aba0861e71c73"
+    },
+    {
+      "path": "tests/v1-fixture-consistency.mjs",
+      "bytes": 3478,
+      "sha256": "b25d5d0aad001e4d7aa1a1f86171b92eb9ed10eb6836027bcd8601ae8bf6bd12"
+    },
+    {
+      "path": "tests/v1-hazard-traceability.mjs",
+      "bytes": 725,
+      "sha256": "459fe047ab45a2263f38551e7ec0fb21d03f5436bdd789c90564999e4815218d"
+    },
+    {
+      "path": "tests/v1-interface-inventory.mjs",
+      "bytes": 900,
+      "sha256": "090baf7e49e9d768a0335d82dda57eb5a0e338e9e3b74b18f85195e75c2a7e88"
+    },
+    {
+      "path": "tests/v1-m01-architecture-mass-ledger.mjs",
+      "bytes": 6003,
+      "sha256": "21b3bf8395c5ad5c8ef299ca90e536b52b4ecd48bc15f1731cdfce019a2a493d"
+    },
+    {
+      "path": "tests/v1-m01-common-mission.mjs",
+      "bytes": 1134,
+      "sha256": "f5f8e572cfce79b5e765c49adb4fe1459493be2d6c8e842977e8947ed780da71"
+    },
+    {
+      "path": "tests/v1-m01-energy-model.mjs",
+      "bytes": 1297,
+      "sha256": "185108b4b67328b94efda5a602ea70949f778d5ebd20396c1447d5ebba5ee6fc"
+    },
+    {
+      "path": "tests/v1-m01-greece-site-research.mjs",
+      "bytes": 694,
+      "sha256": "dea4c7211bd4d505becef84fda6957cb74ae8be29ec1bfe9169bd0033a3fb6b0"
+    },
+    {
+      "path": "tests/v1-m01-sensitivity.mjs",
+      "bytes": 1250,
+      "sha256": "d3dd7e1b17c3fa08ef392191e54b2d7850bc375d1d843791f877433312715098"
+    },
+    {
+      "path": "tests/v1-m01-thrace-route-gates.mjs",
+      "bytes": 789,
+      "sha256": "1cdc8f23846fd169bbb14f2b99890d416ea8b8ce5110748ab0c0eee8e84abebb"
+    },
+    {
+      "path": "tests/v1-mass-energy-closure.mjs",
+      "bytes": 2904,
+      "sha256": "e94268a6596d2d5e5c21abbc7aa20b882e4aa4e18edb7c8e5a9b2cbc002dca00"
+    },
+    {
+      "path": "tests/v1-pack-evidence.mjs",
+      "bytes": 4224,
+      "sha256": "937a66e0f3bb7c64600889cd418209a90c98a2dfe5cd7d72f1ea99770cc366ac"
+    },
+    {
+      "path": "tests/v1-parallel-evidence-gates.mjs",
+      "bytes": 502,
+      "sha256": "3f1a2357eb3abc078c7c7e0bde56fb3ee4de6c1c7281cef4aa0f4a8d2be91e8f"
+    },
+    {
+      "path": "tests/v1-phase-energy-power.mjs",
+      "bytes": 3360,
+      "sha256": "ad57fb4482acdb7acb39a5589460ed70e956e24295ffa1c6567023570c5ed3cf"
+    },
+    {
+      "path": "tests/v1-sensitivity.mjs",
+      "bytes": 1583,
+      "sha256": "ddbdfbcd900324ebdd54059653d90b8037d21f753453a97d21b150ced36b133a"
+    },
+    {
+      "path": "tests/v1-subsystem-hazard-dependencies.mjs",
+      "bytes": 1039,
+      "sha256": "509a45ac7844bab41df16d4c96605964d882101534dc9e62c93fadc15aa18db6"
+    },
+    {
+      "path": "tests/v1-subsystem-readiness.mjs",
+      "bytes": 819,
+      "sha256": "9d0ad53543c88adb0d0458f72c1b22078d523d297c6286d9c8db86ca3f4f01d1"
+    },
+    {
+      "path": "v1-evidence-dashboard.html",
+      "bytes": 6150,
+      "sha256": "c94e9061eb21c6d33cee1e0bb5529ff5aa25bde56ad61c1bdc993a4a4108ff9e"
+    },
+    {
+      "path": "v1-hero.svg",
+      "bytes": 2756,
+      "sha256": "14157580fffefcd4487406fcbefee16461bdf6678212315860dcb6ca1d190575"
+    }
+  ]
+}
