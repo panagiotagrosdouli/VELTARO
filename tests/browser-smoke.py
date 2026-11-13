@@ -28,6 +28,12 @@ try:
   page.click('#startup-language');assert page.locator('html').get_attribute('lang')=='el'
   page.locator('.corporate-nav summary').click();assert page.locator('.dropdown').is_visible()
   page.goto(f"http://127.0.0.1:{port}/about.html");page.click('#locale');assert page.locator('#greek').is_visible()
+  page.goto(f"http://127.0.0.1:{port}/labs-workspace.html");page.fill('#question','What public evidence supports mobility assumptions?');page.check('#local-consent');page.locator('#intake button').click();assert 'NOT submitted' in page.locator('#workspace-status').inner_text();page.fill('#source-url','https://www.easa.europa.eu/');page.fill('#finding','<script>bad()</script> Evidence finding');page.click('#add-source');assert '<script>' in page.locator('#evidence-list').inner_text()
+  for button in ['#export-json','#export-report']:
+   with page.expect_download() as download:page.click(button)
+   assert download.value.suggested_filename
+  page.click('#erase');assert page.locator('#project').is_hidden()
+  page.goto(f"http://127.0.0.1:{port}/scenario-explorer.html");page.wait_for_function("document.querySelector('#results').children.length===2");before=page.locator('#results').inner_text();page.locator('#multiplier').fill('80');page.locator('#multiplier').dispatch_event('input');assert page.locator('#results').inner_text()!=before
   assert not errors,errors
   browser.close();print(json.dumps({"routes":len(results),"pageErrors":errors,"scope":"static browser smoke; no form delivery or physical evidence"}))
 finally:server.terminate();server.wait(timeout=5)

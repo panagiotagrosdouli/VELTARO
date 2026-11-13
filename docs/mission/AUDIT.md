@@ -4,7 +4,7 @@ Baseline `823490a044b6d6a36a01fa2e071f9321f567510c`. Both repositories inspected
 
 ## Existing implementation and gaps
 - Seven HTML pages, three local original SVG illustrations, externally hosted reference imagery; premium founder-selected subjects preserved.
-- 32 local Node test files pass (excluding live GET script). Existing mass-energy, sensitivity, architecture decision, interface, hazard and evidence-quality tools are valuable and must be extended rather than replaced.
+- 31 local Node test files pass (excluding live GET script). Existing mass-energy, sensitivity, architecture decision, interface, hazard and evidence-quality tools are valuable and must be extended rather than replaced.
 - LABS-first decision, V1 dual architecture HOLD, product/system definition, commercial validation playbook, founder pack and launch gates already documented. No evidence supports changing those decisions.
 - Cockpit has bilingual modes and truthful non-operational warnings. Evidence dashboard fetches actual JSON/CSV registers; dataset statuses remain unreviewed.
 - LABS service page has no scoped intake or local project tracking/export workflow; it routes inquiries to existing forms.

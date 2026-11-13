@@ -1,0 +1,282 @@
+RUN python3 tests/check-integrity.py
+21 HTML pages, SVG XML and engineering JSON checked
+RUN node tests/check-site.mjs
+PASS index.html unique IDs
+PASS index.html internal anchors
+PASS index.html local path favicon.svg
+PASS index.html local path assets/corporate.css
+PASS index.html local path index.html
+PASS index.html local path brand/horizontal-dark.svg
+PASS index.html local path labs.html
+PASS index.html local path v1.html
+PASS index.html local path investors.html
+PASS index.html local path labs.html
+PASS index.html local path v1.html
+PASS index.html local path investors.html
+PASS index.html local path about.html
+PASS index.html local path technology.html
+PASS index.html local path research-hub.html
+PASS index.html local path safety.html
+PASS index.html local path contact.html
+PASS index.html local path contact.html
+PASS index.html local path labs.html
+PASS index.html local path early-interest.html
+PASS index.html local path assets/v1-flying-design.svg
+PASS index.html local path labs-workspace.html
+PASS index.html local path v1.html
+PASS index.html local path v1-evidence-dashboard.html
+PASS index.html local path labs.html
+PASS index.html local path assets/v1-concept.svg
+PASS index.html local path assets/v1-flying-design.svg
+PASS index.html local path privacy.html
+PASS index.html local path research-hub.html
+PASS index.html local path brand/horizontal-dark.svg
+PASS index.html local path labs.html
+PASS index.html local path v1.html
+PASS index.html local path air.html
+PASS index.html local path skycourier.html
+PASS index.html local path ground.html
+PASS index.html local path about.html
+PASS index.html local path investors.html
+PASS index.html local path contact.html
+PASS index.html local path collaborate.html
+PASS index.html local path privacy.html
+PASS index.html local path terms.html
+PASS index.html local path research-hub.html
+PASS index.html local path assets/startup-language.js
+PASS collaborate.html unique IDs
+PASS collaborate.html internal anchors
+PASS collaborate.html local path favicon.svg
+PASS collaborate.html local path index.html
+PASS collaborate.html local path index.html
+PASS collaborate.html local path index.html
+PASS collaborate.html local path privacy.html
+PASS collaborate.html local path index.html
+PASS collaborate.html local path research-hub.html
+PASS privacy.html unique IDs
+PASS privacy.html internal anchors
+PASS privacy.html local path favicon.svg
+PASS privacy.html local path index.html
+PASS privacy.html local path index.html
+PASS privacy.html local path collaborate.html
+PASS privacy.html local path research-hub.html
+PASS cockpit-concept.html unique IDs
+PASS cockpit-concept.html internal anchors
+PASS cockpit-concept.html local path favicon.svg
+PASS cockpit-concept.html local path index.html
+PASS cockpit-concept.html local path research-hub.html
+PASS early-interest.html unique IDs
+PASS early-interest.html internal anchors
+PASS early-interest.html local path favicon.svg
+PASS early-interest.html local path index.html
+PASS early-interest.html local path index.html
+PASS early-interest.html local path privacy.html
+PASS early-interest.html local path index.html
+PASS early-interest.html local path collaborate.html
+PASS early-interest.html local path privacy.html
+PASS early-interest.html local path research-hub.html
+PASS labs.html unique IDs
+PASS labs.html internal anchors
+PASS labs.html local path favicon.svg
+PASS labs.html local path assets/corporate.css
+PASS labs.html local path index.html
+PASS labs.html local path brand/horizontal-dark.svg
+PASS labs.html local path labs.html
+PASS labs.html local path v1.html
+PASS labs.html local path investors.html
+PASS labs.html local path labs.html
+PASS labs.html local path v1.html
+PASS labs.html local path investors.html
+PASS labs.html local path about.html
+PASS labs.html local path technology.html
+PASS labs.html local path research-hub.html
+PASS labs.html local path safety.html
+PASS labs.html local path contact.html
+PASS labs.html local path contact.html
+PASS labs.html local path index.html
+PASS labs.html local path index.html
+PASS labs.html local path early-interest.html
+PASS labs.html local path labs-workspace.html
+PASS labs.html local path brand/horizontal-dark.svg
+PASS labs.html local path labs.html
+PASS labs.html local path v1.html
+PASS labs.html local path air.html
+PASS labs.html local path skycourier.html
+PASS labs.html local path ground.html
+PASS labs.html local path about.html
+PASS labs.html local path investors.html
+PASS labs.html local path contact.html
+PASS labs.html local path privacy.html
+PASS labs.html local path terms.html
+PASS labs.html local path research-hub.html
+PASS labs.html local path assets/startup-language.js
+PASS index.html unique page title present
+PASS index.html meta description present
+PASS index.html GitHub Pages canonical
+PASS index.html Open Graph URL
+PASS index.html social card
+PASS collaborate.html cross-page anchor index.html#connect
+PASS collaborate.html unique page title present
+PASS collaborate.html meta description present
+PASS collaborate.html GitHub Pages canonical
+PASS collaborate.html Open Graph URL
+PASS collaborate.html social card
+PASS privacy.html unique page title present
+PASS privacy.html meta description present
+PASS privacy.html GitHub Pages canonical
+PASS privacy.html Open Graph URL
+PASS privacy.html social card
+PASS cockpit-concept.html unique page title present
+PASS cockpit-concept.html meta description present
+PASS cockpit-concept.html GitHub Pages canonical
+PASS cockpit-concept.html Open Graph URL
+PASS cockpit-concept.html social card
+PASS early-interest.html unique page title present
+PASS early-interest.html meta description present
+PASS early-interest.html GitHub Pages canonical
+PASS early-interest.html Open Graph URL
+PASS early-interest.html social card
+PASS labs.html cross-page anchor index.html#message-form
+PASS labs.html cross-page anchor index.html#message-form
+PASS labs.html unique page title present
+PASS labs.html meta description present
+PASS labs.html GitHub Pages canonical
+PASS labs.html Open Graph URL
+PASS labs.html social card
+PASS homepage structured data exists
+PASS homepage structured data is valid
+PASS homepage link collaborate.html
+PASS homepage link early-interest.html
+PASS homepage link privacy.html
+PASS homepage link labs.html
+PASS semantic main landmark
+PASS keyboard skip link
+PASS reduced motion preference
+PASS concept-stage disclosure
+PASS honest availability disclaimer
+PASS vision CTA
+PASS customer research CTA
+PASS collaboration CTA
+PASS responsive viewport
+PASS mobile layout
+PASS keyboard focus styling
+PASS no speculative milestone year
+PASS customer form exists
+PASS customer form POST recipient
+PASS customer form closed
+PASS customer form name
+PASS customer form email
+PASS customer form message
+PASS customer form _subject
+PASS customer form research_profile
+PASS customer form use_case
+PASS customer form research_contact_consent
+PASS customer form _captcha
+PASS customer form _autoresponse
+PASS customer form consent notice
+PASS homepage contact form subject
+PASS engineering evidence dashboard exists
+PASS engineering dashboard is excluded from search indexing
+PASS engineering dashboard data regions
+PASS privacy contact
+PASS privacy research disclosure
+PASS cockpit mode road
+PASS cockpit mode site
+PASS cockpit mode config
+PASS cockpit mode review
+PASS cockpit mode service
+PASS robots sitemap
+PASS sitemap route home
+PASS sitemap route early-interest.html
+PASS sitemap route collaborate.html
+PASS sitemap route cockpit-concept.html
+PASS sitemap route privacy.html
+PASS sitemap route labs.html
+PASS homepage canonical
+PASS homepage social url
+PASS homepage social description
+PASS interest canonical
+PASS interest social url
+PASS interest social description
+PASS LABS page identity
+PASS LABS/V1 long-term research distinction
+PASS LABS contact uses existing form
+PASS LABS introduces no unverified new form
+Static checks passed. Form delivery, accessibility and legal review still require manual verification.
+RUN node tests/cockpit-interaction.mjs
+Cockpit EN/EL interaction regression tests passed.
+RUN node tests/v1-architecture-decision-gates.mjs
+Architecture decision review stays on HOLD pending verified comparative evidence.
+RUN node tests/v1-architecture-gates.mjs
+Architecture trade study guards passed — no unsupported selection.
+RUN node tests/v1-battery-propulsion-evidence.mjs
+Literature records kept separate from six missing V1 hardware measurements.
+RUN node tests/v1-common-cause-links.mjs
+All 8 unreviewed common-cause entries link to HZ-12 and known requirements.
+RUN node tests/v1-concept-comparison.mjs
+Dual-track illustrative numerical comparison checks passed. Neither architecture verified or selected.
+RUN node tests/v1-dashboard-linked-dependencies.mjs
+Dashboard dependency table maps nine unreviewed subsystem links.
+RUN node tests/v1-dependency-links.mjs
+Eight hypothetical dependencies trace to all eight CCA entries, unreviewed.
+RUN node tests/v1-dual-architecture-workstreams.mjs
+Dual architecture concept workstreams verified.
+RUN node tests/v1-evidence-dashboard.mjs
+Evidence dashboard integrity checks passed; decision remains HOLD.
+RUN node tests/v1-evidence-intake.mjs
+Evidence intake validation checks passed; no engineering claim independently verified.
+RUN node tests/v1-evidence-priority.mjs
+10 unverified evidence priorities; mission remains on HOLD.
+RUN node tests/v1-evidence-quality-gate.mjs
+{
+  "canPublishPerformanceComparison": false,
+  "reasons": [
+    "BATT-01: missing independently verified numeric measurement and provenance",
+    "BATT-02: missing independently verified numeric measurement and provenance",
+    "BATT-03: missing independently verified numeric measurement and provenance",
+    "PROP-01: missing independently verified numeric measurement and provenance",
+    "PROP-02: missing independently verified numeric measurement and provenance",
+    "THERM-01: missing independently verified numeric measurement and provenance",
+    "Vehicle measurements not independently validated",
+    "Operational authorization not established",
+    "Mission comparison not reviewed for release",
+    "Valid authorized site pair absent for one or both concepts"
+  ],
+  "assessment": "DOCUMENTATION_GATE_ONLY"
+}
+Data-quality gate blocks unverified published performance and absent legal mission.
+RUN node tests/v1-failure-tree-links.mjs
+4 conceptual top-events linked to registered hazards and proposed requirements; no risks closed.
+RUN node tests/v1-fixture-consistency.mjs
+Toy phase-versus-closure energy consistency checks passed; aircraft feasibility not established.
+RUN node tests/v1-hazard-traceability.mjs
+All 12 proposed requirements map one-to-one to registered hazards; no closure implied.
+RUN node tests/v1-interface-inventory.mjs
+8 candidate interfaces traced to known dependency and common-cause IDs; unreviewed.
+RUN node tests/v1-m01-architecture-mass-ledger.mjs
+M-01 mass-ledger tests passed: unknown default, shared payload, arithmetic fixture and fail-closed validations.
+RUN node tests/v1-m01-common-mission.mjs
+M-01 contains two variants, common unverified assumptions, and no fictional authorization or performance.
+RUN node tests/v1-m01-energy-model.mjs
+Toy arithmetic consistent; operational evidence still missing.
+RUN node tests/v1-m01-greece-site-research.mjs
+Provisional Greece research does not assert route authorization or fictional energy figures.
+RUN node tests/v1-m01-sensitivity.mjs
+24 educational sensitivity scenarios passed monotonicity and HOLD checks.
+RUN node tests/v1-m01-thrace-route-gates.mjs
+Two research paths remain blocked without authorized site pairs or mass/energy evidence.
+RUN node tests/v1-mass-energy-closure.mjs
+Toy mass-energy closure assertions passed. No actual V1 feasibility established.
+RUN node tests/v1-pack-evidence.mjs
+Pack evidence boundary tests passed — no physical V1 pack validated.
+RUN node tests/v1-parallel-evidence-gates.mjs
+Both architecture evidence gates remain open.
+RUN node tests/v1-phase-energy-power.mjs
+Phase energy and power toy checks passed; no V1 performance validated.
+RUN node tests/v1-sensitivity.mjs
+Educational sensitivity calculation tests passed — no vehicle feasibility validated.
+RUN node tests/v1-subsystem-hazard-dependencies.mjs
+Proposed subsystem references checked.
+RUN node tests/v1-subsystem-readiness.mjs
+Nine subsystem records remain unassessed and dashboard links data source.
+FAILED COMMANDS: []
