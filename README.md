@@ -63,3 +63,10 @@ Review [`docs/PRODUCTION-LAUNCH-CHECKLIST.md`](docs/PRODUCTION-LAUNCH-CHECKLIST.
 ## Founder-selected operating direction (2026-11-12)
 
 The founder selected **VELTARO LABS as the first prospective revenue workstream** and **VELTARO V1 as the long-term flagship R&D ambition**. This is a strategic choice, not proof of first revenue or incorporation. See `labs.html` and `docs/VELTARO-FOUNDER-STARTUP-PACK-2026-11-12.md`.
+
+
+## Startup foundation branch — 13 November 2026
+
+Start at `research-hub.html`. Corporate homepage, proposed original identity, review documents and local research tools are added without removing founder-selected imagery. Run `python3 scripts/check-all.py`; optional browser/accessibility checks: `CHROMIUM_PATH=/usr/bin/chromium python3 tests/browser-smoke.py` with Playwright 1.62.0 installed. See `docs/mission/READINESS.md` for incomplete gates and `docs/mission/BUSINESS-PLAN.md`, `financial-model.xlsx`, `investor-deck.pptx` and `investor-deck.pdf` for founder review materials.
+
+LABS workspace stores no data on a server: prepare and export locally, then use the existing inquiry channel. No request is submitted by the workspace. V1 scenario explorer loads actual repository hypothetical inputs and preserves HOLD BOTH.
