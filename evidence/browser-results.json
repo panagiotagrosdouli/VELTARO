@@ -1,0 +1,311 @@
+{
+  "routes": [
+    {
+      "venture": "VELTARO",
+      "page": "about.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "air.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "careers.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "cockpit-concept.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "collaborate.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "contact.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "early-interest.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "ground.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "index.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "investors.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "labs-workspace.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "labs.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "privacy.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "research-hub.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "safety.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "scenario-explorer.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "skycourier.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "technology.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "terms.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "v1-evidence-dashboard.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "v1.html",
+      "width": 390,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "about.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "air.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "careers.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "cockpit-concept.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "collaborate.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "contact.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "early-interest.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "ground.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "index.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "investors.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "labs-workspace.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "labs.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "privacy.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "research-hub.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "safety.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "scenario-explorer.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "skycourier.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "technology.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "terms.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "v1-evidence-dashboard.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    },
+    {
+      "venture": "VELTARO",
+      "page": "v1.html",
+      "width": 1440,
+      "http": 200,
+      "horizontalOverflow": false
+    }
+  ],
+  "pageErrors": [],
+  "flows": [
+    "EN/EL toggle",
+    "mission consent interlock",
+    "live local telemetry",
+    "simulated stop",
+    "cross-origin write rejected",
+    "scripted handoff",
+    "LABS intake/evidence/export/erase",
+    "actual fixture sensitivity"
+  ],
+  "overflowFailures": [],
+  "scope": "Local browser evidence only, not deployed revision, physical safety, complete localization or form delivery"
+}

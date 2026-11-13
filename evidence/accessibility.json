@@ -1,0 +1,138 @@
+{
+  "tool": "axe-core 4.10.3",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21aa"
+  ],
+  "date": "2026-11-13",
+  "scope": "Automated subset only; incomplete findings and manual usability review remain",
+  "pages": [
+    {
+      "venture": "VELTARO",
+      "page": "about.html",
+      "violations": [],
+      "incomplete": 0
+    },
+    {
+      "venture": "VELTARO",
+      "page": "air.html",
+      "violations": [],
+      "incomplete": 0
+    },
+    {
+      "venture": "VELTARO",
+      "page": "careers.html",
+      "violations": [],
+      "incomplete": 0
+    },
+    {
+      "venture": "VELTARO",
+      "page": "cockpit-concept.html",
+      "violations": [],
+      "incomplete": 1
+    },
+    {
+      "venture": "VELTARO",
+      "page": "collaborate.html",
+      "violations": [],
+      "incomplete": 0
+    },
+    {
+      "venture": "VELTARO",
+      "page": "contact.html",
+      "violations": [],
+      "incomplete": 0
+    },
+    {
+      "venture": "VELTARO",
+      "page": "early-interest.html",
+      "violations": [],
+      "incomplete": 1
+    },
+    {
+      "venture": "VELTARO",
+      "page": "ground.html",
+      "violations": [],
+      "incomplete": 0
+    },
+    {
+      "venture": "VELTARO",
+      "page": "index.html",
+      "violations": [],
+      "incomplete": 2
+    },
+    {
+      "venture": "VELTARO",
+      "page": "investors.html",
+      "violations": [],
+      "incomplete": 0
+    },
+    {
+      "venture": "VELTARO",
+      "page": "labs-workspace.html",
+      "violations": [],
+      "incomplete": 1
+    },
+    {
+      "venture": "VELTARO",
+      "page": "labs.html",
+      "violations": [],
+      "incomplete": 1
+    },
+    {
+      "venture": "VELTARO",
+      "page": "privacy.html",
+      "violations": [],
+      "incomplete": 0
+    },
+    {
+      "venture": "VELTARO",
+      "page": "research-hub.html",
+      "violations": [],
+      "incomplete": 0
+    },
+    {
+      "venture": "VELTARO",
+      "page": "safety.html",
+      "violations": [],
+      "incomplete": 0
+    },
+    {
+      "venture": "VELTARO",
+      "page": "scenario-explorer.html",
+      "violations": [],
+      "incomplete": 0
+    },
+    {
+      "venture": "VELTARO",
+      "page": "skycourier.html",
+      "violations": [],
+      "incomplete": 0
+    },
+    {
+      "venture": "VELTARO",
+      "page": "technology.html",
+      "violations": [],
+      "incomplete": 0
+    },
+    {
+      "venture": "VELTARO",
+      "page": "terms.html",
+      "violations": [],
+      "incomplete": 0
+    },
+    {
+      "venture": "VELTARO",
+      "page": "v1-evidence-dashboard.html",
+      "violations": [],
+      "incomplete": 0
+    },
+    {
+      "venture": "VELTARO",
+      "page": "v1.html",
+      "violations": [],
+      "incomplete": 0
+    }
+  ]
+}

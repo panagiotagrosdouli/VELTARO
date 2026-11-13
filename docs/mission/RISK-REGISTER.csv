@@ -1,0 +1,8 @@
+id,risk,status,control,reviewer
+VEL-01,"Unvalidated buyer demand",OPEN,"Consent-based customer discovery",Founder
+VEL-02,"Unqualified technical conclusions",OPEN,"Independent qualified engineering review",Engineering reviewer
+VEL-03,"Privacy and delivery uncertainty",OPEN,"Controller and processor review; inbox receipt evidence",Privacy reviewer
+VEL-04,"Image rights and IP",OPEN,"Source and license chain review",Legal reviewer
+VEL-05,"Insufficient cash",OPEN,"Scoped quotes and milestone financing",Founder/accountant
+VEL-06,"Physical safety and regulatory uncertainty",OPEN,"No physical deployment before qualified validation",Engineering reviewer
+VEL-07,"Overstated software evidence",OPEN,"Separate 2D tests from physical and integration claims",Software reviewer

@@ -20,7 +20,7 @@
     ul{padding-left:1.25rem}.sources{display:flex;flex-wrap:wrap;gap:10px 22px}.status{font-weight:650;color:#e9d3a7}
     @media(max-width:700px){main{padding-top:38px}.summary{grid-template-columns:1fr}.card{padding:16px}}
   </style>
-</head>
+<link rel="icon" href="favicon.svg"></head>
 <body>
 <header><div class="wrap"><a href="index.html">← VELTARO</a></div></header>
 <main class="wrap">
@@ -41,7 +41,7 @@
     <li><a href="engineering/v1-m01-thrace-route-candidates.json">M-01 route candidates</a></li>
     <li><a href="engineering/v1-subsystem-readiness.json">Subsystem readiness register</a></li>
   </ul></section>
-</main>
+<p><a href="scenario-explorer.html">Explore actual model fixture sensitivity (hypothetical inputs)</a></p></main>
 <footer><div class="wrap">VELTARO V1 / Preliminary engineering records · <a href="index.html">Homepage</a></div></footer>
 <script>
 const subsystemPath='engineering/v1-subsystem-readiness.json';
@@ -80,5 +80,5 @@ async function loadDependencies(){
 loadSubsystems(subsystemPath);
 loadDependencies();
 </script>
-</body>
+<aside style="padding:24px;background:#10212b;color:#fff"><a style="color:#dfebf0" href="research-hub.html">Research hub / Έρευνα — all pages, software and evidence →</a></aside></body>
 </html>

@@ -1,0 +1,1 @@
+document.getElementById('startup-language').onclick=()=>{const lang=document.documentElement.lang==='el'?'en':'el';document.documentElement.lang=lang;document.getElementById('startup-language').textContent=lang==='el'?'EN':'ΕΛ';document.querySelectorAll('[data-en][data-el]').forEach(e=>e.textContent=e.dataset[lang]);};

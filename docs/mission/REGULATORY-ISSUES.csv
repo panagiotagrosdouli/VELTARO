@@ -1,0 +1,7 @@
+id,issue,source,status,qualified_review_question
+REG-01,Powered-lift certification basis,EASA-VTOL,OPEN,Does SC-VTOL and which current MoC apply to the intended configuration?
+REG-02,Fixed-wing certification basis,EASA aircraft-products research lead,OPEN,Which aircraft category and certification basis applies?
+REG-03,Road type approval,EU-ROAD content not validated,OPEN,Which EU/national categories and exemptions apply to a road/air vehicle?
+REG-04,Unmanned logistics operations,EASA-UAS,OPEN,Which operational category and site/route authorizations are required?
+REG-05,Infrastructure and airspace,EASA-UAS,OPEN,Which competent authority/operator permissions apply to each actual mission?
+REG-06,Privacy,EU-GDPR content not validated,OPEN,What controller/processor/transfer and retention obligations apply?

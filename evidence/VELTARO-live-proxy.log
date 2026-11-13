@@ -1,0 +1,9 @@
+PASS 200 https://panagiotagrosdouli.github.io/VELTARO/
+PASS published website contact settings
+PASS 200 https://panagiotagrosdouli.github.io/VELTARO/early-interest.html
+PASS published customer form configuration
+PASS 200 https://panagiotagrosdouli.github.io/VELTARO/collaborate.html
+PASS 200 https://panagiotagrosdouli.github.io/VELTARO/privacy.html
+PASS 200 https://panagiotagrosdouli.github.io/VELTARO/cockpit-concept.html
+PASS 200 https://panagiotagrosdouli.github.io/VELTARO/assets/v1-concept.svg
+PASS 200 https://panagiotagrosdouli.github.io/VELTARO/assets/v1-flying-design.svg
