@@ -1,0 +1,206 @@
+
+/* VELTARO • Commercial-grade editorial website system.
+   Independent concept-stage venture; no unsupported operating claims. */
+:root{
+  --ink:#081016; --ink-2:#0e1a21; --panel:#13212a; --panel-soft:#172731;
+  --line:#ffffff20; --sand:#dbbc91; --sand-bright:#f1d6b1;
+  --paper:#f6f3ec; --muted:#adbdc3; --light-text:#253941; --light-muted:#607079;
+  --wrap:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body.veltaro-home{margin:0;background:var(--ink);color:var(--paper);font-family:Inter,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.veltaro-home a{color:inherit;text-decoration:none}
+body.veltaro-home button,body.veltaro-home input,body.veltaro-home textarea{font:inherit}
+body.veltaro-home :focus-visible{outline:3px solid var(--sand-bright);outline-offset:4px}
+body.veltaro-home img{max-width:100%}
+body.veltaro-home h1,body.veltaro-home h2,body.veltaro-home h3,body.veltaro-home p{margin-top:0}
+body.veltaro-home h1,body.veltaro-home h2,body.veltaro-home h3{font-weight:540}
+body.veltaro-home .wrap{width:min(var(--wrap),calc(100% - 72px));margin-inline:auto}
+body.veltaro-home .skip{position:absolute;left:-9999px;top:5px;z-index:100;background:#fff;color:#091016;padding:12px}
+body.veltaro-home .skip:focus{left:12px}
+body.veltaro-home .kicker{display:inline-flex;align-items:center;gap:12px;font-size:.72rem;line-height:1.4;font-weight:750;letter-spacing:.18em;text-transform:uppercase;color:var(--sand)}
+body.veltaro-home .kicker::before{content:"";width:22px;height:1px;background:currentColor}
+body.veltaro-home .button{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:54px;padding:0 22px;border:1px solid transparent;border-radius:5px;font-size:.86rem;letter-spacing:.005em;font-weight:750;transition:background .2s,transform .2s,border-color .2s;cursor:pointer}
+body.veltaro-home .button:hover{transform:translateY(-2px)}
+body.veltaro-home .button.primary{background:var(--sand);color:#172026}
+body.veltaro-home .button.primary:hover{background:var(--sand-bright)}
+body.veltaro-home .button.outline{border-color:#ffffff55;background:#ffffff04;color:var(--paper)}
+body.veltaro-home .button.outline:hover{border-color:var(--sand)}
+body.veltaro-home .button.dark{background:#15232b;color:#fff}
+body.veltaro-home .button.dark:hover{background:#233942}
+body.veltaro-home .arrow{font-size:1.3rem;font-weight:400;line-height:1}
+body.veltaro-home .corporate-header{height:auto;position:sticky;top:0;z-index:50;background:#081219eb;border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
+body.veltaro-home .corporate-inner{width:min(var(--wrap),calc(100% - 72px));min-height:86px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:22px}
+body.veltaro-home .corporate-logo{flex-shrink:0;display:block}
+body.veltaro-home .corporate-logo img{width:174px;height:44px;display:block}
+body.veltaro-home .corporate-nav{display:flex;gap:26px;align-items:center}
+body.veltaro-home .corporate-nav>a,body.veltaro-home .corporate-nav summary{font-size:.86rem;font-weight:650;white-space:nowrap;color:#d0dcdd}
+body.veltaro-home .corporate-nav>a:hover,body.veltaro-home .corporate-nav summary:hover{color:var(--sand-bright)}
+body.veltaro-home .corporate-nav .primary-link{background:var(--sand);color:#12212a;padding:12px 19px;border-radius:4px}
+body.veltaro-home .corporate-nav .primary-link:hover{color:#07131a;background:var(--sand-bright)}
+body.veltaro-home .corporate-nav details{position:relative}
+body.veltaro-home .corporate-nav summary{cursor:pointer;list-style:none;padding:10px 2px}
+body.veltaro-home .corporate-nav summary::-webkit-details-marker{display:none}
+body.veltaro-home .corporate-nav summary::after{content:"⌄";margin-left:8px;color:var(--sand)}
+body.veltaro-home .corporate-nav .dropdown{position:absolute;top:42px;right:0;min-width:245px;display:grid;gap:0;padding:10px;background:#15252e;border:1px solid #ffffff2d;border-radius:8px;box-shadow:0 24px 60px #0009}
+body.veltaro-home .corporate-nav .dropdown a{padding:12px;border-radius:4px;font-size:.84rem;color:#e1eaeb}
+body.veltaro-home .corporate-nav .dropdown a:hover{background:#ffffff12}
+body.veltaro-home #startup-language{border:1px solid #ffffff44;background:#ffffff08;color:#fff;padding:10px 12px;border-radius:5px;font-size:.75rem;font-weight:800;cursor:pointer}
+body.veltaro-home .hero{padding:78px 0 66px;background:radial-gradient(ellipse at 93% 20%,#48626a28 0,transparent 48%),radial-gradient(ellipse at 7% 85%,#b58d5320 0,transparent 38%),#081016;overflow:hidden}
+body.veltaro-home .hero-grid{display:grid;grid-template-columns:.92fr 1.08fr;align-items:center;gap:54px}
+body.veltaro-home .hero-copy{position:relative;z-index:2;padding:22px 0 30px}
+body.veltaro-home .status{display:inline-flex;align-items:center;gap:9px;color:#e2d3bb;border:1px solid #bd9c6c6d;background:#c3a17313;border-radius:100px;font-size:.71rem;font-weight:700;padding:8px 12px;letter-spacing:.035em}
+body.veltaro-home .status .dot{width:6px;height:6px;border-radius:50%;background:var(--sand)}
+body.veltaro-home .hero h1{font-size:clamp(3.7rem,6.2vw,6.65rem);line-height:1.005;letter-spacing:-.072em;margin:28px 0 24px;max-width:650px}
+body.veltaro-home .hero h1 em{font-style:normal;color:var(--sand)}
+body.veltaro-home .hero .lede{font-size:clamp(1.02rem,1.5vw,1.18rem);line-height:1.75;color:#b4c4c8;max-width:545px;margin-bottom:30px}
+body.veltaro-home .hero .actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:0 0 26px}
+body.veltaro-home .hero .micro-note{font-size:.75rem;line-height:1.6;color:#93a8ac;max-width:540px}
+body.veltaro-home .hero-visual{position:relative;min-width:0}
+body.veltaro-home .hero-image{aspect-ratio:1 / 1.03;position:relative;overflow:hidden;border:1px solid #ffffff2c;border-radius:16px;background:#182633;box-shadow:0 30px 90px #0007}
+body.veltaro-home .hero-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:54% center;transform:scale(1.01)}
+body.veltaro-home .hero-image::after{content:"";position:absolute;inset:52% 0 0;background:linear-gradient(transparent,#051018d9);pointer-events:none}
+body.veltaro-home .hero-overline{position:absolute;top:22px;left:22px;z-index:2;background:#07141acb;border:1px solid #ffffff34;backdrop-filter:blur(8px);border-radius:4px;padding:10px 13px;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase}
+body.veltaro-home .hero-image-caption{position:absolute;z-index:2;bottom:24px;left:25px;right:25px;display:flex;justify-content:space-between;align-items:end;gap:12px}
+body.veltaro-home .hero-image-caption strong{font-size:1.4rem;font-weight:540;letter-spacing:-.04em}
+body.veltaro-home .hero-image-caption small{display:block;font-size:.72rem;color:#dae3e2;line-height:1.6;margin-top:6px}
+body.veltaro-home .hero-image-caption .concept-badge{white-space:nowrap;border:1px solid #ffffff7c;border-radius:3px;font-size:.64rem;letter-spacing:.13em;padding:8px}
+body.veltaro-home .proofbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0e1920}
+body.veltaro-home .proofbar-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+body.veltaro-home .proofbar-item{display:flex;align-items:center;gap:15px;padding:23px 26px;border-right:1px solid var(--line)}
+body.veltaro-home .proofbar-item:first-child{padding-left:0}
+body.veltaro-home .proofbar-item:last-child{border-right:0}
+body.veltaro-home .proofbar-icon{display:grid;place-items:center;flex:none;width:35px;height:35px;border:1px solid #ceaf8561;border-radius:50%;color:var(--sand);font-size:1.2rem}
+body.veltaro-home .proofbar-item strong{display:block;font-weight:650;font-size:.87rem}
+body.veltaro-home .proofbar-item span{display:block;color:#92abb1;font-size:.76rem;margin-top:4px;line-height:1.45}
+body.veltaro-home .section{padding:112px 0}
+body.veltaro-home .section-heading{display:flex;align-items:end;justify-content:space-between;gap:45px;margin-bottom:38px}
+body.veltaro-home .section-heading h2{font-size:clamp(2.6rem,4.65vw,4.65rem);line-height:1.07;letter-spacing:-.062em;max-width:780px;margin:18px 0 0}
+body.veltaro-home .section-heading>p{font-size:1rem;line-height:1.8;color:var(--muted);max-width:345px;margin:0 0 6px}
+body.veltaro-home .offer-grid{display:grid;grid-template-columns:1.13fr 1fr 1fr;gap:16px}
+body.veltaro-home .offer{min-height:310px;border:1px solid #ffffff20;border-radius:10px;background:#111e26;display:flex;flex-direction:column;padding:30px;transition:transform .2s,border-color .2s}
+body.veltaro-home .offer:hover{transform:translateY(-4px);border-color:#d6b5837c}
+body.veltaro-home .offer.primary-offer{background:linear-gradient(160deg,#263c45,#111e26 72%);border-color:#cfb0816b}
+body.veltaro-home .offer small{font-size:.67rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sand);font-weight:750}
+body.veltaro-home .offer h3{font-size:1.6rem;letter-spacing:-.04em;margin:42px 0 12px}
+body.veltaro-home .offer p{font-size:.94rem;line-height:1.7;color:#aebfc4;margin-bottom:28px}
+body.veltaro-home .offer a{font-size:.85rem;font-weight:750;color:#e9cfaa;margin-top:auto}
+body.veltaro-home .service{background:var(--paper);color:var(--light-text);padding:115px 0}
+body.veltaro-home .service-grid{display:grid;grid-template-columns:.96fr 1.04fr;gap:75px;align-items:center}
+body.veltaro-home .service .kicker{color:#8b683f}
+body.veltaro-home .service h2{font-size:clamp(2.9rem,5vw,5.1rem);line-height:1.06;letter-spacing:-.068em;margin:23px 0}
+body.veltaro-home .service p{color:var(--light-muted);font-size:1rem;line-height:1.8;max-width:530px}
+body.veltaro-home .service .button{margin-top:14px}
+body.veltaro-home .deliverable{border:1px solid #d6d6cf;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 28px 65px #18232c1a}
+body.veltaro-home .deliverable-bar{background:#172a33;color:#fff;padding:22px 28px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+body.veltaro-home .deliverable-bar strong{font-size:.82rem;letter-spacing:.08em}
+body.veltaro-home .deliverable-bar span{font-size:.68rem;color:#e6cdad}
+body.veltaro-home .deliverable-body{padding:20px 28px}
+body.veltaro-home .deliverable-row{display:grid;grid-template-columns:33px 1fr;gap:13px;padding:18px 0;border-bottom:1px solid #e7e7e1}
+body.veltaro-home .deliverable-row:last-child{border:0}
+body.veltaro-home .deliverable-row .index{color:#76522a;font-size:.78rem;font-weight:800}
+body.veltaro-home .deliverable-row strong{display:block;font-size:.93rem}
+body.veltaro-home .deliverable-row span{display:block;color:#526169;font-size:.8rem;margin-top:5px;line-height:1.5}
+body.veltaro-home .service-foot{padding:0 28px 24px;font-size:.74rem;color:#6c787f}
+body.veltaro-home .vision{padding:100px 0;background:#0a141b}
+body.veltaro-home .vision-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px}
+body.veltaro-home .vision-art{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#1f2b33}
+body.veltaro-home .vision-art img{width:100%;display:block;aspect-ratio:1.48;object-fit:cover}
+body.veltaro-home .vision-art figcaption{position:absolute;bottom:0;left:0;right:0;padding:16px 20px;color:#e8eff1;background:#09151ae9;font-size:.72rem;letter-spacing:.04em}
+body.veltaro-home .vision h2{font-size:clamp(2.7rem,4.6vw,4.5rem);line-height:1.07;letter-spacing:-.06em;margin:18px 0 24px}
+body.veltaro-home .vision p{line-height:1.85;color:#b1c2c6;max-width:530px}
+body.veltaro-home .vision a.inline-link{font-weight:750;font-size:.85rem;color:var(--sand);display:inline-block;margin-top:18px}
+body.veltaro-home .trust{border-top:1px solid var(--line);background:#101d25;padding:95px 0}
+body.veltaro-home .trust-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:74px}
+body.veltaro-home .trust h2{font-size:clamp(2.6rem,4vw,4rem);letter-spacing:-.05em;line-height:1.1;margin:20px 0}
+body.veltaro-home .trust p{line-height:1.8;color:#a9bbc0}
+body.veltaro-home .steps{counter-reset:steps}
+body.veltaro-home .step{display:grid;grid-template-columns:48px 1fr;gap:20px;padding:23px 0;border-bottom:1px solid var(--line)}
+body.veltaro-home .step:first-child{padding-top:0}
+body.veltaro-home .step strong{color:var(--sand);font-size:.82rem}
+body.veltaro-home .step h3{font-size:1.08rem;margin:0 0 7px}
+body.veltaro-home .step p{font-size:.85rem;line-height:1.6;margin:0}
+body.veltaro-home .contact-section{padding:105px 0 120px;background:var(--paper);color:var(--light-text)}
+body.veltaro-home .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
+body.veltaro-home .contact-section .kicker{color:#8b683f}
+body.veltaro-home .contact-section h2{font-size:clamp(2.8rem,4.7vw,4.9rem);letter-spacing:-.065em;line-height:1.05;margin:20px 0}
+body.veltaro-home .contact-section p{font-size:.93rem;line-height:1.75;color:#607079}
+body.veltaro-home .contact-section .research-links{display:flex;gap:15px;flex-wrap:wrap;margin-top:30px}
+body.veltaro-home .research-links a{font-size:.85rem;color:#5d5547;text-decoration:underline;text-underline-offset:5px}
+body.veltaro-home .contact-form{background:#fff;border:1px solid #e1e2dc;border-radius:12px;padding:35px;box-shadow:0 15px 35px #18252f0d;display:grid;gap:17px}
+body.veltaro-home .contact-form h3{font-size:1.18rem;letter-spacing:-.03em;margin:0 0 3px}
+body.veltaro-home .form-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+body.veltaro-home .contact-form label{display:grid;gap:7px;font-size:.78rem;font-weight:700;color:#34434a}
+body.veltaro-home .contact-form input:not([type=checkbox]),body.veltaro-home .contact-form textarea{background:#f8f9f6;border:1px solid #cad1d0;border-radius:5px;width:100%;min-height:49px;padding:12px 13px;color:#17282e;font-size:.92rem}
+body.veltaro-home .contact-form textarea{min-height:132px;resize:vertical}
+body.veltaro-home .contact-form .consent{display:flex;align-items:start;gap:10px;font-size:.75rem;font-weight:450;line-height:1.65;color:#5a656b}
+body.veltaro-home .contact-form .consent input{width:17px;height:17px;margin:2px 0 0;flex:none}
+body.veltaro-home .contact-form .consent a{text-decoration:underline;text-underline-offset:3px}
+body.veltaro-home .contact-form .formnote{font-size:.71rem;line-height:1.6;color:#68767a;margin:0}
+body.veltaro-home .contact-form .honey{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+body.veltaro-home .contact-form .button{justify-self:start}
+body.veltaro-home .startup-footer{padding:70px 0 25px;background:#071219;border-top:1px solid var(--line)}
+body.veltaro-home .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:60px}
+body.veltaro-home .footer-grid img{width:172px;height:auto}
+body.veltaro-home .footer-grid p{font-size:.82rem;line-height:1.8;color:#92a9ae;max-width:300px;margin:20px 0}
+body.veltaro-home .footer-grid h3{font-size:.82rem;color:#fff;font-weight:750;margin-bottom:18px}
+body.veltaro-home .footer-grid a{display:block;font-size:.83rem;color:#a9bcbf;margin-bottom:14px}
+body.veltaro-home .footer-grid a:hover{color:var(--sand-bright)}
+body.veltaro-home .footer-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:23px;margin-top:55px;font-size:.73rem;color:#8099a0;line-height:1.6}
+@media(max-width:1100px){
+  body.veltaro-home .corporate-nav{gap:15px}
+  body.veltaro-home .corporate-nav>a:not(.primary-link){display:none}
+  body.veltaro-home .hero-grid{gap:28px}
+  body.veltaro-home .hero h1{font-size:clamp(3.2rem,5.5vw,5.5rem)}
+}
+@media(max-width:850px){
+  body.veltaro-home .wrap,body.veltaro-home .corporate-inner{width:calc(100% - 40px)}
+  body.veltaro-home .corporate-inner{min-height:76px}
+  body.veltaro-home .corporate-logo img{width:148px}
+  body.veltaro-home .corporate-nav{gap:12px}
+  body.veltaro-home .corporate-nav>.primary-link{display:none}
+  body.veltaro-home .hero{padding:55px 0 47px}
+  body.veltaro-home .hero-grid{grid-template-columns:1fr}
+  body.veltaro-home .hero h1{font-size:clamp(3.4rem,8vw,5.4rem)}
+  body.veltaro-home .hero-image{aspect-ratio:1.5}
+  body.veltaro-home .section,body.veltaro-home .service,body.veltaro-home .vision,body.veltaro-home .trust{padding:72px 0}
+  body.veltaro-home .section-heading{display:block}
+  body.veltaro-home .section-heading>p{margin-top:18px;max-width:650px}
+  body.veltaro-home .offer-grid{grid-template-columns:1fr 1fr}
+  body.veltaro-home .offer:first-child{grid-column:1/-1}
+  body.veltaro-home .offer{min-height:260px}
+  body.veltaro-home .service-grid,body.veltaro-home .vision-grid,body.veltaro-home .trust-grid,body.veltaro-home .contact-grid{grid-template-columns:1fr;gap:35px}
+  body.veltaro-home .proofbar-item{padding:16px;align-items:start}
+  body.veltaro-home .proofbar-item:first-child{padding-left:0}
+  body.veltaro-home .proofbar-item span{font-size:.69rem}
+}
+@media(max-width:760px){
+  body.veltaro-home .proofbar-grid{grid-template-columns:1fr}
+  body.veltaro-home .proofbar-item{padding:14px 0;border-right:0;border-bottom:1px solid var(--line)}
+  body.veltaro-home .proofbar-item:last-child{border-bottom:0}
+  body.veltaro-home .offer-grid{grid-template-columns:1fr}
+  body.veltaro-home .offer:first-child{grid-column:auto}
+  body.veltaro-home .offer{min-height:0}
+  body.veltaro-home .offer h3{margin-top:25px}
+  body.veltaro-home .contact-section{padding:72px 0}
+  body.veltaro-home .footer-grid{grid-template-columns:1fr 1fr;gap:34px}
+  body.veltaro-home .footer-grid>div:first-child{grid-column:1/-1}
+  body.veltaro-home .hero-image{aspect-ratio:1.12}
+}
+@media(max-width:540px){
+  body.veltaro-home .corporate-nav details{position:static}
+  body.veltaro-home .corporate-nav .dropdown{position:absolute;top:70px;right:12px;left:12px;min-width:0}
+  body.veltaro-home .hero h1{font-size:clamp(2.85rem,12.2vw,4.4rem)}
+  body.veltaro-home .hero .actions{align-items:stretch;flex-direction:column}
+  body.veltaro-home .hero .actions .button{width:100%}
+  body.veltaro-home .hero-image-caption{left:16px;bottom:15px;right:16px}
+  body.veltaro-home .hero-image-caption strong{font-size:1.15rem}
+  body.veltaro-home .hero-image-caption .concept-badge{font-size:.52rem}
+  body.veltaro-home .section-heading h2,body.veltaro-home .service h2,body.veltaro-home .vision h2,body.veltaro-home .trust h2,body.veltaro-home .contact-section h2{font-size:clamp(2.5rem,10vw,3.4rem)}
+  body.veltaro-home .form-row{grid-template-columns:1fr}
+  body.veltaro-home .contact-form{padding:22px}
+  body.veltaro-home .footer-grid{grid-template-columns:1fr}
+  body.veltaro-home .footer-grid>div:first-child{grid-column:auto}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}body.veltaro-home .button,body.veltaro-home .offer{transition:none}body.veltaro-home .button:hover,body.veltaro-home .offer:hover{transform:none}}

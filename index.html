@@ -3,190 +3,230 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0c0c0c">
-  <meta name="description" content="VELTARO is exploring a new direction in premium road-and-air mobility. An independent concept-stage venture.">
+  <meta name="theme-color" content="#081016">
+  <meta name="description" content="VELTARO explores next-generation mobility through evidence-led research. Meet the proposed VELTARO LABS service and our long-term road-and-air V1 concept.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="VELTARO — A new perspective on mobility">
-  <meta property="og:description" content="Exploring the future of premium mobility. Concept-stage research and design.">
+  <meta property="og:title" content="VELTARO — Research-led future mobility">
+  <meta property="og:description" content="Early-stage mobility research. Explore VELTARO LABS, our engineering approach, and the long-term V1 vision.">
   <meta property="og:url" content="https://panagiotagrosdouli.github.io/VELTARO/">
-  <meta name="twitter:title" content="VELTARO — Beyond the road">
-  <meta name="twitter:description" content="Exploring premium road-and-air mobility through concept-stage research and design.">
+  <meta name="twitter:title" content="VELTARO — Research-led future mobility">
+  <meta name="twitter:description" content="Evidence-led mobility research and ambitious long-term design concepts.">
   <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://panagiotagrosdouli.github.io/VELTARO/">
   <meta name="robots" content="index,follow">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/home-refresh.css">
   <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebSite","name":"VELTARO","url":"https://panagiotagrosdouli.github.io/VELTARO/","description":"An independent concept-stage exploration of premium road-and-air mobility."}
+    {"@context":"https://schema.org","@type":"WebSite","name":"VELTARO","url":"https://panagiotagrosdouli.github.io/VELTARO/","description":"An independent concept-stage mobility research venture."}
   </script>
-  <title>VELTARO — Beyond the road</title>
+  <title>VELTARO — Research-led future mobility</title>
   <style>
-    :root{color-scheme:dark;--bg:#0c0c0c;--paper:#f2efe9;--muted:#aaa6a0;--line:#30302e;--accent:#c6ad88}
-    *,*::before,*::after{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:5rem}
-    body{margin:0;background:var(--bg);color:var(--paper);font-family:Inter,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
-    a{color:inherit;text-decoration:none}
-    a:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
-    .skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;z-index:9;background:var(--paper);color:var(--bg);padding:1rem}
-    .wrap{width:min(100% - 3rem,1180px);margin-inline:auto}
-    header{height:84px;display:flex;align-items:center;border-bottom:1px solid var(--line)}
-    header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem}
-    .brand{font-size:1.18rem;letter-spacing:.29em;font-weight:650;white-space:nowrap}
-    .brand span{color:var(--accent);margin-right:.55rem}
-    nav{display:flex;align-items:center;gap:clamp(1rem,3vw,2.4rem)}
-    nav a{font-size:.78rem;color:#d1cdc7}nav a:hover,footer a:hover{color:var(--accent)}
-    .nav-contact{border:1px solid #696056;padding:.8rem 1.1rem}
-    .hero{min-height:min(790px,calc(100svh - 84px));display:grid;align-items:center;position:relative;overflow:hidden}
-    .hero:after{content:"V";position:absolute;right:-.04em;top:50%;transform:translateY(-53%);font-family:Georgia,serif;font-size:clamp(25rem,59vw,58rem);font-weight:400;line-height:1;color:rgba(198,173,136,.055);pointer-events:none;z-index:0}
-    .hero-inner{position:relative;z-index:1;padding:7rem 0 8rem}
-    .eyebrow,.kicker{color:var(--accent);font-size:.68rem;text-transform:uppercase;letter-spacing:.23em;font-weight:650}
-    h1,h2,h3,p{margin-top:0}
-    h1{font-weight:450;letter-spacing:-.072em;line-height:1.03;font-size:clamp(4rem,10vw,9rem);max-width:1050px;margin:1.8rem 0}
-    h1 em{font-style:normal;color:var(--accent)}
-    .hero p{font-size:clamp(1.05rem,1.7vw,1.3rem);line-height:1.7;max-width:550px;color:#c4c0ba}
-    .actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.6rem}
-    .button{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 1.55rem;font-size:.8rem;font-weight:600;letter-spacing:.025em;border:1px solid var(--accent);transition:background .2s,color .2s}
-    .button.primary{background:var(--accent);color:#12100e}.button.primary:hover{background:#e2c9a4}
-    .button.secondary:hover{background:#24211e}
-    .hero-foot{font-size:.72rem!important;color:#99948c!important;max-width:570px!important;margin-top:2rem}
-    section.content{border-top:1px solid var(--line);padding:clamp(5rem,10vw,10rem) 0}
-    .section-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(2rem,8vw,9rem)}
-    h2{font-weight:460;letter-spacing:-.06em;line-height:1.12;font-size:clamp(2.5rem,5.3vw,5.5rem);max-width:730px}
-    .copy{color:#bcb8b2;font-size:1.06rem;line-height:1.85;max-width:640px}
-    .copy p{margin-bottom:1.5rem}.copy strong{font-weight:550;color:var(--paper)}
-    .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:5rem}
-    .pillar{border-top:1px solid #66594a;padding-top:1.4rem}
-    .pillar small{color:var(--accent);font-size:.73rem}
-    .pillar h3{font-size:1.2rem;font-weight:500;margin:1.5rem 0 .6rem}
-    .pillar p{color:var(--muted);line-height:1.7;font-size:.91rem;max-width:33ch}
-    .contact{background:#151412}
-    .contact .wrap{display:flex;justify-content:space-between;gap:3rem;align-items:end}
-    .contact h2{margin:1.5rem 0 0}
-    .contact p{color:var(--muted);line-height:1.7;max-width:440px}
-    .contact .button{white-space:nowrap}
-    footer{border-top:1px solid var(--line);padding:2.3rem 0 3rem}
-    .footer-inner{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:start}
-    footer p,footer a{font-size:.75rem;line-height:1.6;color:#aaa49c}
-    .footer-links{display:flex;gap:1.4rem;flex-wrap:wrap}
-    @media(max-width:760px){
-      header{height:72px}.wrap{width:min(100% - 2.25rem,1180px)}
-      .brand{font-size:.93rem;letter-spacing:.16em}
-      nav{gap:1rem}nav a:not(.nav-contact){display:none}.nav-contact{padding:.66rem .78rem}
-      .hero{min-height:650px}.hero-inner{padding:6rem 0}.hero:after{right:-.25em;font-size:34rem}
-      h1{font-size:clamp(3.8rem,16vw,6rem)}
-      .section-grid{grid-template-columns:1fr;gap:2rem}.pillars{grid-template-columns:1fr;margin-top:3.5rem;gap:1.25rem}
-      .contact .wrap{display:block}.contact .button{margin-top:1rem}
-    }
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-  .inquiry{border-top:1px solid var(--line);padding:clamp(5rem,9vw,9rem) 0}.inquiry h2{font-size:clamp(2.5rem,5vw,4.5rem);font-weight:450;letter-spacing:-.06em}.inquiry p{color:var(--muted);line-height:1.7;max-width:650px}.contact-form{display:grid;gap:1.1rem;max-width:650px;margin-top:2rem}.contact-form label{display:grid;gap:.5rem;font-size:.86rem;color:var(--paper)}.contact-form input:not([type=checkbox]),.contact-form textarea{width:100%;border:1px solid #776a5e;background:#141413;color:var(--paper);padding:1rem;font:inherit;border-radius:2px}.contact-form textarea{min-height:140px;resize:vertical}.contact-form .consent{display:flex;gap:.75rem;align-items:start;line-height:1.6;font-size:.82rem}.contact-form .consent input{margin-top:.4rem;flex:none}.contact-form .formnote{font-size:.76rem}.contact-form button{width:fit-content;cursor:pointer}.contact-form input:focus-visible,.contact-form textarea:focus-visible,.contact-form button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}.contact-form .honey{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-
-/* 2026 visual system: cinematic composition, premium editorial spacing and motion restraint */
-:root{--glow:#c6ad88}
-body{background-image:radial-gradient(ellipse 55% 26% at 85% 15%,#856d4512,transparent)}
-header{transition:background .3s,border-color .3s}
-.hero{isolation:isolate}
-.hero h1{text-wrap:balance;text-shadow:0 14px 70px #0007}
-.hero .kicker,.hero .eyebrow{display:inline-flex;align-items:center;gap:14px}
-.hero .kicker:before,.hero .eyebrow:before{content:"";display:inline-block;width:27px;height:1px;background:var(--glow)}
-.hero .actions a,.hero .actions .button{position:relative;overflow:hidden}
-.hero .actions a:focus-visible{outline-offset:5px}
-.section,.content{position:relative}
-.section h2,.content h2{text-wrap:balance}
-.feature,.three article,.pillar{transition:transform .25s,border-color .25s,background .25s}
-.feature:hover,.three article:hover,.pillar:hover{transform:translateY(-4px)}
-.brand,header .logo{transition:opacity .2s}.brand:hover,header .logo:hover{opacity:.78}
-.visual-system-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#13110f}
-.visual-system-strip .strip-inner{max-width:1220px;margin:auto;padding:24px 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;align-items:center}
-.visual-system-strip span{font-size:.68rem;letter-spacing:.19em;text-transform:uppercase;color:#c6ad88;font-weight:600}
-.visual-system-strip span:not(:first-child){color:#b7aa98}
-.featured-statement{padding:clamp(75px,11vw,160px) 0;border-top:1px solid var(--line);position:relative;overflow:hidden;background:linear-gradient(115deg,#1b1814,#0c0c0c)}
-.featured-statement:after{content:"";position:absolute;right:-100px;top:-100px;width:min(60vw,700px);height:min(60vw,700px);border:1px solid #c6ad8825;border-radius:50%;box-shadow:0 0 0 70px #c6ad8808,0 0 0 150px #c6ad8805;pointer-events:none}
-.featured-statement .statement-inner{width:min(1100px,calc(100% - 48px));margin:auto;position:relative;z-index:1}
-.featured-statement p{font-size:clamp(2rem,5vw,5.5rem);line-height:1.2;letter-spacing:-.065em;font-weight:400;max-width:900px;color:#f0e9de;margin:1.5rem 0 0}
-.featured-statement em{font-style:normal;color:#c6ad88}
-@media(max-width:750px){.visual-system-strip .strip-inner{padding:19px}.visual-system-strip span{font-size:.59rem}.visual-system-strip span:nth-child(4){display:none}.feature:hover,.three article:hover,.pillar:hover{transform:none}}
-@media(prefers-reduced-motion:reduce){header,.feature,.three article,.pillar,.brand,header .logo{transition:none!important}.feature:hover,.three article:hover,.pillar:hover{transform:none}}
-.original-gallery{padding:clamp(70px,9vw,140px) 0;border-top:1px solid var(--line);background:#11100f}.original-gallery h2{font-size:clamp(2.1rem,4.5vw,4.5rem);letter-spacing:-.06em;font-weight:500;margin:18px 0 34px}.original-gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.original-gallery figure{margin:0;border:1px solid var(--line);background:#17202b;overflow:hidden}.original-gallery img{display:block;width:100%;height:clamp(230px,32vw,440px);object-fit:cover;background:#211c17}.original-gallery figcaption{padding:17px 20px;letter-spacing:.15em;font-size:.73rem;color:#c6ad88}.gallery-note{font-size:.78rem;color:var(--muted);margin-top:20px;line-height:1.6}@media(max-width:680px){.original-gallery-grid{grid-template-columns:1fr}.original-gallery img{height:280px}}.photo-return{padding:clamp(70px,9vw,135px) 0;border-top:1px solid var(--line);background:#0e0d0c}.photo-return h2{font-size:clamp(2.5rem,5vw,5rem);font-weight:450;letter-spacing:-.06em;max-width:850px;margin:18px 0 16px}.photo-return .photo-intro{max-width:720px;color:var(--muted);line-height:1.7}.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:38px 0 20px}.photo-grid figure{margin:0;background:#191715;border:1px solid #443b30;overflow:hidden}.photo-grid img{display:block;width:100%;height:clamp(240px,30vw,440px);object-fit:cover;background:#292522}.photo-grid figcaption{padding:17px 20px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}.photo-return .footnote{font-size:.78rem;color:var(--muted);line-height:1.7;max-width:720px}@media(max-width:680px){.photo-grid{grid-template-columns:1fr}.photo-grid img{height:250px}}</style>
-<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="assets/corporate.css"></head>
-<body class="venture-veltaro">
+    /* Basic fallback, visible before stylesheet loads. */
+    :focus-visible{outline:3px solid #dbbc91;outline-offset:4px}
+    @media(max-width:760px){body{min-width:0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body class="veltaro-home">
   <a class="skip" href="#main">Skip to content</a>
-  <header class="corporate-header"><div class="corporate-inner"><a class="corporate-logo" href="index.html" aria-label="VELTARO home"><img src="brand/horizontal-dark.svg" alt="VELTARO"></a><nav class="corporate-nav" aria-label="Main navigation"><a href="labs.html">LABS</a><a href="v1.html">V1 Research</a><a href="investors.html">Investors</a><details><summary>Explore / Μενού</summary><div class="dropdown"><a href="labs.html">LABS</a><a href="v1.html">V1 Research</a><a href="investors.html">Investors</a><a href="about.html">About / Σχετικά</a><a href="technology.html">Technology / Τεχνολογία</a><a href="research-hub.html">All pages / Όλες οι σελίδες</a><a href="safety.html">Safety / Ασφάλεια</a><a href="contact.html">Contact / Επικοινωνία</a></div></details><button id="startup-language" aria-label="Switch website language">ΕΛ</button><a class="primary-link" href="contact.html">Let’s talk ↗</a></nav></div></header>
+  <header class="corporate-header">
+    <div class="corporate-inner">
+      <a class="corporate-logo" href="index.html" aria-label="VELTARO homepage">
+        <img src="brand/horizontal-dark.svg" alt="VELTARO" width="174" height="44">
+      </a>
+      <nav class="corporate-nav" aria-label="Main navigation">
+        <a href="labs.html" data-en="Research services" data-el="Υπηρεσίες έρευνας">Research services</a>
+        <a href="v1.html" data-en="VELTARO V1" data-el="VELTARO V1">VELTARO V1</a>
+        <a href="#approach" data-en="Our approach" data-el="Η προσέγγιση">Our approach</a>
+        <details>
+          <summary data-en="Explore" data-el="Μενού">Explore</summary>
+          <div class="dropdown">
+            <a href="labs.html" data-en="VELTARO LABS" data-el="VELTARO LABS">VELTARO LABS</a>
+            <a href="v1.html" data-en="V1 research" data-el="Έρευνα V1">V1 research</a>
+            <a href="about.html" data-en="About the initiative" data-el="Σχετικά με την πρωτοβουλία">About the initiative</a>
+            <a href="research-hub.html" data-en="Research hub" data-el="Κέντρο έρευνας">Research hub</a>
+            <a href="collaborate.html" data-en="Collaborate" data-el="Συνεργασία">Collaborate</a>
+            <a href="investors.html" data-en="Investor information" data-el="Για επενδυτές">Investor information</a>
+            <a href="privacy.html" data-en="Privacy information" data-el="Προσωπικά δεδομένα">Privacy information</a>
+          </div>
+        </details>
+        <button type="button" id="startup-language" aria-label="Switch website language">ΕΛ</button>
+        <a class="primary-link" href="#message-form" data-en="Get in touch ↗" data-el="Επικοινωνία ↗">Get in touch ↗</a>
+      </nav>
+    </div>
+  </header>
   <main id="main">
-    <section class="hero startup-hero" aria-labelledby="hero-title"><div class="wrap"><div class="hero-copy"><span class="status-pill"><span data-en="Mobility research · LABS first" data-el="Έρευνα κινητικότητας · Πρώτα το LABS" >Mobility research · LABS first</span></span><h1 data-en="Ambitious ideas. Clearer evidence." data-el="Φιλόδοξες ιδέες. Καθαρή τεκμηρίωση." id="hero-title">Ambitious ideas. Clearer evidence.</h1><p data-en="VELTARO explores advanced mobility through systems research. LABS is our first proposed research service; V1 is our long-term road-and-air ambition." data-el="Το VELTARO εξερευνά την προηγμένη κινητικότητα μέσα από έρευνα συστημάτων. Το LABS είναι η πρώτη προτεινόμενη ερευνητική υπηρεσία και το V1 το μακροπρόθεσμο όραμα δρόμου και αέρα." >VELTARO explores advanced mobility through systems research. LABS is our first proposed research service; V1 is our long-term road-and-air ambition.</p><div class="actions"><a class="button primary" href="labs.html"><span data-en="Explore VELTARO LABS ↗" data-el="Ανακαλύψτε το VELTARO LABS ↗" >Explore VELTARO LABS ↗</span></a><a class="button secondary" href="#vision"><span data-en="Our vision" data-el="Το όραμά μας" >Our vision</span></a><a class="button secondary" href="early-interest.html"><span data-en="Share your interest" data-el="Μοιραστείτε το ενδιαφέρον σας" >Share your interest</span></a></div><p data-en="Concept-stage venture. No working vehicle, certification, sales, or reservations are offered." data-el="Εγχείρημα σε στάδιο concept. Δεν προσφέρονται λειτουργικό όχημα, πιστοποίηση, πωλήσεις ή κρατήσεις." class="hero-foot hero-note">Concept-stage venture. No working vehicle, certification, sales, or reservations are offered.</p></div><figure class="hero-art"><img src="assets/v1-flying-design.svg" alt="Original VELTARO V1 flying design illustration, research concept only"><span class="art-index">VELTARO V1 / LONG-TERM RESEARCH</span><figcaption>ORIGINAL CONCEPT ILLUSTRATION · NOT A BUILT VEHICLE<br>Δεν αποτελεί κατασκευασμένο όχημα ή τεκμήριο πτήσης.</figcaption></figure></div></section><section class="startup-section"><div class="startup-container"><div class="section-top"><div><p class="kicker"><span data-en="WHAT WE ARE BUILDING" data-el="ΤΙ ΑΝΑΠΤΥΣΣΟΥΜΕ" >WHAT WE ARE BUILDING</span></p><h2 data-en="Focused work. A bigger vision." data-el="Εστιασμένη δουλειά. Ευρύτερο όραμα." >Focused work. A bigger vision.</h2></div><p data-en="Our next step is practical: build the software, examine the evidence and learn from real needs." data-el="Το επόμενο βήμα είναι πρακτικό: λογισμικό, εξέταση τεκμηρίων και κατανόηση πραγματικών αναγκών." >Our next step is practical: build the software, examine the evidence and learn from real needs.</p></div><div class="startup-cards"><article class="startup-card"><span class="card-number">01 / VELTARO LABS</span><h3 data-en="A better first research question." data-el="Ένα καλύτερο πρώτο ερευνητικό ερώτημα." >A better first research question.</h3><p data-en="Preliminary mobility feasibility briefs: literature, requirements, trade-offs and explicit uncertainty. Proposed service; launch gates remain open." data-el="Προκαταρκτικές μελέτες: βιβλιογραφία, απαιτήσεις, εναλλακτικές και αβεβαιότητα. Προτεινόμενη υπηρεσία με ανοικτές προϋποθέσεις έναρξης." >Preliminary mobility feasibility briefs: literature, requirements, trade-offs and explicit uncertainty. Proposed service; launch gates remain open.</p><a href="labs-workspace.html"><span data-en="Explore the work ↗" data-el="Δείτε τη δουλειά ↗" >Explore the work ↗</span></a></article><article class="startup-card"><span class="card-number">02 / VELTARO V1</span><h3 data-en="Two paths. One research discipline." data-el="Δύο διαδρομές. Μία ερευνητική αρχή." >Two paths. One research discipline.</h3><p data-en="Powered-lift and folding fixed wing remain under evaluation. No architecture has been selected or validated." data-el="Η κατακόρυφη απογείωση και η αναδιπλούμενη πτέρυγα παραμένουν υπό αξιολόγηση. Καμία αρχιτεκτονική δεν έχει επικυρωθεί." >Powered-lift and folding fixed wing remain under evaluation. No architecture has been selected or validated.</p><a href="v1.html"><span data-en="Explore the work ↗" data-el="Δείτε τη δουλειά ↗" >Explore the work ↗</span></a></article><article class="startup-card"><span class="card-number">03 / ENGINEERING EVIDENCE</span><h3 data-en="Make the assumptions visible." data-el="Ορατές υποθέσεις και περιορισμοί." >Make the assumptions visible.</h3><p data-en="Explore the source-linked evidence dashboard, open hazards and reproducible hypothetical scenarios." data-el="Δείτε τον πίνακα τεκμηρίων, τους ανοικτούς κινδύνους και τα αναπαραγώγιμα υποθετικά σενάρια." >Explore the source-linked evidence dashboard, open hazards and reproducible hypothetical scenarios.</p><a href="v1-evidence-dashboard.html"><span data-en="Explore the work ↗" data-el="Δείτε τη δουλειά ↗" >Explore the work ↗</span></a></article></div></div></section><div class="visual-system-strip" aria-label="VELTARO focus areas"><div class="strip-inner"><span>FORM FOLLOWS FREEDOM</span><span>DESIGN</span><span>EXPLORATION</span><span>RESPONSIBILITY</span></div></div>
-    <section class="content" id="vision" aria-labelledby="vision-title">
-      <div class="wrap">
-        <div class="section-grid">
-          <span class="kicker">01 / Our vision</span>
-          <div>
-            <h2 id="vision-title">A different way to think about movement.</h2>
-            <div class="copy">
-              <p>Mobility should be more than getting from one place to another. We imagine a world in which freedom, engineering and considered design come together to transform the journey.</p>
-              <p><strong>VELTARO is at the beginning of that exploration.</strong> We are testing ideas, listening to potential users and examining the real-world requirements of road-and-air mobility.</p>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="status"><span class="dot" aria-hidden="true"></span><span data-en="Independent mobility research initiative" data-el="Ανεξάρτητη πρωτοβουλία έρευνας κινητικότητας">Independent mobility research initiative</span></span>
+          <h1 id="hero-title"><span data-en="Ideas move." data-el="Οι ιδέες κινούνται.">Ideas move.</span><br><em data-en="Evidence leads." data-el="Η έρευνα οδηγεί.">Evidence leads.</em></h1>
+          <p class="lede" data-en="VELTARO explores advanced mobility through focused research, thoughtful design and transparent engineering questions. LABS is our first proposed research offering. V1 is our long-term road-and-air vision." data-el="Το VELTARO εξερευνά την προηγμένη κινητικότητα μέσα από στοχευμένη έρευνα, σχεδιασμό και τεκμηριωμένα τεχνικά ερωτήματα. Το LABS είναι η πρώτη προτεινόμενη ερευνητική υπηρεσία και το V1 το μακροπρόθεσμο όραμά μας.">VELTARO explores advanced mobility through focused research, thoughtful design and transparent engineering questions. LABS is our first proposed research offering. V1 is our long-term road-and-air vision.</p>
+          <div class="actions">
+            <a class="button primary" href="labs.html"><span data-en="Explore VELTARO LABS" data-el="Ανακάλυψε το VELTARO LABS">Explore VELTARO LABS</span><span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="button outline" href="#vision"><span data-en="See the vision" data-el="Δες το όραμα">See the vision</span><span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+          <p class="micro-note">Concept-stage venture. No working vehicle, certification, sales, or reservations are offered. <span data-en="Illustrations represent concepts, not built products." data-el="Οι εικόνες δείχνουν σχεδιαστικές ιδέες, όχι κατασκευασμένα προϊόντα.">Illustrations represent concepts, not built products.</span></p>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image">
+            <img src="assets/v1-flying-design.svg" width="1800" height="950" alt="Original VELTARO V1 road-and-air vehicle concept illustration; not a built or operational aircraft" fetchpriority="high">
+            <span class="hero-overline" data-en="VELTARO / FUTURE MOBILITY" data-el="VELTARO / ΜΕΛΛΟΝΤΙΚΗ ΚΙΝΗΤΙΚΟΤΗΤΑ">VELTARO / FUTURE MOBILITY</span>
+            <div class="hero-image-caption">
+              <div><strong>VELTARO V1</strong><small data-en="Exploratory road-and-air design" data-el="Ερευνητικός σχεδιασμός δρόμου και αέρα">Exploratory road-and-air design</small></div>
+              <span class="concept-badge" data-en="CONCEPT ONLY" data-el="ΜΟΝΟ CONCEPT">CONCEPT ONLY</span>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="content" id="approach" aria-labelledby="approach-title">
+
+    <div class="proofbar" aria-label="VELTARO research principles">
+      <div class="wrap proofbar-grid">
+        <div class="proofbar-item"><span class="proofbar-icon" aria-hidden="true">◎</span><div><strong data-en="Research before claims" data-el="Έρευνα πριν από ισχυρισμούς">Research before claims</strong><span data-en="Sources, assumptions and open questions" data-el="Πηγές, παραδοχές και ανοικτά ερωτήματα">Sources, assumptions and open questions</span></div></div>
+        <div class="proofbar-item"><span class="proofbar-icon" aria-hidden="true">◇</span><div><strong data-en="Safety as a design input" data-el="Η ασφάλεια στον σχεδιασμό">Safety as a design input</strong><span data-en="Practical and regulatory constraints" data-el="Πρακτικοί και κανονιστικοί περιορισμοί">Practical and regulatory constraints</span></div></div>
+        <div class="proofbar-item"><span class="proofbar-icon" aria-hidden="true">↗</span><div><strong data-en="Progress you can inspect" data-el="Πρόοδος με τεκμηρίωση">Progress you can inspect</strong><span data-en="Public research and reproducible tools" data-el="Δημόσια έρευνα και αναπαραγώγιμα εργαλεία">Public research and reproducible tools</span></div></div>
+      </div>
+    </div>
+
+    <section class="section" id="approach" aria-labelledby="approach-title">
       <div class="wrap">
-        <div class="section-grid">
-          <span class="kicker">02 / Our approach</span>
-          <div>
-            <h2 id="approach-title">Ambition, grounded in reality.</h2>
-            <p class="copy">We believe meaningful progress starts with asking better questions — about needs, feasibility, safety and responsible development.</p>
-          </div>
+        <div class="section-heading">
+          <div><span class="kicker" data-en="WHAT WE WORK ON" data-el="ΜΕ ΤΙ ΑΣΧΟΛΟΥΜΑΣΤΕ">WHAT WE WORK ON</span><h2 id="approach-title" data-en="Focused today. Ambitious tomorrow." data-el="Εστίαση στο σήμερα. Φιλοδοξία για το αύριο.">Focused today. Ambitious tomorrow.</h2></div>
+          <p data-en="Three connected areas, with clear boundaries between a proposed service, working research tools and a future vehicle concept." data-el="Τρεις συνδεδεμένες κατευθύνσεις, με σαφή διάκριση ανάμεσα σε προτεινόμενη υπηρεσία, ερευνητικά εργαλεία και μελλοντικό όχημα.">Three connected areas, with clear boundaries between a proposed service, working research tools and a future vehicle concept.</p>
         </div>
-        <div class="pillars">
-          <div class="pillar"><small>01</small><h3>Design with purpose</h3><p>Explore an intuitive, elegant experience centered on people and their journeys.</p></div>
-          <div class="pillar"><small>02</small><h3>Research first</h3><p>Understand technical constraints and customer needs before making product claims.</p></div>
-          <div class="pillar"><small>03</small><h3>Build responsibly</h3><p>Treat safety, regulation and practical viability as essential questions from day one.</p></div>
+        <div class="offer-grid">
+          <article class="offer primary-offer">
+            <small>01 / VELTARO LABS</small>
+            <h3 data-en="Applied research briefs" data-el="Εφαρμοσμένες ερευνητικές μελέτες">Applied research briefs</h3>
+            <p data-en="Exploring concise, source-backed preliminary studies for early mobility decisions. Proposed first commercial direction; demand and delivery readiness are still being tested." data-el="Διερευνούμε σύντομες, τεκμηριωμένες προκαταρκτικές μελέτες για πρώιμες αποφάσεις κινητικότητας. Η ζήτηση και η ετοιμότητα παροχής εξετάζονται ακόμη.">Exploring concise, source-backed preliminary studies for early mobility decisions. Proposed first commercial direction; demand and delivery readiness are still being tested.</p>
+            <a href="labs.html"><span data-en="Explore the proposed service" data-el="Δες την προτεινόμενη υπηρεσία">Explore the proposed service</span> <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="offer">
+            <small>02 / RESEARCH TOOLS</small>
+            <h3 data-en="Evidence &amp; software" data-el="Τεκμηρίωση &amp; λογισμικό">Evidence &amp; software</h3>
+            <p data-en="Local research workspaces, documented assumptions and exploratory comparison tools. Software demonstration is not a validated engineering result." data-el="Τοπικά εργαλεία έρευνας, τεκμηριωμένες παραδοχές και διερευνητικά μοντέλα. Η επίδειξη λογισμικού δεν ισοδυναμεί με επικυρωμένο τεχνικό αποτέλεσμα.">Local research workspaces, documented assumptions and exploratory comparison tools. Software demonstration is not a validated engineering result.</p>
+            <a href="research-hub.html"><span data-en="See research tools" data-el="Δες τα εργαλεία έρευνας">See research tools</span> <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="offer">
+            <small>03 / VELTARO V1</small>
+            <h3 data-en="The road-and-air vision" data-el="Το όραμα δρόμου και αέρα">The road-and-air vision</h3>
+            <p data-en="A long-term exploration of combined ground and airborne mobility. Architecture, safety, feasibility and certification questions remain unresolved." data-el="Μακροπρόθεσμη διερεύνηση συνδυασμένης οδικής και εναέριας κινητικότητας. Η αρχιτεκτονική, η ασφάλεια, η εφικτότητα και η πιστοποίηση παραμένουν ανοικτά ζητήματα.">A long-term exploration of combined ground and airborne mobility. Architecture, safety, feasibility and certification questions remain unresolved.</p>
+            <a href="v1.html"><span data-en="Explore V1 research" data-el="Δες την έρευνα V1">Explore V1 research</span> <span aria-hidden="true">↗</span></a>
+          </article>
         </div>
       </div>
     </section>
-    <section class="content" id="labs" aria-labelledby="labs-title">
-      <div class="wrap">
-        <div class="section-grid">
-          <span class="kicker">Research / VELTARO LABS</span>
-          <div>
-            <h2 id="labs-title">From ambitious ideas to evidence-led questions.</h2>
-            <div class="copy"><p>VELTARO LABS is our proposed first commercial direction: narrowly scoped, desk-based mobility feasibility and systems research. We are exploring collaborations and validating demand; no professional service engagement, pricing or delivery capacity is represented as already established.</p>
-              <p>The VELTARO V1 road-and-air vehicle remains our longer-term research ambition, not a vehicle on sale or available for reservation.</p>
-              <a class="button secondary" href="labs.html">Read the LABS research brief ↗</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="content contact" id="connect" aria-labelledby="connect-title">
-      <div class="wrap">
+
+    <section class="service" id="labs" aria-labelledby="labs-title">
+      <div class="wrap service-grid">
         <div>
-          <span class="kicker">03 / Connect</span>
-          <h2 id="connect-title">The future starts<br>with a conversation.</h2>
-          <p>Interested in the concept, research or a possible collaboration? We'd like to hear your perspective.</p>
+          <span class="kicker">VELTARO LABS / FIRST OFFER HYPOTHESIS</span>
+          <h2 id="labs-title" data-en="Better decisions begin with better evidence." data-el="Καλύτερες αποφάσεις ξεκινούν με καλύτερη τεκμηρίωση.">Better decisions begin with better evidence.</h2>
+          <p data-en="The proposed LABS Mobility Evidence Brief organizes public research, compares early alternatives and makes unknowns explicit. We are speaking with potential users to learn whether this limited deliverable is valuable." data-el="Η προτεινόμενη μελέτη LABS Mobility Evidence Brief οργανώνει δημόσιες πηγές, συγκρίνει πρώιμες επιλογές και αναδεικνύει τις αβεβαιότητες. Διερευνούμε αν αυτό το περιορισμένο παραδοτέο έχει πραγματική αξία για πιθανούς χρήστες.">The proposed LABS Mobility Evidence Brief organizes public research, compares early alternatives and makes unknowns explicit. We are speaking with potential users to learn whether this limited deliverable is valuable.</p>
+          <a class="button dark" href="labs.html"><span data-en="Understand LABS" data-el="Γνώρισε το LABS">Understand LABS</span><span class="arrow" aria-hidden="true">↗</span></a>
         </div>
-        <a class="button primary" href="#message-form">Start a conversation ↗</a>
+        <div class="deliverable" aria-label="Illustrative LABS brief outline">
+          <div class="deliverable-bar"><strong data-en="MOBILITY EVIDENCE BRIEF" data-el="ΜΕΛΕΤΗ MOBILITY EVIDENCE">MOBILITY EVIDENCE BRIEF</strong><span data-en="PROPOSED FORMAT" data-el="ΠΡΟΤΕΙΝΟΜΕΝΗ ΜΟΡΦΗ">PROPOSED FORMAT</span></div>
+          <div class="deliverable-body">
+            <div class="deliverable-row"><span class="index">01</span><div><strong data-en="Define the decision" data-el="Ορισμός της απόφασης">Define the decision</strong><span data-en="Problem, intended use and boundaries" data-el="Πρόβλημα, χρήση και περιορισμοί">Problem, intended use and boundaries</span></div></div>
+            <div class="deliverable-row"><span class="index">02</span><div><strong data-en="Map published evidence" data-el="Χαρτογράφηση τεκμηρίων">Map published evidence</strong><span data-en="Sources, assumptions and traceable comparisons" data-el="Πηγές, παραδοχές και τεκμηριωμένες συγκρίσεις">Sources, assumptions and traceable comparisons</span></div></div>
+            <div class="deliverable-row"><span class="index">03</span><div><strong data-en="Expose the uncertainty" data-el="Ανάδειξη αβεβαιότητας">Expose the uncertainty</strong><span data-en="Gaps, technical questions and limits" data-el="Κενά, τεχνικά ερωτήματα και όρια">Gaps, technical questions and limits</span></div></div>
+            <div class="deliverable-row"><span class="index">04</span><div><strong data-en="Recommend the next study" data-el="Πρόταση επόμενης μελέτης">Recommend the next study</strong><span data-en="Prioritized actions, not certification or sign-off" data-el="Προτεραιότητες, όχι πιστοποίηση ή έγκριση σχεδιασμού">Prioritized actions, not certification or sign-off</span></div></div>
+          </div>
+          <div class="service-foot" data-en="Illustrative, non-regulated desk-study format. Not currently offered as a verified paid service." data-el="Ενδεικτική μορφή βιβλιογραφικής μελέτης, χωρίς ρυθμιζόμενη τεχνική πιστοποίηση. Δεν αποτελεί ακόμη επιβεβαιωμένη εμπορική υπηρεσία.">Illustrative, non-regulated desk-study format. Not currently offered as a verified paid service.</div>
+        </div>
       </div>
     </section>
-    <section class="photo-return" id="visuals" aria-labelledby="visuals-title"><div class="wrap"><span class="kicker">VELTARO / VISUAL INSPIRATION</span><h2 id="visuals-title">The vision in perspective.</h2><p class="photo-intro">A visual exploration of automotive design, aviation and refined mobility. Alongside our original illustrations, these photographs inspired the earlier VELTARO website.</p><div class="photo-grid"><figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1100&q=82" alt="Automotive inspiration — third-party reference photo"><figcaption>Automotive inspiration</figcaption></figure><figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1611859266238-4b98091d9d9b?w=1100&q=82" alt="Road mobility reference — third-party reference photo"><figcaption>Road mobility reference</figcaption></figure><figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=1100&q=82" alt="Aviation reference — third-party reference photo"><figcaption>Aviation reference</figcaption></figure><figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=1100&q=82" alt="Interior design inspiration — third-party reference photo"><figcaption>Interior design inspiration</figcaption></figure></div><p class="footnote">Third-party reference photography, not VELTARO products, prototypes or partnerships. Image usage rights must be confirmed for public commercial launch.</p></div></section>
-<section class="original-gallery" aria-labelledby="original-gallery-title"><div class="wrap"><span class="kicker">ORIGINAL CONCEPT VISUALS</span><h2 id="original-gallery-title">A vision, in form.</h2><div class="original-gallery-grid"><figure><img src="assets/v1-concept.svg" alt="ROAD / CONCEPT illustrative concept visual" loading="lazy" decoding="async"><figcaption>ROAD / CONCEPT</figcaption></figure><figure><img src="assets/v1-flying-design.svg" alt="AIR / CONCEPT illustrative concept visual" loading="lazy" decoding="async"><figcaption>AIR / CONCEPT</figcaption></figure></div><p class="gallery-note">Original VELTARO concept illustrations. No working prototype or certified vehicle is shown.</p></div></section>
-<section class="inquiry" id="message-form" aria-labelledby="message-title">
-      <div class="wrap">
-        <span class="kicker">04 / Contact</span>
-        <h2 id="message-title">Start a conversation.</h2>
-        <p>Interested in research, future mobility or collaboration? Send VELTARO a message directly from this page.</p>
-        <form class="contact-form" action="https://formsubmit.co/panagiotagrosdouli@gmail.com" method="POST">
+
+    <section class="vision" id="vision" aria-labelledby="vision-title">
+      <div class="wrap vision-grid">
+        <figure class="vision-art">
+          <img src="assets/v1-concept.svg" alt="Original VELTARO ground mobility concept illustration, not an actual prototype" loading="lazy" decoding="async">
+          <figcaption data-en="ORIGINAL VELTARO DESIGN STUDY · NOT A MANUFACTURED VEHICLE" data-el="ΠΡΩΤΟΤΥΠΗ ΣΧΕΔΙΑΣΤΙΚΗ ΜΕΛΕΤΗ VELTARO · ΟΧΙ ΚΑΤΑΣΚΕΥΑΣΜΕΝΟ ΟΧΗΜΑ">ORIGINAL VELTARO DESIGN STUDY · NOT A MANUFACTURED VEHICLE</figcaption>
+        </figure>
+        <div>
+          <span class="kicker" data-en="THE LONG-TERM VISION" data-el="ΤΟ ΜΑΚΡΟΠΡΟΘΕΣΜΟ ΟΡΑΜΑ">THE LONG-TERM VISION</span>
+          <h2 id="vision-title" data-en="Beyond the road. Grounded in research." data-el="Πέρα από τον δρόμο. Με βάση την έρευνα.">Beyond the road. Grounded in research.</h2>
+          <p data-en="VELTARO V1 explores how road and air mobility might intersect. Both vertical-lift and folding-wing ideas remain early research questions, not proven designs." data-el="Το VELTARO V1 εξερευνά πώς μπορούν να συνδυαστούν οδικές και εναέριες μετακινήσεις. Οι επιλογές κατακόρυφης απογείωσης και αναδιπλούμενων πτερύγων παραμένουν ερευνητικά ερωτήματα, όχι αποδεδειγμένα σχέδια.">VELTARO V1 explores how road and air mobility might intersect. Both vertical-lift and folding-wing ideas remain early research questions, not proven designs.</p>
+          <p data-en="Our approach is to study feasibility, safety and legal requirements first, then decide whether more expensive engineering work is justified." data-el="Η προσέγγισή μας είναι πρώτα να εξετάζουμε εφικτότητα, ασφάλεια και νομικές απαιτήσεις, και μετά να κρίνουμε αν δικαιολογείται περαιτέρω τεχνική ανάπτυξη.">Our approach is to study feasibility, safety and legal requirements first, then decide whether more expensive engineering work is justified.</p>
+          <a class="inline-link" href="v1.html"><span data-en="Read the V1 research programme" data-el="Δες το ερευνητικό πρόγραμμα V1">Read the V1 research programme</span> <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust" id="research" aria-labelledby="research-title">
+      <div class="wrap trust-grid">
+        <div>
+          <span class="kicker" data-en="HOW WE APPROACH DEVELOPMENT" data-el="ΠΩΣ ΠΡΟΣΕΓΓΙΖΟΥΜΕ ΤΗΝ ΑΝΑΠΤΥΞΗ">HOW WE APPROACH DEVELOPMENT</span>
+          <h2 id="research-title" data-en="Real progress is measurable." data-el="Η πραγματική πρόοδος μετριέται.">Real progress is measurable.</h2>
+          <p data-en="Public code and research documentation show what has been explored. They do not replace qualified external review, customer validation or regulatory approval." data-el="Ο δημόσιος κώδικας και η τεκμηρίωση δείχνουν τι έχει διερευνηθεί. Δεν αντικαθιστούν ανεξάρτητο τεχνικό έλεγχο, επιβεβαίωση αγοράς ή κανονιστική έγκριση.">Public code and research documentation show what has been explored. They do not replace qualified external review, customer validation or regulatory approval.</p>
+          <a class="button outline" href="research-hub.html"><span data-en="Browse our research" data-el="Εξερεύνησε την έρευνα">Browse our research</span><span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+        <div class="steps">
+          <div class="step"><strong>01</strong><div><h3 data-en="Define a real problem" data-el="Ορισμός πραγματικού προβλήματος">Define a real problem</h3><p data-en="Listen to prospective users and clarify the decision before proposing a solution." data-el="Κατανόηση πιθανών χρηστών και σαφής ορισμός της απόφασης πριν από τη λύση.">Listen to prospective users and clarify the decision before proposing a solution.</p></div></div>
+          <div class="step"><strong>02</strong><div><h3 data-en="Test the assumptions" data-el="Έλεγχος παραδοχών">Test the assumptions</h3><p data-en="Build traceable comparisons and state unknowns without overstating what models can prove." data-el="Δημιουργία τεκμηριωμένων συγκρίσεων και σαφής δήλωση των περιορισμών των μοντέλων.">Build traceable comparisons and state unknowns without overstating what models can prove.</p></div></div>
+          <div class="step"><strong>03</strong><div><h3 data-en="Advance only with evidence" data-el="Εξέλιξη μόνο με τεκμήρια">Advance only with evidence</h3><p data-en="Independent checks and customer demand should determine the next commercial or engineering step." data-el="Η ανεξάρτητη αξιολόγηση και η ζήτηση πελατών πρέπει να καθορίζουν το επόμενο βήμα.">Independent checks and customer demand should determine the next commercial or engineering step.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="connect" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div>
+          <span class="kicker" data-en="LET'S CONNECT" data-el="ΑΣ ΕΠΙΚΟΙΝΩΝΗΣΟΥΜΕ">LET'S CONNECT</span>
+          <h2 id="contact-title" data-en="Have a question worth exploring?" data-el="Έχεις ένα ερώτημα που αξίζει να διερευνηθεί;">Have a question worth exploring?</h2>
+          <p data-en="We welcome thoughtful questions about early mobility research, potential pilot needs and relevant technical perspectives. No commercial engagement or response is guaranteed." data-el="Δεχόμαστε ερωτήματα για έρευνα κινητικότητας, δυνητικές πιλοτικές ανάγκες και τεχνικές απόψεις. Δεν εγγυόμαστε εμπορική συνεργασία ή απάντηση.">We welcome thoughtful questions about early mobility research, potential pilot needs and relevant technical perspectives. No commercial engagement or response is guaranteed.</p>
+          <div class="research-links">
+            <a href="early-interest.html" data-en="Share research interest ↗" data-el="Δήλωσε ενδιαφέρον έρευνας ↗">Share research interest ↗</a>
+            <a href="collaborate.html" data-en="Explore collaboration ↗" data-el="Διερεύνησε συνεργασία ↗">Explore collaboration ↗</a>
+          </div>
+        </div>
+        <form class="contact-form" id="message-form" action="https://formsubmit.co/panagiotagrosdouli@gmail.com" method="POST">
+          <h3 data-en="Send a research inquiry" data-el="Στείλε ερευνητικό ερώτημα">Send a research inquiry</h3>
           <input type="hidden" name="_subject" value="VELTARO | New Website Contact Message">
           <input type="hidden" name="_captcha" value="true">
           <input type="hidden" name="_template" value="table">
           <div class="honey" aria-hidden="true"><label>Leave blank<input name="_honey" type="text" tabindex="-1" autocomplete="off"></label></div>
-          <label for="contact-name">Full name<input id="contact-name" name="name" autocomplete="name" minlength="2" maxlength="100" required></label>
-          <label for="contact-email">Email address<input id="contact-email" name="email" type="email" autocomplete="email" maxlength="200" required></label>
-          <label for="contact-message">Your message<textarea id="contact-message" name="message" rows="6" minlength="10" maxlength="3000" required></textarea></label>
-          <label class="consent" for="contact-consent"><input id="contact-consent" name="contact_consent" type="checkbox" value="yes" required><span>I request a reply to my inquiry and understand that my submission is processed using FormSubmit, a third-party email delivery service. I have read the <a href="privacy.html" style="color:var(--accent);text-decoration:underline">provisional data notice</a>.</span></label>
-          <p class="formnote">Please do not send sensitive or confidential information. Delivery requires activation of the receiving inbox and testing. The privacy notice requires review before wider launch.</p>
-          <button class="button primary" type="submit">Send message ↗</button>
+          <div class="form-row">
+            <label for="contact-name"><span data-en="Full name" data-el="Ονοματεπώνυμο">Full name</span><input id="contact-name" name="name" autocomplete="name" minlength="2" maxlength="100" required></label>
+            <label for="contact-email"><span data-en="Email address" data-el="Email επικοινωνίας">Email address</span><input id="contact-email" name="email" type="email" autocomplete="email" maxlength="200" required></label>
+          </div>
+          <label for="contact-message"><span data-en="What would you like to explore?" data-el="Τι θα ήθελες να διερευνήσουμε;">What would you like to explore?</span><textarea id="contact-message" name="message" rows="5" minlength="10" maxlength="3000" required></textarea></label>
+          <label class="consent" for="contact-consent"><input id="contact-consent" name="contact_consent" type="checkbox" value="yes" required><span><span data-en="I request a reply and understand that FormSubmit, a third-party email service, handles this submission. I have read the" data-el="Ζητώ απάντηση και γνωρίζω ότι η αποστολή γίνεται μέσω της τρίτης υπηρεσίας FormSubmit. Έχω διαβάσει την">I request a reply and understand that FormSubmit, a third-party email service, handles this submission. I have read the</span> <a href="privacy.html" data-en="provisional privacy notice." data-el="προσωρινή ενημέρωση απορρήτου.">provisional privacy notice.</a></span></label>
+          <p class="formnote" data-en="Do not submit sensitive or confidential information. Inbox activation, delivery testing and final privacy review are pending owner verification." data-el="Μην αποστέλλετε ευαίσθητα ή εμπιστευτικά στοιχεία. Η ενεργοποίηση παραλήπτη, οι δοκιμές παράδοσης και ο τελικός έλεγχος απορρήτου απαιτούν επιβεβαίωση.">Do not submit sensitive or confidential information. Inbox activation, delivery testing and final privacy review are pending owner verification.</p>
+          <button class="button dark" type="submit"><span data-en="Send inquiry" data-el="Αποστολή ερωτήματος">Send inquiry</span><span class="arrow" aria-hidden="true">↗</span></button>
         </form>
       </div>
     </section>
-  <section class="featured-statement" aria-label="VELTARO statement"><div class="statement-inner"><span class="kicker">VELTARO / OUR PHILOSOPHY</span><p>The next frontier isn’t just a destination. It’s <em>a new perspective.</em></p></div></section><section class="startup-section"><div class="startup-container evidence-split"><div><p class="kicker"><span data-en="PROGRESS &amp; NEXT STEPS" data-el="ΠΡΟΟΔΟΣ &amp; ΕΠΟΜΕΝΑ ΒΗΜΑΤΑ" >PROGRESS &amp; NEXT STEPS</span></p><h2 data-en="Built on work you can inspect." data-el="Δουλειά που μπορείτε να ελέγξετε." >Built on work you can inspect.</h2><p data-en="We share the difference between working software, research assumptions and the evidence still needed. That is how this venture moves forward." data-el="Διαχωρίζουμε λειτουργικό λογισμικό, ερευνητικές υποθέσεις και τεκμήρια που ακόμη απαιτούνται. Έτσι προχωρά το εγχείρημα." >We share the difference between working software, research assumptions and the evidence still needed. That is how this venture moves forward.</p><a class="button secondary" href="research-hub.html"><span data-en="Open research hub ↗" data-el="Ανοίξτε τον χώρο έρευνας ↗" >Open research hub ↗</span></a></div><div><div class="milestone-row"><span>01</span><div><b data-en="Software foundation" data-el="Βάση λογισμικού" >Software foundation</b><small data-en="Local research tools and reproducible source checks." data-el="Τοπικά ερευνητικά εργαλεία και αναπαραγώγιμοι έλεγχοι." >Local research tools and reproducible source checks.</small></div><span>IMPLEMENTED</span></div><div class="milestone-row"><span>02</span><div><b data-en="Independent validation" data-el="Ανεξάρτητη αξιολόγηση" >Independent validation</b><small data-en="Engineering, privacy, legal and market evidence still required." data-el="Απαιτούνται τεχνικά, νομικά και εμπορικά τεκμήρια." >Engineering, privacy, legal and market evidence still required.</small></div><span>NEXT GATE</span></div><div class="milestone-row"><span>03</span><div><b data-en="Responsible launch" data-el="Υπεύθυνη έναρξη" >Responsible launch</b><small data-en="Only after the relevant product and commercial gates pass." data-el="Μόνο μετά την ολοκλήρωση των αντίστοιχων ελέγχων." >Only after the relevant product and commercial gates pass.</small></div><span>NOT RELEASED</span></div></div></div></section></main>
-  <footer class="startup-footer"><div class="startup-container"><div><img src="brand/horizontal-dark.svg" alt="VELTARO"><p>Ambitious mobility. Grounded in evidence.</p><p>Independent concept-stage venture.<br>Ανεξάρτητο ερευνητικό εγχείρημα.</p></div><div><h3>Explore / Ανακαλύψτε</h3><a href="labs.html">VELTARO LABS</a><a href="v1.html">VELTARO V1</a><a href="air.html">AIR</a><a href="skycourier.html">SKYCOURIER</a><a href="ground.html">GROUND</a></div><div><h3>Company / Εγχείρημα</h3><a href="about.html">About</a><a href="investors.html">Investors</a><a href="contact.html">Contact</a><a href="collaborate.html">Research & collaboration</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="research-hub.html">Research hub</a></div></div><div class="footer-caption">VELTARO · Research & design · No manufactured product or certification claimed. / Δεν δηλώνεται κατασκευασμένο προϊόν ή πιστοποίηση.</div></footer>
-<script src="assets/startup-language.js"></script></body>
+  </main>
+  <footer class="startup-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <img src="brand/horizontal-dark.svg" alt="VELTARO" width="172" height="39">
+          <p data-en="An independent concept-stage initiative exploring more thoughtful, evidence-led mobility." data-el="Ανεξάρτητη πρωτοβουλία σε ερευνητικό στάδιο, με επίκεντρο την τεκμηριωμένη εξέλιξη της κινητικότητας.">An independent concept-stage initiative exploring more thoughtful, evidence-led mobility.</p>
+        </div>
+        <div><h3 data-en="Explore" data-el="Ανακάλυψε">Explore</h3>
+          <a href="labs.html">VELTARO LABS</a>
+          <a href="v1.html">VELTARO V1</a>
+          <a href="research-hub.html" data-en="Research hub" data-el="Κέντρο έρευνας">Research hub</a>
+          <a href="early-interest.html" data-en="Research interest" data-el="Ενδιαφέρον έρευνας">Research interest</a>
+        </div>
+        <div><h3 data-en="About" data-el="Σχετικά">About</h3>
+          <a href="about.html" data-en="Our initiative" data-el="Η πρωτοβουλία">Our initiative</a>
+          <a href="collaborate.html" data-en="Collaborate" data-el="Συνεργασία">Collaborate</a>
+          <a href="investors.html" data-en="Investor information" data-el="Για επενδυτές">Investor information</a>
+          <a href="privacy.html" data-en="Privacy" data-el="Απόρρητο">Privacy</a>
+          <a href="terms.html" data-en="Terms" data-el="Όροι">Terms</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© VELTARO · <span data-en="Independent research initiative" data-el="Ανεξάρτητη ερευνητική πρωτοβουλία">Independent research initiative</span></span>
+        <span data-en="Concept designs, not operational products. No certification or sales claimed." data-el="Σχεδιαστικές ιδέες, όχι λειτουργικά προϊόντα. Δεν δηλώνονται πιστοποιήσεις ή πωλήσεις.">Concept designs, not operational products. No certification or sales claimed.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/startup-language.js"></script>
+</body>
 </html>
