@@ -99,9 +99,9 @@ body.veltaro-home .deliverable-bar span{font-size:.68rem;color:#e6cdad}
 body.veltaro-home .deliverable-body{padding:20px 28px}
 body.veltaro-home .deliverable-row{display:grid;grid-template-columns:33px 1fr;gap:13px;padding:18px 0;border-bottom:1px solid #e7e7e1}
 body.veltaro-home .deliverable-row:last-child{border:0}
-body.veltaro-home .deliverable-row .index{color:#a57d50;font-size:.78rem;font-weight:800}
+body.veltaro-home .deliverable-row .index{color:#76522a;font-size:.78rem;font-weight:800}
 body.veltaro-home .deliverable-row strong{display:block;font-size:.93rem}
-body.veltaro-home .deliverable-row span{display:block;color:#738087;font-size:.8rem;margin-top:5px;line-height:1.5}
+body.veltaro-home .deliverable-row span{display:block;color:#526169;font-size:.8rem;margin-top:5px;line-height:1.5}
 body.veltaro-home .service-foot{padding:0 28px 24px;font-size:.74rem;color:#6c787f}
 body.veltaro-home .vision{padding:100px 0;background:#0a141b}
 body.veltaro-home .vision-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px}
