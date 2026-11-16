@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 535" role="img" aria-labelledby="title desc">
+<title id="title">VELTARO — gold-wing stacked brand concept</title>
+<desc id="desc">Gold-wing V emblem above VELTARO typography. Transparent background. Proposed identity awaiting brand clearance.</desc>
+<defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2=".5"><stop stop-color="#a56b25"/><stop offset=".40" stop-color="#f2d49b"/><stop offset=".75" stop-color="#d3a54e"/><stop offset="1" stop-color="#a86c28"/></linearGradient></defs>
+<g transform="translate(185 18) scale(1.55)">
+<path d="M19 27H66L102 96L139 27H187L102 158Z" fill="#22272a"/>
+<path d="M135 27C152 16 190 15 227 8L206 29C198 36 188 40 168 42L134 45Z" fill="url(#gold)"/>
+<path d="M142 53C156 44 183 42 212 39L198 57C191 64 173 67 137 69Z" fill="url(#gold)"/>
+<path d="M7 148C56 102 125 76 211 73C138 86 73 108 7 148Z" fill="url(#gold)"/>
+</g>
+<text x="57" y="417" fill="#22272a" font-size="79" font-family="Arial,Helvetica,sans-serif" font-weight="700" letter-spacing="10">VELTARO</text>
+<path d="M278 424L285 411L292 424Z" fill="#c89a4b"/>
+</svg>
