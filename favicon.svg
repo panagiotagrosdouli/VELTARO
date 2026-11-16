@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90" style="color:#dfc398"><title>VELTARO original proposed identity</title><path d="M12 20l34 50 34-50-34 27z" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90" role="img" aria-labelledby="t">
+<title id="t">VELTARO gold-wing V icon</title>
+<defs><linearGradient id="g" x1="0" x2="1" y1="0" y2=".5"><stop stop-color="#ba853b"/><stop offset=".5" stop-color="#e7c477"/><stop offset="1" stop-color="#b57c34"/></linearGradient></defs>
+<rect width="90" height="90" rx="16" fill="#0e1921"/>
+<path d="M14 18H31L45 49L60 18H77L45 75Z" fill="#f5f0e9"/>
+<path d="M56 18L81 12L69 24L56 29Z" fill="url(#g)"/>
+<path d="M59 32L78 27L68 37L56 40Z" fill="url(#g)"/>
+<path d="M7 70Q43 40 85 39Q44 48 7 70Z" fill="url(#g)"/>
+</svg>
