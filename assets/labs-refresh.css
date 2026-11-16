@@ -32,7 +32,7 @@ body.labs-premium .section ol{padding:0;list-style:none;counter-reset:process;ma
 body.labs-premium .section ol li{display:grid;grid-template-columns:52px 1fr;align-items:start;gap:12px;border-top:1px solid #ffffff25;padding:23px 0;margin:0;color:#becbcd;line-height:1.65;counter-increment:process}
 body.labs-premium .section ol li::before{content:"0" counter(process);font-size:.78rem;letter-spacing:.05em;color:#dfbf95;font-weight:750;padding-top:4px}
 body.labs-premium .labs-sample{background:#f6f3ec;color:#253941}
-body.labs-premium .labs-sample .eyebrow{color:#916c44}
+body.labs-premium .labs-sample .eyebrow{color:#6b4824}
 body.labs-premium .labs-sample p{color:#61727a;max-width:700px}
 body.labs-premium .sample-grid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
 body.labs-premium .sample-grid h2{max-width:720px}
