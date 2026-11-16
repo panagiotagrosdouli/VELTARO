@@ -44,3 +44,11 @@ body.labs-premium :focus-visible{outline:3px solid #f0d4ad;outline-offset:5px}
 @media(max-width:850px){body.labs-premium .corporate-header .corporate-inner,body.labs-premium .wrap,body.labs-premium .startup-footer .startup-container{width:calc(100% - 40px)}body.labs-premium .hero{padding:76px 0}body.labs-premium section.section{padding:70px 0}body.labs-premium .sample-grid{grid-template-columns:1fr}body.labs-premium .sample-grid .sample-cta{justify-self:start}}
 @media(max-width:540px){body.labs-premium .hero h1{font-size:clamp(3.2rem,13vw,4.8rem)}body.labs-premium .grid article{min-height:auto}body.labs-premium .button{width:100%;text-align:center}body.labs-premium .corporate-nav .dropdown{right:0;left:auto}}
 @media(prefers-reduced-motion:reduce){body.labs-premium .button{transition:none}body.labs-premium .button:hover{transform:none}}
+
+
+/* Original source-image based logo replaces the previous approximation in navigation/footer. */
+body.labs-premium .corporate-logo{background:#faf6f2;border-radius:6px;padding:6px 9px;line-height:0}
+body.labs-premium .corporate-logo img{display:block;width:190px;height:auto;object-fit:contain}
+body.labs-premium .startup-footer img{display:block;width:min(100%,220px);height:auto;object-fit:contain;background:#faf6f2;border-radius:8px}
+@media(max-width:850px){body.labs-premium .corporate-logo img{width:148px;height:auto}}
+@media(max-width:540px){body.labs-premium .corporate-logo{padding:5px}body.labs-premium .corporate-logo img{width:130px;height:auto}}
