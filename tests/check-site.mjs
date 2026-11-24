@@ -40,18 +40,21 @@ for(const page of pages){
 const websiteSchema=home.match(/<script type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/i);
 check(!!websiteSchema,'homepage structured data exists');
 if(websiteSchema){try{const schema=JSON.parse(websiteSchema[1]);check(schema['@type']==='WebSite'&&schema.url==='https://panagiotagrosdouli.github.io/VELTARO/','homepage structured data is valid');}catch{check(false,'homepage structured data is valid')}}
-for(const path of ['collaborate.html','early-interest.html','privacy.html','labs.html'])check(home.includes('href="'+path+'"'),'homepage link '+path);
+const studio=read('assets/veltaro-studio.css');
+for(const path of ['privacy.html','terms.html'])check(home.includes('href="'+path+'"'),'homepage legal link '+path);
+for(const path of ['collaborate.html','early-interest.html','labs.html'])check(existsSync(resolve(root,path)),'retained research route '+path);
+check(!/href="(?:v1|labs)\.html"/.test(home),'focused corporate homepage');
 check(/<main\b[^>]*id=["']main["']/.test(home),'semantic main landmark');
 check(/class=["']skip["'][^>]*href=["']#main["']/.test(home),'keyboard skip link');
-check(home.includes('prefers-reduced-motion:reduce'),'reduced motion preference');
+check(studio.includes('prefers-reduced-motion:reduce'),'reduced motion preference');
 check(home.includes('Concept-stage venture'),'concept-stage disclosure');
 check(home.includes('No working vehicle, certification, sales, or reservations'),'honest availability disclaimer');
-check(home.includes('href="#vision"'),'vision CTA');
-check(home.includes('href="early-interest.html"'),'customer research CTA');
-check(home.includes('href="collaborate.html"'),'collaboration CTA');
+check(home.includes('href="#about"'),'vision CTA');
+check(read('research-hub.html').includes('href="early-interest.html"'),'customer research route retained');
+check(read('research-hub.html').includes('href="collaborate.html"'),'collaboration route retained');
 check(home.includes('name="viewport"'),'responsive viewport');
-check(home.includes('@media(max-width:760px)'),'mobile layout');
-check(home.includes(':focus-visible'),'keyboard focus styling');
+check(studio.includes('@media(max-width:760px)'),'mobile layout');
+check(studio.includes(':focus-visible'),'keyboard focus styling');
 check(!home.includes('VISION SYSTEM / 2070'),'no speculative milestone year');
 check(/<form\b[^>]*id="interest-form"[^>]*>/.test(interest),'customer form exists');
 check(interest.includes('method="POST"') && interest.includes('action="https://formsubmit.co/panagiotagrosdouli@gmail.com"'),'customer form POST recipient');
