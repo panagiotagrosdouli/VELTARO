@@ -204,12 +204,3 @@ body.veltaro-home .footer-bottom{display:flex;justify-content:space-between;gap:
   body.veltaro-home .footer-grid>div:first-child{grid-column:auto}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}body.veltaro-home .button,body.veltaro-home .offer{transition:none}body.veltaro-home .button:hover,body.veltaro-home .offer:hover{transform:none}}
-
-
-/* Brand images are crops of the exact user-supplied artwork, not redrawn vectors.
-   Keep the supplied ivory background and native aspect ratios. */
-body.veltaro-home .corporate-logo{display:block;flex-shrink:0;background:#faf6f2;border-radius:6px;padding:5px 8px;line-height:0}
-body.veltaro-home .corporate-logo img{display:block;width:190px;height:auto;object-fit:contain}
-body.veltaro-home .footer-grid img{display:block;width:min(100%,230px);height:auto;object-fit:contain;background:#faf6f2;border-radius:8px}
-@media(max-width:850px){body.veltaro-home .corporate-logo img{width:148px;height:auto}}
-@media(max-width:540px){body.veltaro-home .corporate-logo{padding:6px}body.veltaro-home .corporate-logo img{width:130px;height:auto}}
